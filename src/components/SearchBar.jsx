@@ -1,18 +1,21 @@
 import React from 'react';
 
 export default function SearchBar(props) {
-  // acá va tu código
-  const inputSearch = document.querySelector('#inputSearch')
-  props.onSearch(inputSearch.value)
-  return <div>
-    <div>
-      <input type='text' placeholder='Ciudad...'/>
-      <button onClick={(input.value)=>props.onSearch()}
-    </div>
+  // const search = () => {
+  //   const inputSearch = document.querySelector('#inputSearch');
+  //   props.onSearch(inputSearch.value);
+  // };
 
+  return (
     <div>
-      <input id='inputSearch' type='text' />
-      <button onClick={search}> Search </button>
+      <div>
+        <input type='text' placeholder='Ciudad...'/>
+        <button onClick={() => props.onSearch("Buscando ciudad..")}> BUSCAR </button>
+      </div>
+      {/* <div>
+        <input id='inputSearch' type='text' placeholder='City...'/>
+        <button onClick={search}> SEARCH </button>
+      </div> */}
     </div>
-  </div>
+  );
 };
