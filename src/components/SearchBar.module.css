@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-content: space-around; */
+    background-color: gray;
+    width: 300px;
+    /* padding: 10px; */
+
+}
+
+.input {
+    border-radius: 5px;
+    width: 220px;
+
+}
+
+.button {
+    border-radius: 5px;
+    background-color: rgba(0, 128, 0, 0);
+    color: aqua;
+    border-color: aqua;
+}

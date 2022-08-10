@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './SearchBar.module.css'
 
 export default function SearchBar(props) {
   // const search = () => {
@@ -7,10 +8,12 @@ export default function SearchBar(props) {
   // };
 
   return (
-    <div>
+    <div className = { css.main }>
       <div>
-        <input type='text' placeholder='Ciudad...'/>
-        <button onClick={() => props.onSearch("Buscando ciudad..")}> BUSCAR </button>
+        <input type='text' placeholder='Ciudad...' className = { css.input }/>
+      </div>
+      <div>
+        <button className = { css.button } onClick={() => props.onSearch("Buscando ciudad..")}> BUSCAR </button>          
       </div>
       {/* <div>
         <input id='inputSearch' type='text' placeholder='City...'/>
