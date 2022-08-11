@@ -30,10 +30,12 @@ export default function Card(props) {
   // acá va tu código
   let {img, max, min, name, onClose} = props;
   return (
-    <div className = { css.main }>
-      <button onClick={onClose} className = { css.button }> X </button>
-      <h1>{name}</h1>
-      <div className = { css.minMaxIcon }>
+    <div className = { css.card }>
+      <div className = { css.upper }>
+        <h1 className = { css.cityName }>{name}</h1>
+        <button onClick={onClose} className = { css.button }> X </button>
+      </div>
+      <div className = { css.lower }>
         <div>
           <h3>Min</h3>
           <h4>{Math.round((min-32)*(5/9))}º</h4>
@@ -48,8 +50,7 @@ export default function Card(props) {
           alt={"weatherIcon"}
           />
         </div> 
-      </div> 
-      
+      </div>
     </div>
   );
 };
