@@ -13,7 +13,7 @@ export default function SearchBar(props) {
         <input type='text' placeholder='Ciudad...' className = { css.input }/>
       </div>
       <div>
-        <button className = { css.button } onClick={() => props.onSearch("Buscando ciudad..")}> BUSCAR </button>          
+        <button className = { css.button } onClick={() => props.onSearch("Buscando ciudad..")}> Agregar </button>          
       </div>
       {/* <div>
         <input id='inputSearch' type='text' placeholder='City...'/>

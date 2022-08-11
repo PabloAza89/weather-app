@@ -36,15 +36,15 @@ export default function Card(props) {
         <button onClick={onClose} className = { css.button }> X </button>
       </div>
       <div className = { css.lower }>
-        <div>
+        <div className = { css.width }>
           <h3>Min</h3>
           <h4>{Math.round((min-32)*(5/9))}º</h4>
         </div>
-        <div>
+        <div className = { css.width }>
           <h3>Max</h3>
           <h4>{Math.round((max-32)*(5/9))}º</h4>
         </div>
-        <div>
+        <div className = { css.width }>
           <img 
           src={`http://openweathermap.org/img/wn/${img}@2x.png`}
           alt={"weatherIcon"}
