@@ -1,42 +1,20 @@
 import React from 'react';
+import './Cards.css';
+
 import Card from './Card.jsx';
-import css from './Cards.module.css'
 
-export default function Cards({cities}) {
-  if (!cities) {
-    return <p> loading.. </p>
-  }
-  return <div className = { css.align }>
-    {cities.map((c) => (
-      <Card
-      key = {c.id}
-      max={c.main.temp_max}
-      min={c.main.temp_min}
-      name={c.name}
-      img={c.weather[0].icon}
-      onClose={() => alert(c.name)}
-      />
-    ))}
-  </div>
-};
-
-// class Cards extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         {this.props.cities.map((c) => (
-//           <Card
-//             key = {c.id}
-//             max={c.main.temp_max}
-//             min={c.main.temp_min}
-//             name={c.name}
-//             img={c.weather[0].icon}
-//             onClose={() => alert(c.name)}
-//           />
-//         ))}
-//       </div>
-//     )
-//   }
-// };
-
-// export default Cards;
+export default function Cards({cities, onClose}) {
+  return (
+    <div className='cards'>
+      {cities.map(c => <Card
+          key={c.id}
+          id={c.id}
+          max={c.max}
+          min={c.min}
+          name={c.name}
+          img={c.img}
+          onClose={() => onClose(c.id)}
+        /> )}
+    </div>
+  );
+}

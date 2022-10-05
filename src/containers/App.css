@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  /* background: url(../img/bg-image.jpg) no-repeat center center fixed; */
+  background: url("../img/bg-image.jpg");
+  background-size: cover;
+}

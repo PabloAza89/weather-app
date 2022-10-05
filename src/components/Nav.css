@@ -1,0 +1,16 @@
+#logoHenry {
+  margin-right: 20px;
+}
+
+/* #background {
+  filter: blur(0px);
+} */
+
+/* .bg-dark {
+  --bs-bg-opacity: 1;
+  background: rgb(255, 16, 16);
+} */
+
+.navbar {
+  background-color: rgba(144, 238, 144, 0.33);
+}

@@ -1,0 +1,24 @@
+.card {
+  margin: 20px;
+  width: 18rem;
+  background-color: rgba(230, 46, 175, 0.157);
+}
+
+.card-title {
+  margin-bottom: 15px;
+  /* background-color: red */;
+}
+
+#closeIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 8px;
+  /* background-color: aqua */;
+}
+
+.card-body {
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
