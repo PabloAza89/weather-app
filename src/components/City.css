@@ -5,7 +5,8 @@
   font-size:x-large;
   margin-top: 50px;
   justify-items: center;
-  margin-left: 19%;
+  /* margin-left: 19%; */
+  padding-right: 10%;
 }
 
 .ciudad {

@@ -1,0 +1,10 @@
+.footer {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-tracks: center;
+  width: 30px;
+  height: 30px;
+}

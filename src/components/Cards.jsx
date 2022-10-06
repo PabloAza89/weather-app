@@ -20,6 +20,7 @@ export default function Cards({cities, onClose}) {
           min={c.min}
           name={c.name}
           img={c.img}
+          country={c.country}
           onClose={() => onClose(c.id)}
         /> )}
     </div>

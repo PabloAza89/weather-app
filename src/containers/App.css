@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   
+  
 }
 
 .row {
@@ -11,13 +12,13 @@
 
 body {
   background: url("../img/bg-image.jpg");  
-  background-size:cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
-    margin-bottom: 0px;
- 
-}
-
-html {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   
 }
+
+
+

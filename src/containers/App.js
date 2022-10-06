@@ -5,6 +5,7 @@ import Cards from '../components/Cards.jsx';
 import { Route } from 'react-router-dom';
 import About from '../components/About.jsx';
 import City from '../components/City.jsx';
+import Footer from '../components/Footer.jsx';
 
 const apiKey = '996c7f0e4e0b0953dddafed0a123ef9c&units=metric';
 
@@ -28,6 +29,7 @@ function App() {
             wind: recurso.wind.speed,
             temp: recurso.main.temp,
             name: recurso.name,
+            country: recurso.sys.country,
             weather: recurso.weather[0].main,
             clouds: recurso.clouds.all,
             latitud: recurso.coord.lat,
@@ -56,12 +58,16 @@ function App() {
 
   return (
     <div className="App">
+    
       <Route path='/' render={() => <Nav onSearch={onSearch} />}/>
       <Route exact path='/' render={() => <Cards cities={cities} onClose={onClose} />}/>
       <Route exact path= '/about' component={About} />
       <Route exact path='/city/:ciudadId'><City onFilter={onFilter}/></Route>
-      
+      <Route path= '/' component={Footer} />
+    
     </div>
+    
+    
   );
 }
 
