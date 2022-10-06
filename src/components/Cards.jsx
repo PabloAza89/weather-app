@@ -4,9 +4,16 @@ import './Cards.css';
 import Card from './Card.jsx';
 
 export default function Cards({cities, onClose}) {
+ 
+  let qq = cities.filter((value, index, self) =>
+  index === self.findIndex((e) => (
+    e.id === value.id
+  )))
+      
   return (
     <div className='cards'>
-      {cities.map(c => <Card
+  
+      {qq.map(c => <Card
           key={c.id}
           id={c.id}
           max={c.max}
@@ -17,4 +24,5 @@ export default function Cards({cities, onClose}) {
         /> )}
     </div>
   );
+  
 }

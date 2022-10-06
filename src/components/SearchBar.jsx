@@ -9,11 +9,11 @@ export default function SearchBar({onSearch}) {
     }}>
       <input
         type="text"
-        placeholder="Ciudad..."
+        placeholder="Search city..."
         value={city}
         onChange={e => setCity(e.target.value)}
       />
-      <input type="submit" value="Agregar" />
+      <input type="submit" value="ADD CITY!" />
     </form>
   );
 }

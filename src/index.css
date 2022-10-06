@@ -5,13 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height:0px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    line-height:0px;
 }
 
-/* :root {
-  --border: solid;
-} */
+:root {
+  --border: none;
+  border: 0px;
+  line-height:0px;
+}
+
+html {
+  
+  line-height:0px;
+}

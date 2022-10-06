@@ -11,6 +11,7 @@ const apiKey = '996c7f0e4e0b0953dddafed0a123ef9c&units=metric';
 function App() {
   const [cities, setCities] = useState([]);
   function onClose(id) {
+    //setCities(oldCities => oldCities.filter(c => c.id !== id));
     setCities(oldCities => oldCities.filter(c => c.id !== id));
   }
   function onSearch(ciudad) {
@@ -34,14 +35,17 @@ function App() {
           };
           setCities(oldCities => [...oldCities, ciudad]);
         } else {
-          alert("Ciudad no encontrada");
+          alert("City not found!");
         }
       });
-  }
+  }  
 
   function onFilter(ciudadId) {
+    
     let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
+    
     if(ciudad.length > 0) {
+      
         return ciudad[0];
     } else {
         return 'Ciudad no encontrada';
@@ -53,13 +57,10 @@ function App() {
   return (
     <div className="App">
       <Route path='/' render={() => <Nav onSearch={onSearch} />}/>
-      {/* '/' SE RENDERIZA EN TODAS */}
       <Route exact path='/' render={() => <Cards cities={cities} onClose={onClose} />}/>
-      {/* exact path='/algo' renderiza SOLO cuanto está en ese path */}
       <Route exact path= '/about' component={About} />
       <Route exact path='/city/:ciudadId'><City onFilter={onFilter}/></Route>
-      {/* <Route exact path = '/city/:ciudadId' render={({match}) => {<City city={onFilter(match.params.ciudadId)}/>}} /> */}
-      <hr />
+      
     </div>
   );
 }

@@ -1,0 +1,18 @@
+
+.container {
+  display: flex;
+  flex-direction: column;  
+  font-size:x-large;
+  margin-top: 50px;
+  justify-items: center;
+  margin-left: 19%;
+}
+
+.ciudad {
+  display: flex;
+  flex-direction: column;  
+  font-size:x-large;
+  
+  
+  
+}

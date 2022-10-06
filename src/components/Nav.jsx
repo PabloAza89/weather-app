@@ -1,24 +1,24 @@
 import React from "react";
-import Logo from "../img/logoHenry.png";
+import Logo from "../img/logo.png";
 import SearchBar from "./SearchBar.jsx";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 
 function Nav({ onSearch }) {
   return (
-    <nav  id="background" class="navbar" /* className="navbar navbar-dark bg-dark" */>
-      <Link to="/">
-        <span className="navbar-brand">
+    <nav   className="navbar" /* className="navbar navbar-dark bg-dark" */>
+      <Link id="background" to="/">
+        <span id="logoAlign" className="navbar-brand">
           <img
-            id="logoHenry"
+            id="logo"
             src={Logo}
             width="30"
             height="30"
             className="d-inline-block align-top"
             alt=""
           />
-          Henry - Weather App
         </span>
+        Weatherify
       </Link>
       <Link to= "/about">
         <span>ABOUT</span>
