@@ -76,14 +76,14 @@ function App() {
     <div className="App">
     
       <Route path='/' render={() => <Nav onSearch={onSearch} lang={lang}/>}/>
-      <Route exact path='/' render={() => <Cards cities={cities} onClose={onClose} />}/>
+      <Route exact path='/' render={() => <Cards cities={cities} onClose={onClose} lang={lang} />}/>
       {/* <Route exact path= '/about' component={About} /> */}
       <Route exact path= '/about' render={() => <About lang={lang} />} />
       <Route exact path='/city/:ciudadId'><City onFilter={onFilter} lang={lang}/></Route>
       {/* <Route path= '/' render={() => <Footer />} /> */}
       <footer className="footer">
-      <Link onClick={langEs} ><img src={Es} alt=""/></Link>
-      <Link onClick={langEn} ><img src={En} alt=""/></Link>
+      <Link onClick={langEs} ><img className="image" src={Es} alt=""/></Link>
+      <Link onClick={langEn} ><img className="image" src={En} alt=""/></Link>
       
     </footer>
     

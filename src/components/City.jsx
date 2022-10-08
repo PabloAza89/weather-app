@@ -15,7 +15,8 @@ export default function Ciudad({onFilter, lang}) {
             if (city.weather === "Clouds") clima = "Nublado"
             if (city.weather === "Clear") clima = "Despejado"
             if (city.weather === "Rain") clima = "Lluvioso"
-            if (city.weather === "Fog") clima = "Neblina"
+            if (city.weather === "Mist") clima = "Neblina"
+            if (city.weather === "Fog") clima = "Niebla"
 
             return (
                 <div className="ciudad">
