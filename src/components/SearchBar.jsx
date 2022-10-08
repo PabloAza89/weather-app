@@ -1,19 +1,44 @@
 import React, { useState } from "react";
+import "./SearchBar.css";
 
-export default function SearchBar({onSearch}) {
+export default function SearchBar({onSearch, lang}) {
+  console.log("CC", lang)
   const [city, setCity] = useState("");
-  return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      onSearch(city);
-    }}>
-      <input
-        type="text"
-        placeholder="Search city..."
-        value={city}
-        onChange={e => setCity(e.target.value)}
-      />
-      <input type="submit" value="ADD CITY!" />
-    </form>
-  );
+
+  if (lang === 1) {
+    return (
+      <form className="search" onSubmit={(e) => {
+        e.preventDefault();
+        onSearch(city);
+      }}>
+        <input className="findAdd"
+          type="text"
+          placeholder="Buscar ciudad..."
+          value={city}
+          onChange={e => setCity(e.target.value)}
+        />
+        <input className="findAdd"
+        type="submit" value="AGREGAR CIUDAD!" />
+      </form>
+    );
+  } else {
+    return (
+      <form className="search" onSubmit={(e) => {
+        e.preventDefault();
+        onSearch(city);
+      }}>
+        <input className="findAdd"
+          type="text"
+          placeholder="Search city..."
+          value={city}
+          onChange={e => setCity(e.target.value)}
+        />
+        <input className="findAdd"
+        type="submit" value="ADD CITY!" />
+      </form>
+    );
+
+  }
+
+  
 }

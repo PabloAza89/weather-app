@@ -9,13 +9,16 @@ export default function Card ({min, max, name, img, onClose, id, country}) {
     if (country === "CA") country = "(CANADA)"
     if (country === "CL") country = "(CHILE)"
     if (country === "CO") country = "(COLOMBIA)"
+    if (country === "CR") country = "(COSTA RICA)"
     if (country === "CU") country = "(CUBA)"
+    if (country === "DO") country = "(DOMINICAN REPUBLIC)"
     if (country === "EC") country = "(ECUADOR)"
     if (country === "ES") country = "(SPAIN)"
     if (country === "GN") country = "(GUINEA)"
     if (country === "PE") country = "(PERU)"
     if (country === "PH") country = "(PHILIPPINES)"
     if (country === "PY") country = "(PARAGUAY)"
+    if (country === "RO") country = "(ROMANIA)"
     if (country === "US") country = "(USA)"
     if (country === "UY") country = "(URUGUAY)"
     if (country === "VE") country = "(VENEZUELA)"
@@ -31,11 +34,11 @@ export default function Card ({min, max, name, img, onClose, id, country}) {
           </Link> 
           <p className="card-country">{country}</p>
           <div className="row">
-            <div className="col-sm-4 col-md-4 col-lg-4">
+            <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
               <h5>Min</h5>
               <h5>{min}°</h5>
             </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
+            <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
               <h5>Max</h5>
               <h5>{max}°</h5>
             </div>

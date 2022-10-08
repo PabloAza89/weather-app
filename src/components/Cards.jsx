@@ -5,7 +5,7 @@ import Card from './Card.jsx';
 
 export default function Cards({cities, onClose}) {
  
-  let qq = cities.filter((value, index, self) =>
+  let filterRepeat = cities.filter((value, index, self) =>
   index === self.findIndex((e) => (
     e.id === value.id
   )))
@@ -13,7 +13,7 @@ export default function Cards({cities, onClose}) {
   return (
     <div className='cards'>
   
-      {qq.map(c => <Card
+      {filterRepeat.map(c => <Card
           key={c.id}
           id={c.id}
           max={c.max}

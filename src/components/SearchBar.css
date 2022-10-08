@@ -1,0 +1,10 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+}
+
+.findAdd {
+  width: 160px;
+
+}
