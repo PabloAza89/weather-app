@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SearchBar.css";
 
 export default function SearchBar({onSearch, lang}) {
-  console.log("CC", lang)
+  //console.log("CC", lang)
   const [city, setCity] = useState("");
 
   if (lang === 1) {

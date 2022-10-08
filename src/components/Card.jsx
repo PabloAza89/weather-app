@@ -3,7 +3,7 @@ import './Card.css';
 import { Link } from 'react-router-dom'
 
 export default function Card ({min, max, name, img, onClose, id, country, lang}) {
-    console.log("LANG", lang)
+    //console.log("LANG", lang)
     
     if (country === "AF" & lang === 1) country = "(AFGANISTAN)"
     if (country === "AF") country = "(AFGHANISTAN)"
@@ -37,30 +37,62 @@ export default function Card ({min, max, name, img, onClose, id, country, lang})
     if (country === "UY") country = "(URUGUAY)"
     if (country === "VE") country = "(VENEZUELA)"
   
-    return (
-      <div class="card">
-        <div id="closeIcon" className="row">
-            <button onClick={onClose} className="btn btn-sm btn-danger">X</button>
-        </div>
-        <div className="card-body">
-          <Link to={`/city/${id}`} >
-          <h3 className="card-title">{name}</h3>
-          </Link> 
-          <p className="card-country">{country}</p>
-          <div className="row">
-            <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
-              <h5>Min</h5>
-              <h5>{min}°</h5>
-            </div>
-            <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
-              <h5>Max</h5>
-              <h5>{max}°</h5>
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt="" />
+    
+    if (lang === 1) {
+      return (
+        <div className="card">
+          <div id="closeIcon" className="row">
+              <button onClick={onClose} className="btn btn-sm btn-danger">X</button>
+          </div>
+          <div className="card-body">
+            <Link to={`/city/${id}`} >
+            <h3 className="card-title">{name}</h3>
+            </Link> 
+            <p className="card-country">{country}</p>
+            <div className="row">
+              <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
+                <h5>Min</h5>
+                <h5>{min} °C</h5>
+              </div>
+              <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
+                <h5>Max</h5>
+                <h5>{max} °C</h5>
+              </div>
+              <div className="col-sm-4 col-md-4 col-lg-4">
+                <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt="" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className="card">
+          <div id="closeIcon" className="row">
+              <button onClick={onClose} className="btn btn-sm btn-danger">X</button>
+          </div>
+          <div className="card-body">
+            <Link to={`/city/${id}`} >
+            <h3 className="card-title">{name}</h3>
+            </Link> 
+            <p className="card-country">{country}</p>
+            <div className="row">
+              <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
+                <h5>Min</h5>
+                <h5>{(min * (9/5)) + 32} °F</h5>
+              </div>
+              <div id="minAlign" className="col-sm-4 col-md-4 col-lg-4">
+                <h5>Max</h5>
+                <h5>{(max * (9/5)) + 32} °F</h5>
+              </div>
+              <div className="col-sm-4 col-md-4 col-lg-4">
+                <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+      
+    }
+    
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { /* useEffect, */ useState } from 'react';
 import './App.css';
 import Nav from '../components/Nav.jsx';
 import Cards from '../components/Cards.jsx';
@@ -15,9 +15,9 @@ const apiKey = '996c7f0e4e0b0953dddafed0a123ef9c&units=metric';
 function App() {
   const [lang, setLang] = useState(0);
 
-  useEffect(() => {
+ /*  useEffect(() => {
     console.log("COUNT:", lang)
-  })  
+  })   */
 
   const langEs = e => {setLang(1)}
   const langEn = e => {setLang(0)}

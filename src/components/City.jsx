@@ -8,6 +8,7 @@ export default function Ciudad({onFilter, lang}) {
     var city = onFilter(params.ciudadId)
     //console.log(city, 'debug');
     let clima = ""
+    
 
     if (lang === 1) {
         if (city) {
@@ -23,9 +24,9 @@ export default function Ciudad({onFilter, lang}) {
                         <div className="container">
                             <h2>{city.name}</h2>
                             <div className="info">
-                                <div>Temperatura: {city.temp} ºC</div>
+                                <div>Temperatura: {Math.round(city.temp * 10) / 10} ºC</div>
                                 <div>Clima: {clima}</div>
-                                <div>Viento: {city.wind} Km/h</div>
+                                <div>Viento: {Math.round(city.wind * 10) / 10} Km/h</div>
                                 <div>Cantidad de nubes: {city.clouds} %</div>
                                 <div>Latitud: {city.latitud}º</div>
                                 <div>Longitud: {city.longitud}º</div>
@@ -42,15 +43,17 @@ export default function Ciudad({onFilter, lang}) {
         }
 
     } else {
+       /*  if (lang === 0) min = (min * 0.621371)
+        if (lang === 0) min = (min * 0.621371) */
         if (city) {
             return (
                 <div className="ciudad">
                         <div className="container">
                             <h2>{city.name}</h2>
                             <div className="info">
-                                <div>Temperature: {city.temp} ºC</div>
+                                <div>Temperature: {Math.round(((city.temp * (9/5)) + 32) * 10) / 10} ºF</div>
                                 <div>Weather: {city.weather}</div>
-                                <div>Wind: {city.wind} Km/h</div>
+                                <div>Wind: {Math.round((city.wind * 0.621371) * 10) / 10} MPH</div>
                                 <div>Clouds amount: {city.clouds} %</div>
                                 <div>Latitude: {city.latitud}º</div>
                                 <div>Longitude: {city.longitud}º</div>
