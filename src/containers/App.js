@@ -82,7 +82,7 @@ function App() {
 
             {/* <div id="map"></div> */}
             {/* <Route path= '/' component={Map} /> */}
-            <Route exact path="/city/:ciudadId"> <Map onFilter={onFilter} /> </Route>
+            <Route exact path="/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route>
             <footer className="footer">
                 <Link onClick={langEs}> <img className="image" src={Es} alt="" /> </Link>
                 <Link onClick={langEn}> <img className="image" src={En} alt="" /> </Link>
