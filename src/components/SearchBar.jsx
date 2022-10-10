@@ -12,8 +12,9 @@ export default function SearchBar({onSearch, lang}) {
         onSearch(city);
       }}>
         <input className="findAdd"
-          type="text"
+          type="text"        
           placeholder="Buscar ciudad..."
+          onFocus={e => setCity("")}
           value={city}
           onChange={e => setCity(e.target.value)}
         />
@@ -28,8 +29,9 @@ export default function SearchBar({onSearch, lang}) {
         onSearch(city);
       }}>
         <input className="findAdd"
-          type="text"
+          type="text"          
           placeholder="Search city..."
+          onFocus={e => setCity("")}
           value={city}
           onChange={e => setCity(e.target.value)}
         />

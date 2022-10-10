@@ -1,10 +1,19 @@
 .search {
   display: flex;
   flex-direction: row;
-  width: 320px;
+  width: 330px;
+  transition:all 0.05s;
+  
 }
 
 .findAdd {
   width: 160px;
 
 }
+
+textarea:focus, input:focus{
+  outline: none;
+  transition:all 0.01s;
+}
+
+/* width: 320px; NORMAL WIDTH*/

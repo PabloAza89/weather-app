@@ -23,7 +23,7 @@ function Nav({ onSearch, lang }) {
           Weatherify
         </Link>
         <Link to= "/about">
-          <span>ACERCA</span>
+          <span className="aboutNav">ACERCA</span>
         </Link>
         <SearchBar onSearch={onSearch} lang={lang}/>
       </nav>
@@ -31,25 +31,27 @@ function Nav({ onSearch, lang }) {
     
   } else {
     return (
-      <nav   className="navbar">
-        <Link id="background" to="/">
-          <span id="logoAlign" className="navbar-brand">
-            <img
-              id="logo"
-              src={Logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt=""
-            />
-          </span>
-          Weatherify
-        </Link>
+      <div className="NavbarContainer">
+        <nav   className="navbar">
+          <Link id="background" to="/">
+            <span id="logoAlign" className="navbar-brand">
+              <img
+                id="logo"
+                src={Logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt=""
+              />
+            </span>
+            Weatherify
+          </Link> 
+          <SearchBar onSearch={onSearch} lang={lang}/>
+        </nav>        
         <Link to= "/about">
-          <span>ABOUT</span>
+        <span className="aboutNav">ABOUT</span>
         </Link>
-        <SearchBar onSearch={onSearch} lang={lang}/>
-      </nav>
+    </div>
     );
     
   }

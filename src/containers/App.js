@@ -53,7 +53,22 @@ function App() {
                     };
                     setCities((oldCities) => [...oldCities, ciudad]);
                 } else {
-                    alert("City not found!");
+                    function right(){document.getElementsByClassName("search")[0].style.width=(320+"px")}
+                    function left(){document.getElementsByClassName("search")[0].style.width=(340+"px")}
+                    function center(){document.getElementsByClassName("search")[0].style.width=(330+"px")}
+                    center()
+                    setTimeout(center, 200)
+                    left()
+                    setTimeout(left, 160)
+                    center()                  
+                    setTimeout(center, 120)
+                    right()
+                    setTimeout(right, 80)
+                    center()
+                    setTimeout(center, 40)
+                    left()                    
+                    
+                    /* alert("City not found!"); */
                 }
             });
     }
