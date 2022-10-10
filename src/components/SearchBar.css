@@ -25,3 +25,18 @@ textarea:focus, input:focus{
 }
 
 /* width: 320px; NORMAL WIDTH*/
+
+
+@media (max-width: 360px) {
+  .search {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    transition:all 0.05s;
+    
+  }
+  .findAdd {
+    width: 150px;
+  
+  }
+}  

@@ -20,10 +20,12 @@ function Nav({ onSearch, lang }) {
               alt=""
             />
           </span>
+          <div className="weatherify">
           Weatherify
+          </div>
         </Link>
-        <Link to= "/about">
-          <span className="aboutNav">ACERCA</span>
+        <Link className="aboutNav" to="/about">
+          <span >ACERCA</span>
         </Link>
         <SearchBar onSearch={onSearch} lang={lang}/>
       </nav>
@@ -44,12 +46,14 @@ function Nav({ onSearch, lang }) {
                 alt=""
               />
             </span>
+            <div className="weatherify">
             Weatherify
+            </div>
           </Link> 
           <SearchBar onSearch={onSearch} lang={lang}/>
         </nav>        
-        <Link to= "/about">
-        <span className="aboutNav">ABOUT</span>
+        <Link className="aboutNav" to="/about">
+        <span >ABOUT</span>
         </Link>
     </div>
     );
