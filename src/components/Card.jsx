@@ -553,7 +553,7 @@ export default function Card({
                             <img
                                 className="iconoClima"
                                 src={
-                                    "http://openweathermap.org/img/wn/" +
+                                    "https://openweathermap.org/img/wn/" +
                                     img +
                                     "@2x.png"
                                 }
@@ -602,7 +602,7 @@ export default function Card({
                             <img
                                 className="iconoClima"
                                 src={
-                                    "http://openweathermap.org/img/wn/" +
+                                    "https://openweathermap.org/img/wn/" +
                                     img +
                                     "@2x.png"
                                 }
