@@ -32,7 +32,7 @@ function Map({onFilter}) {
         //L.marker([51.505, -0.09]).addTo(map);
         L.marker([city.latitud, city.longitud]).addTo(map);
         //marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-    }, []);
+    },);
 
     
     return (

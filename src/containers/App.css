@@ -16,9 +16,20 @@ body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  
-  
-  
+    
+}
+
+@media (max-width: 450px) {
+  body {
+    background: url("../img/bg-image-rotate.jpg");  
+    background-size:180%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    
+  }
+    
+
 }
 
 .footer {
@@ -31,9 +42,33 @@ body {
   max-width: 30px;
 }
 
+@media (max-width: 450px) {
+  .footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: 5px;
+    margin-left: 38%;
+    width: 30px;
+    max-width: 30px;
+  }
+    
+
+}
+
+
 .image {
   margin: 1px;
   width: 33px;
+}
+
+@media (max-width: 450px) {
+  .image {
+    margin: 1px;
+    width: 33px;
+  }
+    
+
 }
 
 .mapAlign{
