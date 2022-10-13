@@ -530,7 +530,7 @@ export default function Card({
                     </button>
                 </div>
                 <div className="card-body">
-                    <Link to={`/city/${id}`}>
+                    <Link to={`/weather-app/city/${id}`}>
                         <h3 className="card-title">{name}</h3>
                     </Link>
                     <p className="card-country">{country}</p>
@@ -575,7 +575,7 @@ export default function Card({
                     </button>
                 </div>
                 <div className="card-body">
-                    <Link to={`/city/${id}`}>
+                    <Link to={`/weather-app/city/${id}`}>
                         <h3 className="card-title">{name}</h3>
                     </Link>
                     <p className="card-country">{country}</p>
