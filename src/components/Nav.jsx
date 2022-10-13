@@ -9,7 +9,7 @@ function Nav({ onSearch, lang }) {
   if (parseInt(lang) === 1) {
     return (
       <nav className="navbar">
-        <Link id="background" to="/">
+        <Link id="background" to="/weather-app">
           <span id="logoAlign" className="navbar-brand">
             <img
               id="logo"
@@ -24,7 +24,7 @@ function Nav({ onSearch, lang }) {
           Weatherify
           </div>
         </Link>
-        <Link className="aboutNav" to="/about">
+        <Link className="aboutNav" to="/weather-app/about">
           <span >ACERCA</span>
         </Link>
         <SearchBar onSearch={onSearch} lang={lang}/>
@@ -35,7 +35,7 @@ function Nav({ onSearch, lang }) {
     return (
       <div className="NavbarContainer">
         <nav   className="navbar">
-          <Link id="background" to="/">
+          <Link id="background" to="/weather-app">
             <span id="logoAlign" className="navbar-brand">
               <img
                 id="logo"
@@ -52,7 +52,7 @@ function Nav({ onSearch, lang }) {
           </Link> 
           <SearchBar onSearch={onSearch} lang={lang}/>
         </nav>        
-        <Link className="aboutNav" to="/about">
+        <Link className="aboutNav" to="/weather-app/about">
         <span >ABOUT</span>
         </Link>
     </div>

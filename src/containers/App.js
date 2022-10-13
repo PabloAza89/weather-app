@@ -14,8 +14,10 @@ import Es from "../img/lan-es.png";
 const apiKey = "996c7f0e4e0b0953dddafed0a123ef9c&units=metric";
 
 function App() {
+
+
     const [lang, setLang] = useState(0);
-    
+  
     const langEs = (e) => {
         setLang(1);
     };
@@ -87,21 +89,26 @@ function App() {
 
     return (
         <div className="App">
-            <Route path="/" render={() => <Nav onSearch={onSearch} lang={lang} />}/>
-            <Route exact path="/" render={() => (<Cards cities={cities} onClose={onClose} lang={lang} />)}
+            <Route path="/weather-app" render={() => <Nav onSearch={onSearch} lang={lang} />}/>
+            <Route exact path="/weather-app" render={() => (<Cards cities={cities} onClose={onClose} lang={lang} />)}
             />
             {/* <Route exact path= '/about' component={About} /> */}
-            <Route exact path="/about" render={() => <About lang={lang} />} />
-            <Route exact path="/city/:ciudadId"> <City onFilter={onFilter} lang={lang} /> </Route>
+            <Route exact path="/weather-app/about" render={() => <About lang={lang} />} />
+            {/* <Route exact path="/city/:ciudadId"> <City onFilter={onFilter} lang={lang} /> </Route> */}
+            <Route exact path="/weather-app/city/:ciudadId" render={() => (<City onFilter={onFilter} lang={lang} />)}/>
             {/* <Route path= '/' render={() => <Footer />} /> */}
 
             {/* <div id="map"></div> */}
             {/* <Route path= '/' component={Map} /> */}
-            <Route exact path="/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route>
+            <Route exact path="/weather-app/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route>
+          
             <footer className="footer">
                 <Link onClick={langEs}> <img className="image" src={Es} alt="" /> </Link>
                 <Link onClick={langEn}> <img className="image" src={En} alt="" /> </Link>
+                 
             </footer>
+       
+           
         </div>
     );
 }
