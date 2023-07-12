@@ -8,7 +8,7 @@ function About({lang}) {
   if (parseInt(lang) === 1) {
     return (
       <div className="about">
-        <p>Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry! &#x1F680;</p>
+        <p>Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry!! &#x1F680;</p>
         <br></br>
         <a href="https://www.linkedin.com/in/juan-pablo-azambuyo/" target="_blank" rel="noopener noreferrer">&#10145; MI PERFIL DE LINKEDIN &#11013;</a>
       </div>
