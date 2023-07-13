@@ -5,6 +5,13 @@ export function addCity(addCity:any) {
   }
 };
 
+export function deleteCity(deleteCity:any) {
+  return {
+    type: 'DELETE_CITY',
+    payload: deleteCity
+  }
+};
+
 export function languageChanger(languageChanger:boolean) {
   return {
     type: 'LANGUAGE_CHANGER',

@@ -3,9 +3,7 @@ import "./Searcher.css";
 import { Box, FormControl, Input, Button, TextField } from '@mui/material';
 import * as s from '../../styles/SearcherSX';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  addCity
-} from '../../actions';
+import { addCity } from '../../actions';
 
 export default function SearchBar() {
 
@@ -57,8 +55,8 @@ export default function SearchBar() {
   }
 
 
-  function onSearch(ciudad:string) {
-    fetch( `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}` )
+  function onSearch(city:string) {
+    fetch( `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}` )
     .then((r) => r.json())
     .then((res) => {
       if (res.main !== undefined) {
@@ -76,9 +74,8 @@ export default function SearchBar() {
           latitud: res.coord.lat,
           longitud: res.coord.lon,
         };
-        //setCities(() => [...cities, ciudad]);
-        //dispatch(addCity([...cities, ciudad]))
-        dispatch(addCity([...cities, newCity]))
+        if (cities.filter(e => e.id === newCity.id).length === 0) dispatch(addCity([...cities, newCity]))
+        else alert("City already exists!");
       } else alert("City not found!");
     });
   }

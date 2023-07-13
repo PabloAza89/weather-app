@@ -2,13 +2,17 @@ import React from 'react';
 import './Cards.css';
 import { useDispatch, useSelector } from 'react-redux';
 import Card from '../Card/Card';
+import countries from '../../styles/Countries.json';
+//console.log("A VER", countries)
 
 interface cardsI {
   /* cities: any, */
   onClose: any,
 }
 
-export default function Cards({/* cities,  */onClose}: cardsI) {
+export default function Cards(/* {cities, onClose}: cardsI */) {
+
+  console.log("A VER", countries)
 
   interface citiesI {
     id: number,
@@ -44,7 +48,7 @@ export default function Cards({/* cities,  */onClose}: cardsI) {
           name={c.name}
           img={c.img}
           country={c.country}
-          onClose={() => onClose(c.id)}
+          /* onClose={() => onClose(c.id)} */
         /> )}
     </div>
   );

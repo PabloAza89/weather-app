@@ -60,6 +60,14 @@ const reducer = (state = initialState, action: {type: string; payload: any}) => 
         ...state,
         cities: action.payload
       };
+    case 'DELETE_CITY':
+      const clonedCities = [...state.cities];
+      let indexToDelete = clonedCities.map(e => e.id).indexOf(action.payload)
+      clonedCities.splice(indexToDelete, 1);
+      return {
+        ...state,
+        cities: clonedCities
+      };
     case 'LANGUAGE_CHANGER':
       return {
         ...state,

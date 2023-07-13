@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux';
 import * as s from '../../styles/NavBarSX';
 import "./Nav.css";
 import { Link } from "react-router-dom";
-import countries from '../../styles/Countries.json';
-//const countries = require('../../styles/Countries.JSON')
-//import * as countries from "../../styles/Countries.json"
+//import countries from '../../styles/Countries.json';
+//console.log("A VER", countries)
+
 
 const NavBar = () => {
 
@@ -20,8 +20,8 @@ const NavBar = () => {
   const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
   const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
-  //console.log("A VER", JSON.parse(countries))
-  console.log("A VER", countries)
+  
+  //console.log("A VER", countries)
 
   return (
     <Box sx={s.background}>

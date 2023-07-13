@@ -54,6 +54,7 @@ function App() {
       <Routes>
         <Route path="/" element={<>
           <NavBar />
+          <Cards />
           <Language />
         </>}/>
         <Route path="/about" element={<>
