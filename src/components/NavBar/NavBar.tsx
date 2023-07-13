@@ -31,11 +31,12 @@ function Nav(/* { onSearch } */) {
           Weatherify
         </Typography>
       </Link>
-      <Link 
+      <Link
         to="/about"
+        style={s.linkAbout()}
       >
         <Typography sx={s.typoAbout()}>
-          ACERCA
+          { english ? `ABOUT` : `ACERCA`}
         </Typography>
       </Link>
       <Searcher />

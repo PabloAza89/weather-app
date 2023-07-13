@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./Searcher.css";
 import { useSelector } from 'react-redux';
-import * as s from '../../styles/NavBarSX';
+import { Box, FormControl, Input, Button, TextField } from '@mui/material';
+import * as s from '../../styles/SearcherSX';
 
-export default function SearchBar(/* {onSearch, lang} */) {
-  //console.log("CC", lang)
+export default function SearchBar() {
+
+  const apiKey = "996c7f0e4e0b0953dddafed0a123ef9c&units=metric";
+
   const [city, setCity] = useState("");
 
   const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
@@ -16,21 +19,62 @@ export default function SearchBar(/* {onSearch, lang} */) {
   const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
   const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
+  interface arrayI {
+    id: number,
+    name: string,
+    country: string,
+    min: number,
+    max: number,
+    wind: number,
+    temp: number,
+    weather: string,
+    img: string,
+    clouds: number,
+    latitud: number,
+    longitud: number,
+  }
 
-    return (
-      <form className="search" onSubmit={(e) => {
-        e.preventDefault();
-        /* onSearch(city); */
-      }}>
-        <input className="findAdd"
-          type="text"        
-          placeholder="Buscar ciudad..."
-          onFocus={e => setCity("")}
-          value={city}
-          onChange={e => setCity(e.target.value)}
-        />
-        <input className="findAdd"
-        type="submit" value="AGREGAR CIUDAD!" />
-      </form>
-    );
+  const [cities, setCities] = useState<arrayI[]>([]);
+
+  function onSearch(ciudad:string) {
+    fetch( `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}` )
+    .then((r) => r.json())
+    .then((res) => {
+      if (res.main !== undefined) {
+        const ciudad = {
+          id: res.id,
+          name: res.name,
+          country: res.sys.country,
+          min: Math.round(res.main.temp_min),
+          max: Math.round(res.main.temp_max),
+          wind: res.wind.speed,
+          temp: res.main.temp,
+          weather: res.weather[0].main,
+          img: res.weather[0].icon,
+          clouds: res.clouds.all,
+          latitud: res.coord.lat,
+          longitud: res.coord.lon,
+        };
+        setCities(() => [...cities, ciudad]);
+      } else alert("City not found!");
+    });
+  }
+
+  console.log(cities)
+
+  return (
+    <Box
+      component="form"
+      onSubmit={(e: any) => { e.preventDefault(); onSearch(city) }}
+    >
+      <TextField
+        type="text"
+        placeholder={ english ? `Search city...` : `Buscar ciudad...`}
+        onFocus={() => setCity("")}
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+      />
+      <Button sx={s.button} type="submit">{ english ? `ADD CITY!` : `AGREGAR CIUDAD!` }</Button>
+    </Box>
+  );
 }

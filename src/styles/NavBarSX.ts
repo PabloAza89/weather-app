@@ -7,13 +7,14 @@ import {
 export const background = () => {
   return {
     ...flex, ...row, ...jcsb,
-    background: 'red',
+    background: 'gray',
   }
 }
 
 export const linkLogo = () => {
   return {
     /* ...flex, */ /* ...row,  */...aic,
+    ...noDeco,
     display: 'flex',
     fontSize: 'x-large',
   }
@@ -30,19 +31,33 @@ export const logo = () => {
 
 export const logoTypo = () => {
   return {
+    ...noDeco,
     display: 'flex',
     flexDirection: 'row',
     margin: '-5%',
+    fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
+    fontSize: '24px',
+    fontWeight: 400,
+    color: '#007bff',
+  }
+}
+
+export const linkAbout = () => {
+  return {
+    ...noDeco,
   }
 }
 
 export const typoAbout = () => {
   return {
+    ...noDeco,
     display: 'flex',
     /* position: 'absolute', */
     /* top: '35%', */
     /* left: '45%', */
-    fontSize: 'large',
-    fontWeight: 450
+    fontSize: '18px',
+    color: '#007bff',
+    fontWeight: 450,
+    /* fontSize: 'large', */
   }
 }

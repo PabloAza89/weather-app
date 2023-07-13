@@ -14,512 +14,260 @@ export default function Card({
 }) {
     //console.log("LANG", lang)
 
-    if (country === "AF" & lang === 1) country = "(AFGANISTAN)"
-    if (country === "AX" & lang === 1) country = "(ISLAS ALAND)"
-    if (country === "AL" & lang === 1) country = "(ALBANIA)"
-    if (country === "DZ" & lang === 1) country = "(ALGERIA)"
-    if (country === "AS" & lang === 1) country = "(SAMOA AMERICANA)"
-    if (country === "AD" & lang === 1) country = "(ANDORRA)"
-    if (country === "AO" & lang === 1) country = "(ANGOLA)"
-    if (country === "AI" & lang === 1) country = "(ANGUILA)"
-    if (country === "AQ" & lang === 1) country = "(ANTARTIDA)"
-    if (country === "AG" & lang === 1) country = "(ANTIGUA Y BARBUDA)"
-    if (country === "AR" & lang === 1) country = "(ARGENTINA)"
-    if (country === "AM" & lang === 1) country = "(ARMENIA)"
-    if (country === "AW" & lang === 1) country = "(ARUBA)"
-    if (country === "AU" & lang === 1) country = "(AUSTRALIA)"
-    if (country === "AT" & lang === 1) country = "(AUSTRIA)"
-    if (country === "AZ" & lang === 1) country = "(AZERBAIYÁN)"
-    if (country === "BS" & lang === 1) country = "(BAHAMAS)"
-    if (country === "BH" & lang === 1) country = "(BAREIN)"
-    if (country === "BD" & lang === 1) country = "(BANGLADES)"
-    if (country === "BB" & lang === 1) country = "(BARBADOS)"
-    if (country === "BY" & lang === 1) country = "(BIELORRUSIA)"
-    if (country === "BE" & lang === 1) country = "(BELGICA)"
-    if (country === "BZ" & lang === 1) country = "(BELICE)"
-    if (country === "BJ" & lang === 1) country = "(BENIN)"
-    if (country === "BM" & lang === 1) country = "(BERMUDA)"
-    if (country === "BT" & lang === 1) country = "(BUTAN)"
-    if (country === "BO" & lang === 1) country = "(BOLIVIA)"
-    if (country === "BQ" & lang === 1) country = "(CARIBE NEERLANDÉS)"
-    if (country === "BA" & lang === 1) country = "(BOSNIA AND HERZEGOVINA)"
-    if (country === "BW" & lang === 1) country = "(BOTSUANA)"
-    if (country === "BV" & lang === 1) country = "(ISLA BOUVET)"
-    if (country === "BR" & lang === 1) country = "(BRASIL)"
-    if (country === "IO" & lang === 1) country = "(TERRITORIO BRITÁNICO DEL OCÉANO ÍNDICO)"
-    if (country === "BN" & lang === 1) country = "(BRUNEI)"
-    if (country === "BG" & lang === 1) country = "(BULGARIA)"
-    if (country === "BF" & lang === 1) country = "(BURKINA FASO)"
-    if (country === "BI" & lang === 1) country = "(BURUNDI)"
-    if (country === "KH" & lang === 1) country = "(CAMBODIA)"
-    if (country === "CM" & lang === 1) country = "(CAMERUN)"
-    if (country === "CA" & lang === 1) country = "(CANADA)"
-    if (country === "CV" & lang === 1) country = "(CABO VERDE)"
-    if (country === "KY" & lang === 1) country = "(ISLAS CAIMAN)"
-    if (country === "CF" & lang === 1) country = "(REPÚBLICA CENTROAFRICANA)"
-    if (country === "TD" & lang === 1) country = "(CHAD)"
-    if (country === "CL" & lang === 1) country = "(CHILE)"
-    if (country === "CN" & lang === 1) country = "(CHINA)"
-    if (country === "CX" & lang === 1) country = "(ISLA DE NAVIDAD)"
-    if (country === "CC" & lang === 1) country = "(ISLAS COCOS)"
-    if (country === "CO" & lang === 1) country = "(COLOMBIA)"
-    if (country === "KM" & lang === 1) country = "(COMOROS)"
-    if (country === "CD" & lang === 1) country = "(REPÚBLICA DEMOCRÁTICA DEL CONGO)"
-    if (country === "CG" & lang === 1) country = "(CONGO)"
-    if (country === "CK" & lang === 1) country = "(COOK ISLANDS)"
-    if (country === "CR" & lang === 1) country = "(COSTA RICA)"
-    if (country === "CI" & lang === 1) country = "(COSTA DE MARFIL)"
-    if (country === "HR" & lang === 1) country = "(CROACIA)"
-    if (country === "CU" & lang === 1) country = "(CUBA)"
-    if (country === "CW" & lang === 1) country = "(CURAZAO)"
-    if (country === "CY" & lang === 1) country = "(CHIPRE)"
-    if (country === "CZ" & lang === 1) country = "(RECUPLICA CHECA)"
-    if (country === "DK" & lang === 1) country = "(DINAMARCA)"
-    if (country === "DJ" & lang === 1) country = "(YIBUTI)"
-    if (country === "DM" & lang === 1) country = "(DOMINICA)"
-    if (country === "DO" & lang === 1) country = "(RECUPLICA DOMINICANA)"
-    if (country === "EC" & lang === 1) country = "(ECUADOR)"
-    if (country === "EG" & lang === 1) country = "(EGIPTO)"
-    if (country === "SV" & lang === 1) country = "(EL SALVADOR)"
-    if (country === "GQ" & lang === 1) country = "(GUINEA ECUATORIAL)"
-    if (country === "ER" & lang === 1) country = "(ERITREA)"
-    if (country === "EE" & lang === 1) country = "(ESTONIA)"
-    if (country === "ET" & lang === 1) country = "(ETIOPIA)"
-    if (country === "FK" & lang === 1) country = "(ISLAS MALVINAS)"
-    if (country === "FO" & lang === 1) country = "(ISLAS FEROE)"
-    if (country === "FJ" & lang === 1) country = "(FIJI)"
-    if (country === "FI" & lang === 1) country = "(FINLANDIA)"
-    if (country === "FR" & lang === 1) country = "(FRANCIA)"
-    if (country === "GF" & lang === 1) country = "(GUAYANA FRANCESA)"
-    if (country === "PF" & lang === 1) country = "(POLINESIA FRANCESA)"
-    if (country === "TF" & lang === 1) country = "(TIERRAS AUSTRALES Y ANTÁRTICAS FRANCESAS)"
-    if (country === "GA" & lang === 1) country = "(GABON)"
-    if (country === "GM" & lang === 1) country = "(GAMBIA)"
-    if (country === "GE" & lang === 1) country = "(GEORGIA)"
-    if (country === "DE" & lang === 1) country = "(ALEMANIA)"
-    if (country === "GH" & lang === 1) country = "(GHANA)"
-    if (country === "GI" & lang === 1) country = "(GIBRALTAR)"
-    if (country === "GR" & lang === 1) country = "(GRECIA)"
-    if (country === "GL" & lang === 1) country = "(GROENLANDIA)"
-    if (country === "GD" & lang === 1) country = "(GRANADA)"
-    if (country === "GP" & lang === 1) country = "(GUADELUPE)"
-    if (country === "GU" & lang === 1) country = "(GUAM)"
-    if (country === "GT" & lang === 1) country = "(GUATEMALA)"
-    if (country === "GG" & lang === 1) country = "(GUERNSEY)"
-    if (country === "GW" & lang === 1) country = "(GUINEA-BISAU)"
-    if (country === "GN" & lang === 1) country = "(GUINEA)"
-    if (country === "GY" & lang === 1) country = "(GUYANA)"
-    if (country === "HT" & lang === 1) country = "(HAITI)"
-    if (country === "HM" & lang === 1) country = "(ISLAS HEARD Y MCDONALD)"
-    if (country === "VA" & lang === 1) country = "(CIUDAD DEL VATICANO)"
-    if (country === "HN" & lang === 1) country = "(HONDURAS)"
-    if (country === "HK" & lang === 1) country = "(HONG KONG)"
-    if (country === "HU" & lang === 1) country = "(HUNGRIA)"
-    if (country === "IS" & lang === 1) country = "(ISLANDIA)"
-    if (country === "IN" & lang === 1) country = "(INDIA)"
-    if (country === "ID" & lang === 1) country = "(INDONESIA)"
-    if (country === "IR" & lang === 1) country = "(IRAN)"
-    if (country === "IQ" & lang === 1) country = "(IRAQ)"
-    if (country === "IE" & lang === 1) country = "(IRLANDA)"
-    if (country === "IM" & lang === 1) country = "(ISLA DE MAN)"
-    if (country === "IL" & lang === 1) country = "(ISRAEL)"
-    if (country === "IT" & lang === 1) country = "(ITALIA)"
-    if (country === "JM" & lang === 1) country = "(JAMAICA)"
-    if (country === "JP" & lang === 1) country = "(JAPON)"
-    if (country === "JE" & lang === 1) country = "(JERSEY)"
-    if (country === "JO" & lang === 1) country = "(JORDAN)"
-    if (country === "KZ" & lang === 1) country = "(KAZAJISTÁN)"
-    if (country === "KE" & lang === 1) country = "(KENIA)"
-    if (country === "KI" & lang === 1) country = "(KIRIBATI)"
-    if (country === "KP" & lang === 1) country = "(REPÚBLICA POPULAR DEMOCRÁTICA DE COREA)"
-    if (country === "KR" & lang === 1) country = "(REPÚBLICA DE COREA (COREA DEL SUR))"
-    if (country === "KW" & lang === 1) country = "(KUWAIT)"
-    if (country === "KG" & lang === 1) country = "(KIRGUISTÁN)"
-    if (country === "LA" & lang === 1) country = "(LAOS)"
-    if (country === "LV" & lang === 1) country = "(LETONIA)"
-    if (country === "LB" & lang === 1) country = "(LIBANO)"
-    if (country === "LS" & lang === 1) country = "(LESOTHO)"
-    if (country === "LR" & lang === 1) country = "(LIBERIA)"
-    if (country === "LY" & lang === 1) country = "(LIBIA)"
-    if (country === "LI" & lang === 1) country = "(LIECHTENSTEIN)"
-    if (country === "LT" & lang === 1) country = "(LITUANIA)"
-    if (country === "LU" & lang === 1) country = "(LUXEMBURGO)"
-    if (country === "MO" & lang === 1) country = "(MACAO)"
-    if (country === "MK" & lang === 1) country = "(MACEDONIA DEL NORTE)"
-    if (country === "MG" & lang === 1) country = "(MADAGASCAR)"
-    if (country === "MW" & lang === 1) country = "(MALAWI)"
-    if (country === "MY" & lang === 1) country = "(MALASIA)"
-    if (country === "MV" & lang === 1) country = "(MALDIVAS)"
-    if (country === "ML" & lang === 1) country = "(MALI)"
-    if (country === "MT" & lang === 1) country = "(MALTA)"
-    if (country === "MH" & lang === 1) country = "(ISLAS MARSHALL)"
-    if (country === "MQ" & lang === 1) country = "(MARTINICA)"
-    if (country === "MR" & lang === 1) country = "(MAURITANIA)"
-    if (country === "MU" & lang === 1) country = "(MAURICIO)"
-    if (country === "YT" & lang === 1) country = "(MAYOTTE)"
-    if (country === "MX" & lang === 1) country = "(MEXICO)"
-    if (country === "FM" & lang === 1) country = "(ESTADOS FEDERADOS DE MICRONESIA)"
-    if (country === "MD" & lang === 1) country = "(MOLDOVA)"
-    if (country === "MC" & lang === 1) country = "(MONACO)"
-    if (country === "MN" & lang === 1) country = "(MONGOLIA)"
-    if (country === "ME" & lang === 1) country = "(MONTENEGRO)"
-    if (country === "MS" & lang === 1) country = "(MONTSERRAT)"
-    if (country === "MA" & lang === 1) country = "(MARRUECOS)"
-    if (country === "MZ" & lang === 1) country = "(MOZAMBIQUE)"
-    if (country === "MM" & lang === 1) country = "(MYANMAR)"
-    if (country === "NA" & lang === 1) country = "(NAMIBIA)"
-    if (country === "NR" & lang === 1) country = "(NAURU)"
-    if (country === "NP" & lang === 1) country = "(NEPAL)"
-    if (country === "NL" & lang === 1) country = "(PAISES BAJOS)"
-    if (country === "NC" & lang === 1) country = "(NUEVA CALEDONIA)"
-    if (country === "NZ" & lang === 1) country = "(NUEVA ZELANDA)"
-    if (country === "NI" & lang === 1) country = "(NICARAGUA)"
-    if (country === "NG" & lang === 1) country = "(NIGERIA)"
-    if (country === "NE" & lang === 1) country = "(NIGER)"
-    if (country === "NU" & lang === 1) country = "(NIUE)"
-    if (country === "NF" & lang === 1) country = "(ISLA NORFOLK)"
-    if (country === "MP" & lang === 1) country = "(ISLAS MARIANAS DEL NORTE)"
-    if (country === "NO" & lang === 1) country = "(NORUEGA)"
-    if (country === "OM" & lang === 1) country = "(OMAN)"
-    if (country === "PK" & lang === 1) country = "(PAKISTAN)"
-    if (country === "PW" & lang === 1) country = "(PALAOS)"
-    if (country === "PS" & lang === 1) country = "(TERRITORIOS PALESTINOS)"
-    if (country === "PA" & lang === 1) country = "(PANAMA)"
-    if (country === "PG" & lang === 1) country = "(PAPUA NUEVA GUINEA)"
-    if (country === "PY" & lang === 1) country = "(PARAGUAY)"
-    if (country === "PE" & lang === 1) country = "(PERU)"
-    if (country === "PH" & lang === 1) country = "(FILIPINAS)"
-    if (country === "PN" & lang === 1) country = "(ISLAS PITCAIRN)"
-    if (country === "PL" & lang === 1) country = "(POLONIA)"
-    if (country === "PT" & lang === 1) country = "(PORTUGAL)"
-    if (country === "PR" & lang === 1) country = "(PUERTO RICO)"
-    if (country === "QA" & lang === 1) country = "(QATAR)"
-    if (country === "RE" & lang === 1) country = "(REUNION)"
-    if (country === "RO" & lang === 1) country = "(RUMANIA)"
-    if (country === "RU" & lang === 1) country = "(RUSIA)"
-    if (country === "RW" & lang === 1) country = "(RWANDA)"
-    if (country === "BL" & lang === 1) country = "(SAN BARTOLOME)"
-    if (country === "SH" & lang === 1) country = "(ISLA SANTA ELENA)"
-    if (country === "KN" & lang === 1) country = "(SAN CRISTOBAL Y NIEVES)"
-    if (country === "LC" & lang === 1) country = "(SANTA LUCIA)"
-    if (country === "MF" & lang === 1) country = "(SAN MARTIN)"
-    if (country === "PM" & lang === 1) country = "(SAN PEDRO Y MIQUELON)"
-    if (country === "VC" & lang === 1) country = "(SAN VICENTE Y LAS GRANADINAS)"
-    if (country === "WS" & lang === 1) country = "(SAMOA)"
-    if (country === "SM" & lang === 1) country = "(SAN MARINO)"
-    if (country === "ST" & lang === 1) country = "(SANTO TOMÉ Y PRÍNCIPE)"
-    if (country === "SA" & lang === 1) country = "(ARABIA SAUDITA)"
-    if (country === "SN" & lang === 1) country = "(SENEGAL)"
-    if (country === "RS" & lang === 1) country = "(SERBIA)"
-    if (country === "SC" & lang === 1) country = "(SEYCHELLES)"
-    if (country === "SL" & lang === 1) country = "(SIERRA LEONA)"
-    if (country === "SG" & lang === 1) country = "(SINGAPORE)"
-    if (country === "SX" & lang === 1) country = "(SAN MARTIN (PAISES BAJOS))"
-    if (country === "SK" & lang === 1) country = "(ESLOVAQUIA)"
-    if (country === "SI" & lang === 1) country = "(ESLOVENIA)"
-    if (country === "SB" & lang === 1) country = "(ISLAS SOLOMON)"
-    if (country === "SO" & lang === 1) country = "(SOMALIA)"
-    if (country === "ZA" & lang === 1) country = "(SUDAFRICA)"
-    if (country === "GS" & lang === 1) country = "(ISLAS GEORGIAS DEL SUR Y SANDWICH DEL SUR)"
-    if (country === "SS" & lang === 1) country = "(SUDAN DEL SUR)"
-    if (country === "ES" & lang === 1) country = "(ESPAÑA)"
-    if (country === "LK" & lang === 1) country = "(SRI LANKA)"
-    if (country === "SD" & lang === 1) country = "(SUDAN)"
-    if (country === "SR" & lang === 1) country = "(SURINAM)"
-    if (country === "SJ" & lang === 1) country = "(SVALBARD Y JAN MAYEN)"
-    if (country === "SZ" & lang === 1) country = "(SUAZILANDIA)"
-    if (country === "SE" & lang === 1) country = "(SUECIA)"
-    if (country === "CH" & lang === 1) country = "(SUIZA)"
-    if (country === "SY" & lang === 1) country = "(SIRIA)"
-    if (country === "TW" & lang === 1) country = "(TAIWAN)"
-    if (country === "TJ" & lang === 1) country = "(TAYIKISTÁN)"
-    if (country === "TZ" & lang === 1) country = "(TANZANIA)"
-    if (country === "TH" & lang === 1) country = "(TAILANDIA)"
-    if (country === "TL" & lang === 1) country = "(TIMOR ORIENTAL)"
-    if (country === "TG" & lang === 1) country = "(TOGO)"
-    if (country === "TK" & lang === 1) country = "(TOKELAU)"
-    if (country === "TO" & lang === 1) country = "(TONGA)"
-    if (country === "TT" & lang === 1) country = "(TRINIDAD AND TOBAGO)"
-    if (country === "TN" & lang === 1) country = "(TUNEZ)"
-    if (country === "TR" & lang === 1) country = "(TURQUIA)"
-    if (country === "TM" & lang === 1) country = "(TURKMENISTAN)"
-    if (country === "TC" & lang === 1) country = "(ISLAS TURCAS Y CAICOS)"
-    if (country === "TV" & lang === 1) country = "(TUVALU)"
-    if (country === "UG" & lang === 1) country = "(UGANDA)"
-    if (country === "UA" & lang === 1) country = "(UCRANIA)"
-    if (country === "AE" & lang === 1) country = "(EMIRATOS ÁRABES UNIDOS)"
-    if (country === "GB" & lang === 1) country = "(REINO UNIDO)"
-    if (country === "UM" & lang === 1) country = "(ISLAS ULTRAMARINAS MENORES DE LOS ESTADOS UNIDOS)"
-    if (country === "US" & lang === 1) country = "(ESTADOS UNIDOS)"
-    if (country === "UY" & lang === 1) country = "(URUGUAY)"
-    if (country === "UZ" & lang === 1) country = "(UZBEKISTAN)"
-    if (country === "VU" & lang === 1) country = "(VANUATU)"
-    if (country === "VE" & lang === 1) country = "(VENEZUELA)"
-    if (country === "VN" & lang === 1) country = "(VIETNAM)"
-    if (country === "VG" & lang === 1) country = "(ISLAS VÍRGENES BRITÁNICAS)"
-    if (country === "VI" & lang === 1) country = "(ISLAS VÍRGENES DE ESTADOS UNIDOS)"
-    if (country === "WF" & lang === 1) country = "(WALLIS AND FUTUNA)"
-    if (country === "EH" & lang === 1) country = "(SAHARA OCCIDENTAL)"
-    if (country === "YE" & lang === 1) country = "(YEMEN)"
-    if (country === "ZM" & lang === 1) country = "(ZAMBIA)"
-    if (country === "ZW" & lang === 1) country = "(ZIMBABUE)"
-
+    let array = [
+    { country: "AF" , en: "(AFGHANISTAN)" , es: "(AFGANISTAN)" },
+    { country: "AX" , en: "(ALAND ISLANDS)" , es: "(ISLAS ALAND)" },
+    { country: "AL" , en: "(ALBANIA)" , es: "(ALBANIA)" },
+    { country: "DZ" , en: "(ALGERIA)" , es: "(ALGERIA)" },
+    { country: "AS" , en: "(AMERICAN SAMOA)" , es: "(SAMOA AMERICANA)" },
+    { country: "AD" , en: "(ANDORRA)" , es: "(ANDORRA)" },
+    { country: "AO" , en: "(ANGOLA)" , es: "(ANGOLA)" },
+    { country: "AI" , en: "(ANGUILLA)" , es: "(ANGUILA)" },
+    { country: "AQ" , en: "(ANTARCTICA)" , es: "(ANTARTIDA)" },
+    { country: "AG" , en: "(ANTIGUA AND BARBUDA)" , es: "(ANTIGUA Y BARBUDA)" },
+    { country: "AR" , en: "(ARGENTINA)" , es: "(ARGENTINA)" },
+    { country: "AM" , en: "(ARMENIA)" , es: "(ARMENIA)" },
+    { country: "AW" , en: "(ARUBA)" , es: "(ARUBA)" },
+    { country: "AU" , en: "(AUSTRALIA)" , es: "(AUSTRALIA)" },
+    { country: "AT" , en: "(AUSTRIA)" , es: "(AUSTRIA)" },
+    { country: "AZ" , en: "(AZERBAIJAN)" , es: "(AZERBAIYÁN)" },
+    { country: "BS" , en: "(BAHAMAS)" , es: "(BAHAMAS)" },
+    { country: "BH" , en: "(BAHRAIN)" , es: "(BAREIN)" },
+    { country: "BD" , en: "(BANGLADESH)" , es: "(BANGLADES)" },
+    { country: "BB" , en: "(BARBADOS)" , es: "(BARBADOS)" },
+    { country: "BY" , en: "(BELARUS)" , es: "(BIELORRUSIA)" },
+    { country: "BE" , en: "(BELGIUM)" , es: "(BELGICA)" },
+    { country: "BZ" , en: "(BELIZE)" , es: "(BELICE)" },
+    { country: "BJ" , en: "(BENIN)" , es: "(BENIN)" },
+    { country: "BM" , en: "(BERMUDA)" , es: "(BERMUDA)" },
+    { country: "BT" , en: "(BHUTAN)" , es: "(BUTAN)" },
+    { country: "BO" , en: "(BOLIVIA)" , es: "(BOLIVIA)" },
+    { country: "BQ" , en: "(SINT EUSTATIUS AND SABA BONAIRE)" , es: "(CARIBE NEERLANDÉS)" },
+    { country: "BA" , en: "(BOSNIA AND HERZEGOVINA)" , es: "(BOSNIA AND HERZEGOVINA)" },
+    { country: "BW" , en: "(BOTSWANA)" , es: "(BOTSUANA)" },
+    { country: "BV" , en: "(BOUVET ISLAND)" , es: "(ISLA BOUVET)" },
+    { country: "BR" , en: "(BRAZIL)" , es: "(BRASIL)" },
+    { country: "IO" , en: "(BRITISH INDIAN OCEAN TERRITORY)" , es: "(TERRITORIO BRITÁNICO DEL OCÉANO ÍNDICO)" },
+    { country: "BN" , en: "(BRUNEI DARUSSALAM)" , es: "(BRUNEI)" },
+    { country: "BG" , en: "(BULGARIA)" , es: "(BULGARIA)" },
+    { country: "BF" , en: "(BURKINA FASO)" , es: "(BURKINA FASO)" },
+    { country: "BI" , en: "(BURUNDI)" , es: "(BURUNDI)" },
+    { country: "KH" , en: "(CAMBODIA)" , es: "(CAMBODIA)" },
+    { country: "CM" , en: "(CAMEROON)" , es: "(CAMERUN)" },
+    { country: "CA" , en: "(CANADA)" , es: "(CANADA)" },
+    { country: "CV" , en: "(CAPE VERDE)" , es: "(CABO VERDE)" },
+    { country: "KY" , en: "(CAYMAN ISLANDS)" , es: "(ISLAS CAIMAN)" },
+    { country: "CF" , en: "(CENTRAL AFRICAN REPUBLIC)" , es: "(REPÚBLICA CENTROAFRICANA)" },
+    { country: "TD" , en: "(CHAD)" , es: "(CHAD)" },
+    { country: "CL" , en: "(CHILE)" , es: "(CHILE)" },
+    { country: "CN" , en: "(CHINA)" , es: "(CHINA)" },
+    { country: "CX" , en: "(CHRISTMAS ISLAND)" , es: "(ISLA DE NAVIDAD)" },
+    { country: "CC" , en: "(COCOS (KEELING) ISLANDS)" , es: "(ISLAS COCOS)" },
+    { country: "CO" , en: "(COLOMBIA)" , es: "(COLOMBIA)" },
+    { country: "KM" , en: "(COMOROS)" , es: "(COMOROS)" },
+    { country: "CD" , en: "(THE DEMOCRATIC REPUBLIC OF THE CONGO)" , es: "(REPÚBLICA DEMOCRÁTICA DEL CONGO)" },
+    { country: "CG" , en: "(CONGO)" , es: "(CONGO)" },
+    { country: "CK" , en: "(COOK ISLANDS)" , es: "(COOK ISLANDS)" },
+    { country: "CR" , en: "(COSTA RICA)" , es: "(COSTA RICA)" },
+    { country: "CI" , en: "(CÔTE D'IVOIRE)" , es: "(COSTA DE MARFIL)" },
+    { country: "HR" , en: "(CROATIA)" , es: "(CROACIA)" },
+    { country: "CU" , en: "(CUBA)" , es: "(CUBA)" },
+    { country: "CW" , en: "(CURAÇAO)" , es: "(CURAZAO)" },
+    { country: "CY" , en: "(CYPRUS)" , es: "(CHIPRE)" },
+    { country: "CZ" , en: "(CZECH REPUBLIC)" , es: "(RECUPLICA CHECA)" },
+    { country: "DK" , en: "(DENMARK)" , es: "(DINAMARCA)" },
+    { country: "DJ" , en: "(DJIBOUTI)" , es: "(YIBUTI)" },
+    { country: "DM" , en: "(DOMINICA)" , es: "(DOMINICA)" },
+    { country: "DO" , en: "(DOMINICAN REPUBLIC)" , es: "(RECUPLICA DOMINICANA)" },
+    { country: "EC" , en: "(ECUADOR)" , es: "(ECUADOR)" },
+    { country: "EG" , en: "(EGYPT)" , es: "(EGIPTO)" },
+    { country: "SV" , en: "(EL SALVADOR)" , es: "(EL SALVADOR)" },
+    { country: "GQ" , en: "(EQUATORIAL GUINEA)" , es: "(GUINEA ECUATORIAL)" },
+    { country: "ER" , en: "(ERITREA)" , es: "(ERITREA)" },
+    { country: "EE" , en: "(ESTONIA)" , es: "(ESTONIA)" },
+    { country: "ET" , en: "(ETHIOPIA)" , es: "(ETIOPIA)" },
+    { country: "FK" , en: "(FALKLAND ISLANDS)" , es: "(ISLAS MALVINAS)" },
+    { country: "FO" , en: "(FAROE ISLANDS)" , es: "(ISLAS FEROE)" },
+    { country: "FJ" , en: "(FIJI)" , es: "(FIJI)" },
+    { country: "FI" , en: "(FINLAND)" , es: "(FINLANDIA)" },
+    { country: "FR" , en: "(FRANCE)" , es: "(FRANCIA)" },
+    { country: "GF" , en: "(FRENCH GUIANA)" , es: "(GUAYANA FRANCESA)" },
+    { country: "PF" , en: "(FRENCH POLYNESIA)" , es: "(POLINESIA FRANCESA)" },
+    { country: "TF" , en: "(FRENCH SOUTHERN TERRITORIES)" , es: "(TIERRAS AUSTRALES Y ANTÁRTICAS FRANCESAS)" },
+    { country: "GA" , en: "(GABON)" , es: "(GABON)" },
+    { country: "GM" , en: "(GAMBIA)" , es: "(GAMBIA)" },
+    { country: "GE" , en: "(GEORGIA)" , es: "(GEORGIA)" },
+    { country: "DE" , en: "(GERMANY)" , es: "(ALEMANIA)" },
+    { country: "GH" , en: "(GHANA)" , es: "(GHANA)" },
+    { country: "GI" , en: "(GIBRALTAR)" , es: "(GIBRALTAR)" },
+    { country: "GR" , en: "(GREECE)" , es: "(GRECIA)" },
+    { country: "GL" , en: "(GREENLAND)" , es: "(GROENLANDIA)" },
+    { country: "GD" , en: "(GRENADA)" , es: "(GRANADA)" },
+    { country: "GP" , en: "(GUADELOUPE)" , es: "(GUADELUPE)" },
+    { country: "GU" , en: "(GUAM)" , es: "(GUAM)" },
+    { country: "GT" , en: "(GUATEMALA)" , es: "(GUATEMALA)" },
+    { country: "GG" , en: "(GUERNSEY)" , es: "(GUERNSEY)" },
+    { country: "GW" , en: "(GUINEA-BISSAU)" , es: "(GUINEA-BISAU)" },
+    { country: "GN" , en: "(GUINEA)" , es: "(GUINEA)" },
+    { country: "GY" , en: "(GUYANA)" , es: "(GUYANA)" },
+    { country: "HT" , en: "(HAITI)" , es: "(HAITI)" },
+    { country: "HM" , en: "(HEARD ISLAND AND MCDONALD ISLANDS)" , es: "(ISLAS HEARD Y MCDONALD)" },
+    { country: "VA" , en: "(HOLY SEE (VATICAN CITY STATE))" , es: "(CIUDAD DEL VATICANO)" },
+    { country: "HN" , en: "(HONDURAS)" , es: "(HONDURAS)" },
+    { country: "HK" , en: "(HONG KONG)" , es: "(HONG KONG)" },
+    { country: "HU" , en: "(HUNGARY)" , es: "(HUNGRIA)" },
+    { country: "IS" , en: "(ICELAND)" , es: "(ISLANDIA)" },
+    { country: "IN" , en: "(INDIA)" , es: "(INDIA)" },
+    { country: "ID" , en: "(INDONESIA)" , es: "(INDONESIA)" },
+    { country: "IR" , en: "(ISLAMIC REPUBLIC OF IRAN)" , es: "(IRAN)" },
+    { country: "IQ" , en: "(IRAQ)" , es: "(IRAQ)" },
+    { country: "IE" , en: "(IRELAND)" , es: "(IRLANDA)" },
+    { country: "IM" , en: "(ISLE OF MAN)" , es: "(ISLA DE MAN)" },
+    { country: "IL" , en: "(ISRAEL)" , es: "(ISRAEL)" },
+    { country: "IT" , en: "(ITALY)" , es: "(ITALIA)" },
+    { country: "JM" , en: "(JAMAICA)" , es: "(JAMAICA)" },
+    { country: "JP" , en: "(JAPAN)" , es: "(JAPON)" },
+    { country: "JE" , en: "(JERSEY)" , es: "(JERSEY)" },
+    { country: "JO" , en: "(JORDAN)" , es: "(JORDAN)" },
+    { country: "KZ" , en: "(KAZAKHSTAN)" , es: "(KAZAJISTÁN)" },
+    { country: "KE" , en: "(KENYA)" , es: "(KENIA)" },
+    { country: "KI" , en: "(KIRIBATI)" , es: "(KIRIBATI)" },
+    { country: "KP" , en: "(DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA)" , es: "(REPÚBLICA POPULAR DEMOCRÁTICA DE COREA)" },
+    { country: "KR" , en: "(REPUBLIC OF KOREA)" , es: "(REPÚBLICA DE COREA (COREA DEL SUR))" },
+    { country: "KW" , en: "(KUWAIT)" , es: "(KUWAIT)" },
+    { country: "KG" , en: "(KYRGYZSTAN)" , es: "(KIRGUISTÁN)" },
+    { country: "LA" , en: "(LAO PEOPLE'S DEMOCRATIC REPUBLIC)" , es: "(LAOS)" },
+    { country: "LV" , en: "(LATVIA)" , es: "(LETONIA)" },
+    { country: "LB" , en: "(LEBANON)" , es: "(LIBANO)" },
+    { country: "LS" , en: "(LESOTHO)" , es: "(LESOTHO)" },
+    { country: "LR" , en: "(LIBERIA)" , es: "(LIBERIA)" },
+    { country: "LY" , en: "(LIBYAN ARAB JAMAHIRIYA)" , es: "(LIBIA)" },
+    { country: "LI" , en: "(LIECHTENSTEIN)" , es: "(LIECHTENSTEIN)" },
+    { country: "LT" , en: "(LITHUANIA)" , es: "(LITUANIA)" },
+    { country: "LU" , en: "(LUXEMBOURG)" , es: "(LUXEMBURGO)" },
+    { country: "MO" , en: "(MACAO)" , es: "(MACAO)" },
+    { country: "MK" , en: "(MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF)" , es: "(MACEDONIA DEL NORTE)" },
+    { country: "MG" , en: "(MADAGASCAR)" , es: "(MADAGASCAR)" },
+    { country: "MW" , en: "(MALAWI)" , es: "(MALAWI)" },
+    { country: "MY" , en: "(MALAYSIA)" , es: "(MALASIA)" },
+    { country: "MV" , en: "(MALDIVES)" , es: "(MALDIVAS)" },
+    { country: "ML" , en: "(MALI)" , es: "(MALI)" },
+    { country: "MT" , en: "(MALTA)" , es: "(MALTA)" },
+    { country: "MH" , en: "(MARSHALL ISLANDS)" , es: "(ISLAS MARSHALL)" },
+    { country: "MQ" , en: "(MARTINIQUE)" , es: "(MARTINICA)" },
+    { country: "MR" , en: "(MAURITANIA)" , es: "(MAURITANIA)" },
+    { country: "MU" , en: "(MAURITIUS)" , es: "(MAURICIO)" },
+    { country: "YT" , en: "(MAYOTTE)" , es: "(MAYOTTE)" },
+    { country: "MX" , en: "(MEXICO)" , es: "(MEXICO)" },
+    { country: "FM" , en: "(MICRONESIA, FEDERATED STATES OF)" , es: "(ESTADOS FEDERADOS DE MICRONESIA)" },
+    { country: "MD" , en: "(MOLDOVA, REPUBLIC OF)" , es: "(MOLDOVA)" },
+    { country: "MC" , en: "(MONACO)" , es: "(MONACO)" },
+    { country: "MN" , en: "(MONGOLIA)" , es: "(MONGOLIA)" },
+    { country: "ME" , en: "(MONTENEGRO)" , es: "(MONTENEGRO)" },
+    { country: "MS" , en: "(MONTSERRAT)" , es: "(MONTSERRAT)" },
+    { country: "MA" , en: "(MOROCCO)" , es: "(MARRUECOS)" },
+    { country: "MZ" , en: "(MOZAMBIQUE)" , es: "(MOZAMBIQUE)" },
+    { country: "MM" , en: "(MYANMAR)" , es: "(MYANMAR)" },
+    { country: "NA" , en: "(NAMIBIA)" , es: "(NAMIBIA)" },
+    { country: "NR" , en: "(NAURU)" , es: "(NAURU)" },
+    { country: "NP" , en: "(NEPAL)" , es: "(NEPAL)" },
+    { country: "NL" , en: "(NETHERLANDS)" , es: "(PAISES BAJOS)" },
+    { country: "NC" , en: "(NEW CALEDONIA)" , es: "(NUEVA CALEDONIA)" },
+    { country: "NZ" , en: "(NEW ZEALAND)" , es: "(NUEVA ZELANDA)" },
+    { country: "NI" , en: "(NICARAGUA)" , es: "(NICARAGUA)" },
+    { country: "NG" , en: "(NIGERIA)" , es: "(NIGERIA)" },
+    { country: "NE" , en: "(NIGER)" , es: "(NIGER)" },
+    { country: "NU" , en: "(NIUE)" , es: "(NIUE)" },
+    { country: "NF" , en: "(NORFOLK ISLAND)" , es: "(ISLA NORFOLK)" },
+    { country: "MP" , en: "(NORTHERN MARIANA ISLANDS)" , es: "(ISLAS MARIANAS DEL NORTE)" },
+    { country: "NO" , en: "(NORWAY)" , es: "(NORUEGA)" },
+    { country: "OM" , en: "(OMAN)" , es: "(OMAN)" },
+    { country: "PK" , en: "(PAKISTAN)" , es: "(PAKISTAN)" },
+    { country: "PW" , en: "(PALAU)" , es: "(PALAOS)" },
+    { country: "PS" , en: "(OCCUPIED PALESTINIAN TERRITORY)" , es: "(TERRITORIOS PALESTINOS)" },
+    { country: "PA" , en: "(PANAMA)" , es: "(PANAMA)" },
+    { country: "PG" , en: "(PAPUA NEW GUINEA)" , es: "(PAPUA NUEVA GUINEA)" },
+    { country: "PY" , en: "(PARAGUAY)" , es: "(PARAGUAY)" },
+    { country: "PE" , en: "(PERU)" , es: "(PERU)" },
+    { country: "PH" , en: "(PHILIPPINES)" , es: "(FILIPINAS)" },
+    { country: "PN" , en: "(PITCAIRN)" , es: "(ISLAS PITCAIRN)" },
+    { country: "PL" , en: "(POLAND)" , es: "(POLONIA)" },
+    { country: "PT" , en: "(PORTUGAL)" , es: "(PORTUGAL)" },
+    { country: "PR" , en: "(PUERTO RICO)" , es: "(PUERTO RICO)" },
+    { country: "QA" , en: "(QATAR)" , es: "(QATAR)" },
+    { country: "RE" , en: "(RÉUNION)" , es: "(REUNION)" },
+    { country: "RO" , en: "(ROMANIA)" , es: "(RUMANIA)" },
+    { country: "RU" , en: "(RUSSIAN FEDERATION)" , es: "(RUSIA)" },
+    { country: "RW" , en: "(RWANDA)" , es: "(RWANDA)" },
+    { country: "BL" , en: "(SAINT BARTHÉLEMY)" , es: "(SAN BARTOLOME)" },
+    { country: "SH" , en: "(SAINT HELENA)" , es: "(ISLA SANTA ELENA)" },
+    { country: "KN" , en: "(SAINT KITTS AND NEVIS)" , es: "(SAN CRISTOBAL Y NIEVES)" },
+    { country: "LC" , en: "(SAINT LUCIA)" , es: "(SANTA LUCIA)" },
+    { country: "MF" , en: "(SAINT MARTIN (FRENCH PART))" , es: "(SAN MARTIN)" },
+    { country: "PM" , en: "(SAINT PIERRE AND MIQUELON)" , es: "(SAN PEDRO Y MIQUELON)" },
+    { country: "VC" , en: "(SAINT VINCENT AND THE GRENADINES)" , es: "(SAN VICENTE Y LAS GRANADINAS)" },
+    { country: "WS" , en: "(SAMOA)" , es: "(SAMOA)" },
+    { country: "SM" , en: "(SAN MARINO)" , es: "(SAN MARINO)" },
+    { country: "ST" , en: "(SAO TOME AND PRINCIPE)" , es: "(SANTO TOMÉ Y PRÍNCIPE)" },
+    { country: "SA" , en: "(SAUDI ARABIA)" , es: "(ARABIA SAUDITA)" },
+    { country: "SN" , en: "(SENEGAL)" , es: "(SENEGAL)" },
+    { country: "RS" , en: "(SERBIA)" , es: "(SERBIA)" },
+    { country: "SC" , en: "(SEYCHELLES)" , es: "(SEYCHELLES)" },
+    { country: "SL" , en: "(SIERRA LEONE)" , es: "(SIERRA LEONA)" },
+    { country: "SG" , en: "(SINGAPORE)" , es: "(SINGAPORE)" },
+    { country: "SX" , en: "(SINT MAARTEN (DUTCH PART))" , es: "(SAN MARTIN (PAISES BAJOS))" },
+    { country: "SK" , en: "(SLOVAKIA)" , es: "(ESLOVAQUIA)" },
+    { country: "SI" , en: "(SLOVENIA)" , es: "(ESLOVENIA)" },
+    { country: "SB" , en: "(SOLOMON ISLANDS)" , es: "(ISLAS SOLOMON)" },
+    { country: "SO" , en: "(SOMALIA)" , es: "(SOMALIA)" },
+    { country: "ZA" , en: "(SOUTH AFRICA)" , es: "(SUDAFRICA)" },
+    { country: "GS" , en: "(SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS)" , es: "(ISLAS GEORGIAS DEL SUR Y SANDWICH DEL SUR)" },
+    { country: "SS" , en: "(SOUTH SUDAN)" , es: "(SUDAN DEL SUR)" },
+    { country: "ES" , en: "(SPAIN)" , es: "(ESPAÑA)" },
+    { country: "LK" , en: "(SRI LANKA)" , es: "(SRI LANKA)" },
+    { country: "SD" , en: "(SUDAN)" , es: "(SUDAN)" },
+    { country: "SR" , en: "(SURINAME)" , es: "(SURINAM)" },
+    { country: "SJ" , en: "(SVALBARD AND JAN MAYEN)" , es: "(SVALBARD Y JAN MAYEN)" },
+    { country: "SZ" , en: "(SWAZILAND)" , es: "(SUAZILANDIA)" },
+    { country: "SE" , en: "(SWEDEN)" , es: "(SUECIA)" },
+    { country: "CH" , en: "(SWITZERLAND)" , es: "(SUIZA)" },
+    { country: "SY" , en: "(SYRIAN ARAB REPUBLIC)" , es: "(SIRIA)" },
+    { country: "TW" , en: "(PROVINCE OF CHINA TAIWAN)" , es: "(TAIWAN)" },
+    { country: "TJ" , en: "(TAJIKISTAN)" , es: "(TAYIKISTÁN)" },
+    { country: "TZ" , en: "(UNITED REPUBLIC OF TANZANIA)" , es: "(TANZANIA)" },
+    { country: "TH" , en: "(THAILAND)" , es: "(TAILANDIA)" },
+    { country: "TL" , en: "(TIMOR-LESTE)" , es: "(TIMOR ORIENTAL)" },
+    { country: "TG" , en: "(TOGO)" , es: "(TOGO)" },
+    { country: "TK" , en: "(TOKELAU)" , es: "(TOKELAU)" },
+    { country: "TO" , en: "(TONGA)" , es: "(TONGA)" },
+    { country: "TT" , en: "(TRINIDAD AND TOBAGO)" , es: "(TRINIDAD AND TOBAGO)" },
+    { country: "TN" , en: "(TUNISIA)" , es: "(TUNEZ)" },
+    { country: "TR" , en: "(TURKEY)" , es: "(TURQUIA)" },
+    { country: "TM" , en: "(TURKMENISTAN)" , es: "(TURKMENISTAN)" },
+    { country: "TC" , en: "(TURKS AND CAICOS ISLANDS)" , es: "(ISLAS TURCAS Y CAICOS)" },
+    { country: "TV" , en: "(TUVALU)" , es: "(TUVALU)" },
+    { country: "UG" , en: "(UGANDA)" , es: "(UGANDA)" },
+    { country: "UA" , en: "(UKRAINE)" , es: "(UCRANIA)" },
+    { country: "AE" , en: "(UNITED ARAB EMIRATES)" , es: "(EMIRATOS ÁRABES UNIDOS)" },
+    { country: "GB" , en: "(UNITED KINGDOM)" , es: "(REINO UNIDO)" },
+    { country: "UM" , en: "(UNITED STATES MINOR OUTLYING ISLANDS)" , es: "(ISLAS ULTRAMARINAS MENORES DE LOS ESTADOS UNIDOS)" },
+    { country: "US" , en: "(UNITED STATES)" , es: "(ESTADOS UNIDOS)" },
+    { country: "UY" , en: "(URUGUAY)" , es: "(URUGUAY)" },
+    { country: "UZ" , en: "(UZBEKISTAN)" , es: "(UZBEKISTAN)" },
+    { country: "VU" , en: "(VANUATU)" , es: "(VANUATU)" },
+    { country: "VE" , en: "(VENEZUELA)" , es: "(VENEZUELA)" },
+    { country: "VN" , en: "(VIETNAM)" , es: "(VIETNAM)" },
+    { country: "VG" , en: "(VIRGIN ISLANDS, BRITISH)" , es: "(ISLAS VÍRGENES BRITÁNICAS)" },
+    { country: "VI" , en: "(VIRGIN ISLANDS, USA)" , es: "(ISLAS VÍRGENES DE ESTADOS UNIDOS)" },
+    { country: "WF" , en: "(WALLIS AND FUTUNA)" , es: "(WALLIS AND FUTUNA)" },
+    { country: "EH" , en: "(WESTERN SAHARA)" , es: "(SAHARA OCCIDENTAL)" },
+    { country: "YE" , en: "(YEMEN)" , es: "(YEMEN)" },
+    { country: "ZM" , en: "(ZAMBIA)" , es: "(ZAMBIA)" },
+    { country: "ZW" , en: "(ZIMBABWE)" , es: "(ZIMBABUE)" },
+    ]
     
 
-    if (country === "AF" & lang === 0) country = "(AFGHANISTAN)"
-    if (country === "AX" & lang === 0) country = "(ALAND ISLANDS)"
-    if (country === "AL" & lang === 0) country = "(ALBANIA)"
-    if (country === "DZ" & lang === 0) country = "(ALGERIA)"
-    if (country === "AS" & lang === 0) country = "(AMERICAN SAMOA)"
-    if (country === "AD" & lang === 0) country = "(ANDORRA)"
-    if (country === "AO" & lang === 0) country = "(ANGOLA)"
-    if (country === "AI" & lang === 0) country = "(ANGUILLA)"
-    if (country === "AQ" & lang === 0) country = "(ANTARCTICA)"
-    if (country === "AG" & lang === 0) country = "(ANTIGUA AND BARBUDA)"
-    if (country === "AR" & lang === 0) country = "(ARGENTINA)"
-    if (country === "AM" & lang === 0) country = "(ARMENIA)"
-    if (country === "AW" & lang === 0) country = "(ARUBA)"
-    if (country === "AU" & lang === 0) country = "(AUSTRALIA)"
-    if (country === "AT" & lang === 0) country = "(AUSTRIA)"
-    if (country === "AZ" & lang === 0) country = "(AZERBAIJAN)"
-    if (country === "BS" & lang === 0) country = "(BAHAMAS)"
-    if (country === "BH" & lang === 0) country = "(BAHRAIN)"
-    if (country === "BD" & lang === 0) country = "(BANGLADESH)"
-    if (country === "BB" & lang === 0) country = "(BARBADOS)"
-    if (country === "BY" & lang === 0) country = "(BELARUS)"
-    if (country === "BE" & lang === 0) country = "(BELGIUM)"
-    if (country === "BZ" & lang === 0) country = "(BELIZE)"
-    if (country === "BJ" & lang === 0) country = "(BENIN)"
-    if (country === "BM" & lang === 0) country = "(BERMUDA)"
-    if (country === "BT" & lang === 0) country = "(BHUTAN)"
-    if (country === "BO" & lang === 0) country = "(BOLIVIA)"
-    if (country === "BQ" & lang === 0) country = "(SINT EUSTATIUS AND SABA BONAIRE)"
-    if (country === "BA" & lang === 0) country = "(BOSNIA AND HERZEGOVINA)"
-    if (country === "BW" & lang === 0) country = "(BOTSWANA)"
-    if (country === "BV" & lang === 0) country = "(BOUVET ISLAND)"
-    if (country === "BR" & lang === 0) country = "(BRAZIL)"
-    if (country === "IO" & lang === 0) country = "(BRITISH INDIAN OCEAN TERRITORY)"
-    if (country === "BN" & lang === 0) country = "(BRUNEI DARUSSALAM)"
-    if (country === "BG" & lang === 0) country = "(BULGARIA)"
-    if (country === "BF" & lang === 0) country = "(BURKINA FASO)"
-    if (country === "BI" & lang === 0) country = "(BURUNDI)"
-    if (country === "KH" & lang === 0) country = "(CAMBODIA)"
-    if (country === "CM" & lang === 0) country = "(CAMEROON)"
-    if (country === "CA" & lang === 0) country = "(CANADA)"
-    if (country === "CV" & lang === 0) country = "(CAPE VERDE)"
-    if (country === "KY" & lang === 0) country = "(CAYMAN ISLANDS)"
-    if (country === "CF" & lang === 0) country = "(CENTRAL AFRICAN REPUBLIC)"
-    if (country === "TD" & lang === 0) country = "(CHAD)"
-    if (country === "CL" & lang === 0) country = "(CHILE)"
-    if (country === "CN" & lang === 0) country = "(CHINA)"
-    if (country === "CX" & lang === 0) country = "(CHRISTMAS ISLAND)"
-    if (country === "CC" & lang === 0) country = "(COCOS (KEELING) ISLANDS)"
-    if (country === "CO" & lang === 0) country = "(COLOMBIA)"
-    if (country === "KM" & lang === 0) country = "(COMOROS)"
-    if (country === "CD" & lang === 0) country = "(THE DEMOCRATIC REPUBLIC OF THE CONGO)"
-    if (country === "CG" & lang === 0) country = "(CONGO)"
-    if (country === "CK" & lang === 0) country = "(COOK ISLANDS)"
-    if (country === "CR" & lang === 0) country = "(COSTA RICA)"
-    if (country === "CI" & lang === 0) country = "(CÔTE D'IVOIRE)"
-    if (country === "HR" & lang === 0) country = "(CROATIA)"
-    if (country === "CU" & lang === 0) country = "(CUBA)"
-    if (country === "CW" & lang === 0) country = "(CURAÇAO)"
-    if (country === "CY" & lang === 0) country = "(CYPRUS)"
-    if (country === "CZ" & lang === 0) country = "(CZECH REPUBLIC)"
-    if (country === "DK" & lang === 0) country = "(DENMARK)"
-    if (country === "DJ" & lang === 0) country = "(DJIBOUTI)"
-    if (country === "DM" & lang === 0) country = "(DOMINICA)"
-    if (country === "DO" & lang === 0) country = "(DOMINICAN REPUBLIC)"
-    if (country === "EC" & lang === 0) country = "(ECUADOR)"
-    if (country === "EG" & lang === 0) country = "(EGYPT)"
-    if (country === "SV" & lang === 0) country = "(EL SALVADOR)"
-    if (country === "GQ" & lang === 0) country = "(EQUATORIAL GUINEA)"
-    if (country === "ER" & lang === 0) country = "(ERITREA)"
-    if (country === "EE" & lang === 0) country = "(ESTONIA)"
-    if (country === "ET" & lang === 0) country = "(ETHIOPIA)"
-    if (country === "FK" & lang === 0) country = "(FALKLAND ISLANDS)"
-    if (country === "FO" & lang === 0) country = "(FAROE ISLANDS)"
-    if (country === "FJ" & lang === 0) country = "(FIJI)"
-    if (country === "FI" & lang === 0) country = "(FINLAND)"
-    if (country === "FR" & lang === 0) country = "(FRANCE)"
-    if (country === "GF" & lang === 0) country = "(FRENCH GUIANA)"
-    if (country === "PF" & lang === 0) country = "(FRENCH POLYNESIA)"
-    if (country === "TF" & lang === 0) country = "(FRENCH SOUTHERN TERRITORIES)"
-    if (country === "GA" & lang === 0) country = "(GABON)"
-    if (country === "GM" & lang === 0) country = "(GAMBIA)"
-    if (country === "GE" & lang === 0) country = "(GEORGIA)"
-    if (country === "DE" & lang === 0) country = "(GERMANY)"
-    if (country === "GH" & lang === 0) country = "(GHANA)"
-    if (country === "GI" & lang === 0) country = "(GIBRALTAR)"
-    if (country === "GR" & lang === 0) country = "(GREECE)"
-    if (country === "GL" & lang === 0) country = "(GREENLAND)"
-    if (country === "GD" & lang === 0) country = "(GRENADA)"
-    if (country === "GP" & lang === 0) country = "(GUADELOUPE)"
-    if (country === "GU" & lang === 0) country = "(GUAM)"
-    if (country === "GT" & lang === 0) country = "(GUATEMALA)"
-    if (country === "GG" & lang === 0) country = "(GUERNSEY)"
-    if (country === "GW" & lang === 0) country = "(GUINEA-BISSAU)"
-    if (country === "GN" & lang === 0) country = "(GUINEA)"
-    if (country === "GY" & lang === 0) country = "(GUYANA)"
-    if (country === "HT" & lang === 0) country = "(HAITI)"
-    if (country === "HM" & lang === 0) country = "(HEARD ISLAND AND MCDONALD ISLANDS)"
-    if (country === "VA" & lang === 0) country = "(HOLY SEE (VATICAN CITY STATE))"
-    if (country === "HN" & lang === 0) country = "(HONDURAS)"
-    if (country === "HK" & lang === 0) country = "(HONG KONG)"
-    if (country === "HU" & lang === 0) country = "(HUNGARY)"
-    if (country === "IS" & lang === 0) country = "(ICELAND)"
-    if (country === "IN" & lang === 0) country = "(INDIA)"
-    if (country === "ID" & lang === 0) country = "(INDONESIA)"
-    if (country === "IR" & lang === 0) country = "(ISLAMIC REPUBLIC OF IRAN)"
-    if (country === "IQ" & lang === 0) country = "(IRAQ)"
-    if (country === "IE" & lang === 0) country = "(IRELAND)"
-    if (country === "IM" & lang === 0) country = "(ISLE OF MAN)"
-    if (country === "IL" & lang === 0) country = "(ISRAEL)"
-    if (country === "IT" & lang === 0) country = "(ITALY)"
-    if (country === "JM" & lang === 0) country = "(JAMAICA)"
-    if (country === "JP" & lang === 0) country = "(JAPAN)"
-    if (country === "JE" & lang === 0) country = "(JERSEY)"
-    if (country === "JO" & lang === 0) country = "(JORDAN)"
-    if (country === "KZ" & lang === 0) country = "(KAZAKHSTAN)"
-    if (country === "KE" & lang === 0) country = "(KENYA)"
-    if (country === "KI" & lang === 0) country = "(KIRIBATI)"
-    if (country === "KP" & lang === 0) country = "(DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA)"
-    if (country === "KR" & lang === 0) country = "(REPUBLIC OF KOREA)"
-    if (country === "KW" & lang === 0) country = "(KUWAIT)"
-    if (country === "KG" & lang === 0) country = "(KYRGYZSTAN)"
-    if (country === "LA" & lang === 0) country = "(LAO PEOPLE'S DEMOCRATIC REPUBLIC)"
-    if (country === "LV" & lang === 0) country = "(LATVIA)"
-    if (country === "LB" & lang === 0) country = "(LEBANON)"
-    if (country === "LS" & lang === 0) country = "(LESOTHO)"
-    if (country === "LR" & lang === 0) country = "(LIBERIA)"
-    if (country === "LY" & lang === 0) country = "(LIBYAN ARAB JAMAHIRIYA)"
-    if (country === "LI" & lang === 0) country = "(LIECHTENSTEIN)"
-    if (country === "LT" & lang === 0) country = "(LITHUANIA)"
-    if (country === "LU" & lang === 0) country = "(LUXEMBOURG)"
-    if (country === "MO" & lang === 0) country = "(MACAO)"
-    if (country === "MK" & lang === 0) country = "(MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF)"
-    if (country === "MG" & lang === 0) country = "(MADAGASCAR)"
-    if (country === "MW" & lang === 0) country = "(MALAWI)"
-    if (country === "MY" & lang === 0) country = "(MALAYSIA)"
-    if (country === "MV" & lang === 0) country = "(MALDIVES)"
-    if (country === "ML" & lang === 0) country = "(MALI)"
-    if (country === "MT" & lang === 0) country = "(MALTA)"
-    if (country === "MH" & lang === 0) country = "(MARSHALL ISLANDS)"
-    if (country === "MQ" & lang === 0) country = "(MARTINIQUE)"
-    if (country === "MR" & lang === 0) country = "(MAURITANIA)"
-    if (country === "MU" & lang === 0) country = "(MAURITIUS)"
-    if (country === "YT" & lang === 0) country = "(MAYOTTE)"
-    if (country === "MX" & lang === 0) country = "(MEXICO)"
-    if (country === "FM" & lang === 0) country = "(MICRONESIA, FEDERATED STATES OF)"
-    if (country === "MD" & lang === 0) country = "(MOLDOVA, REPUBLIC OF)"
-    if (country === "MC" & lang === 0) country = "(MONACO)"
-    if (country === "MN" & lang === 0) country = "(MONGOLIA)"
-    if (country === "ME" & lang === 0) country = "(MONTENEGRO)"
-    if (country === "MS" & lang === 0) country = "(MONTSERRAT)"
-    if (country === "MA" & lang === 0) country = "(MOROCCO)"
-    if (country === "MZ" & lang === 0) country = "(MOZAMBIQUE)"
-    if (country === "MM" & lang === 0) country = "(MYANMAR)"
-    if (country === "NA" & lang === 0) country = "(NAMIBIA)"
-    if (country === "NR" & lang === 0) country = "(NAURU)"
-    if (country === "NP" & lang === 0) country = "(NEPAL)"
-    if (country === "NL" & lang === 0) country = "(NETHERLANDS)"
-    if (country === "NC" & lang === 0) country = "(NEW CALEDONIA)"
-    if (country === "NZ" & lang === 0) country = "(NEW ZEALAND)"
-    if (country === "NI" & lang === 0) country = "(NICARAGUA)"
-    if (country === "NG" & lang === 0) country = "(NIGERIA)"
-    if (country === "NE" & lang === 0) country = "(NIGER)"
-    if (country === "NU" & lang === 0) country = "(NIUE)"
-    if (country === "NF" & lang === 0) country = "(NORFOLK ISLAND)"
-    if (country === "MP" & lang === 0) country = "(NORTHERN MARIANA ISLANDS)"
-    if (country === "NO" & lang === 0) country = "(NORWAY)"
-    if (country === "OM" & lang === 0) country = "(OMAN)"
-    if (country === "PK" & lang === 0) country = "(PAKISTAN)"
-    if (country === "PW" & lang === 0) country = "(PALAU)"
-    if (country === "PS" & lang === 0) country = "(OCCUPIED PALESTINIAN TERRITORY)"
-    if (country === "PA" & lang === 0) country = "(PANAMA)"
-    if (country === "PG" & lang === 0) country = "(PAPUA NEW GUINEA)"
-    if (country === "PY" & lang === 0) country = "(PARAGUAY)"
-    if (country === "PE" & lang === 0) country = "(PERU)"
-    if (country === "PH" & lang === 0) country = "(PHILIPPINES)"
-    if (country === "PN" & lang === 0) country = "(PITCAIRN)"
-    if (country === "PL" & lang === 0) country = "(POLAND)"
-    if (country === "PT" & lang === 0) country = "(PORTUGAL)"
-    if (country === "PR" & lang === 0) country = "(PUERTO RICO)"
-    if (country === "QA" & lang === 0) country = "(QATAR)"
-    if (country === "RE" & lang === 0) country = "(RÉUNION)"
-    if (country === "RO" & lang === 0) country = "(ROMANIA)"
-    if (country === "RU" & lang === 0) country = "(RUSSIAN FEDERATION)"
-    if (country === "RW" & lang === 0) country = "(RWANDA)"
-    if (country === "BL" & lang === 0) country = "(SAINT BARTHÉLEMY)"
-    if (country === "SH" & lang === 0) country = "(SAINT HELENA)"
-    if (country === "KN" & lang === 0) country = "(SAINT KITTS AND NEVIS)"
-    if (country === "LC" & lang === 0) country = "(SAINT LUCIA)"
-    if (country === "MF" & lang === 0) country = "(SAINT MARTIN (FRENCH PART))"
-    if (country === "PM" & lang === 0) country = "(SAINT PIERRE AND MIQUELON)"
-    if (country === "VC" & lang === 0) country = "(SAINT VINCENT AND THE GRENADINES)"
-    if (country === "WS" & lang === 0) country = "(SAMOA)"
-    if (country === "SM" & lang === 0) country = "(SAN MARINO)"
-    if (country === "ST" & lang === 0) country = "(SAO TOME AND PRINCIPE)"
-    if (country === "SA" & lang === 0) country = "(SAUDI ARABIA)"
-    if (country === "SN" & lang === 0) country = "(SENEGAL)"
-    if (country === "RS" & lang === 0) country = "(SERBIA)"
-    if (country === "SC" & lang === 0) country = "(SEYCHELLES)"
-    if (country === "SL" & lang === 0) country = "(SIERRA LEONE)"
-    if (country === "SG" & lang === 0) country = "(SINGAPORE)"
-    if (country === "SX" & lang === 0) country = "(SINT MAARTEN (DUTCH PART))"
-    if (country === "SK" & lang === 0) country = "(SLOVAKIA)"
-    if (country === "SI" & lang === 0) country = "(SLOVENIA)"
-    if (country === "SB" & lang === 0) country = "(SOLOMON ISLANDS)"
-    if (country === "SO" & lang === 0) country = "(SOMALIA)"
-    if (country === "ZA" & lang === 0) country = "(SOUTH AFRICA)"
-    if (country === "GS" & lang === 0) country = "(SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS)"
-    if (country === "SS" & lang === 0) country = "(SOUTH SUDAN)"
-    if (country === "ES" & lang === 0) country = "(SPAIN)"
-    if (country === "LK" & lang === 0) country = "(SRI LANKA)"
-    if (country === "SD" & lang === 0) country = "(SUDAN)"
-    if (country === "SR" & lang === 0) country = "(SURINAME)"
-    if (country === "SJ" & lang === 0) country = "(SVALBARD AND JAN MAYEN)"
-    if (country === "SZ" & lang === 0) country = "(SWAZILAND)"
-    if (country === "SE" & lang === 0) country = "(SWEDEN)"
-    if (country === "CH" & lang === 0) country = "(SWITZERLAND)"
-    if (country === "SY" & lang === 0) country = "(SYRIAN ARAB REPUBLIC)"
-    if (country === "TW" & lang === 0) country = "(PROVINCE OF CHINA TAIWAN)"
-    if (country === "TJ" & lang === 0) country = "(TAJIKISTAN)"
-    if (country === "TZ" & lang === 0) country = "(UNITED REPUBLIC OF TANZANIA)"
-    if (country === "TH" & lang === 0) country = "(THAILAND)"
-    if (country === "TL" & lang === 0) country = "(TIMOR-LESTE)"
-    if (country === "TG" & lang === 0) country = "(TOGO)"
-    if (country === "TK" & lang === 0) country = "(TOKELAU)"
-    if (country === "TO" & lang === 0) country = "(TONGA)"
-    if (country === "TT" & lang === 0) country = "(TRINIDAD AND TOBAGO)"
-    if (country === "TN" & lang === 0) country = "(TUNISIA)"
-    if (country === "TR" & lang === 0) country = "(TURKEY)"
-    if (country === "TM" & lang === 0) country = "(TURKMENISTAN)"
-    if (country === "TC" & lang === 0) country = "(TURKS AND CAICOS ISLANDS)"
-    if (country === "TV" & lang === 0) country = "(TUVALU)"
-    if (country === "UG" & lang === 0) country = "(UGANDA)"
-    if (country === "UA" & lang === 0) country = "(UKRAINE)"
-    if (country === "AE" & lang === 0) country = "(UNITED ARAB EMIRATES)"
-    if (country === "GB" & lang === 0) country = "(UNITED KINGDOM)"
-    if (country === "UM" & lang === 0) country = "(UNITED STATES MINOR OUTLYING ISLANDS)"
-    if (country === "US" & lang === 0) country = "(UNITED STATES)"
-    if (country === "UY" & lang === 0) country = "(URUGUAY)"
-    if (country === "UZ" & lang === 0) country = "(UZBEKISTAN)"
-    if (country === "VU" & lang === 0) country = "(VANUATU)"
-    if (country === "VE" & lang === 0) country = "(VENEZUELA)"
-    if (country === "VN" & lang === 0) country = "(VIETNAM)"
-    if (country === "VG" & lang === 0) country = "(VIRGIN ISLANDS, BRITISH)"
-    if (country === "VI" & lang === 0) country = "(VIRGIN ISLANDS, USA)"
-    if (country === "WF" & lang === 0) country = "(WALLIS AND FUTUNA)"
-    if (country === "EH" & lang === 0) country = "(WESTERN SAHARA)"
-    if (country === "YE" & lang === 0) country = "(YEMEN)"
-    if (country === "ZM" & lang === 0) country = "(ZAMBIA)"
-    if (country === "ZW" & lang === 0) country = "(ZIMBABWE)"
 
-
-    
-
-    
 
     if (lang === 1) {
         return (

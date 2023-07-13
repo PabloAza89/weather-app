@@ -1,6 +1,7 @@
 import { Box, Dialog, Typography } from '@mui/material';
 import "../../styles/AboutSX";
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 interface langI {
   lang: string,
@@ -21,12 +22,16 @@ function About(/* {lang}:langI */) {
   return (
     <Box className="about">
       <Typography> { english ?
-        `Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry!! &#x1F680;` :
-        `Hi i'm Pablo ! And this is my weather app created during my Bootcamp at Henry! &#x1F680;`
-      }
+        `Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry!!` :
+        `Hi i'm Pablo ! And this is my weather app created during my Bootcamp at Henry!`
+      }&#x1F680;
         </Typography>
-      {/* <br></br> */}
-      <a href="https://www.linkedin.com/in/juan-pablo-azambuyo/" target="_blank" rel="noopener noreferrer">&#10145; MI PERFIL DE LINKEDIN &#11013;</a>
+            <a
+              href={"https://www.linkedin.com/in/juan-pablo-azambuyo"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >&#10145; { english ? `MY LINKEDIN PROFILE` : `MI PERFIL DE LINKEDIN`} &#11013;</a>
+        
     </Box>
   )
   
