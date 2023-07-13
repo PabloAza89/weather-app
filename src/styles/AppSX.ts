@@ -1,4 +1,14 @@
-.App {
+export const background = () => {
+  return {
+    background: 'url("./img/bg-image.jpg")',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    display: 'flex',
+    flexDirection: 'column',
+  }
+}
+
+/* .App {
   text-align: center;
   
   
@@ -11,7 +21,7 @@
 }
 
 body {
-  background: url("../img/bg-image.jpg");  
+  background: url("./img/bg-image.jpg");  
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -21,7 +31,7 @@ body {
 
 @media (max-width: 450px) {
   body {
-    background: url("../img/bg-image-rotate.jpg");  
+    background: url("./img/bg-image-rotate.jpg");  
     background-size:180%;
     background-repeat: no-repeat;
     display: flex;
@@ -79,8 +89,6 @@ body {
   position: relative;
   margin-right: 6%;
   margin-top: 1.5%;
-  /* /* justify-content: center; */
-  /* margin-top: 30px;
-  margin-left: 25vmax */
+
   
-} 
+}  */

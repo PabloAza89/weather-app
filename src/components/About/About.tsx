@@ -1,9 +1,11 @@
-import React from 'react'
-import "./About.css";
+import { Box, Dialog, Typography } from '@mui/material';
+import "../../styles/AboutSX";
 
-function About({lang}) {
-  //const { lang } = Footer()
-  //console.log("BB", lang)
+interface langI {
+  lang: string,
+}
+
+function About({lang}:langI) {
 
   if (parseInt(lang) === 1) {
     return (
@@ -23,12 +25,6 @@ function About({lang}) {
       
     )
   }
-
-  /* return (
-    <div>Esto es el 'About' y mostramos nuestro linkedIn con etiqueta a</div>
-  ) */
-
-  
 }
 
 export default About
