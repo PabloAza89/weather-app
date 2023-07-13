@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Box } from '@mui/material';
 import "./App.css";
-import Nav from "./components/Nav.jsx";
+import NavBar from "./components/NavBar/NavBar";
 import Cards from "./components/Cards.jsx";
 import { Route, Routes, useLocation, Link } from "react-router-dom";
 import About from "./components/About/About";
+import Language from "./components/Language/Language";
 import City from "./components/City.jsx";
 import Map from "./components/Map.jsx"
 //import En from "./img/lan-en.png";
@@ -43,14 +44,14 @@ function App() {
   });
 
 
-    const [lang, setLang] = useState(0);
+    // const [lang, setLang] = useState(0);
   
-    const langEs = (e:any) => {
-        setLang(1);
-    };
-    const langEn = (e:any) => {
-        setLang(0);
-    };
+    // const langEs = (e:any) => {
+    //     setLang(1);
+    // };
+    // const langEn = (e:any) => {
+    //     setLang(0);
+    // };
 
     const [cities, setCities] = useState<any>([]);
 
@@ -110,7 +111,15 @@ function App() {
 
     return (
         <Box sx={s.background}>
-            <Routes>
+          <Routes>
+            <Route path="/" element={<>
+              <NavBar />
+              <Language />
+            </>}/>
+            <Route path="/about" element={<>
+              <About />
+              <Language />
+            </>}/>
             {/* <Route path="/weather-app" render={() => <Nav onSearch={onSearch} lang={lang} />}/>
             <Route exact path="/weather-app" render={() => (<Cards cities={cities} onClose={onClose} lang={lang} />)}
             />
@@ -120,9 +129,9 @@ function App() {
             
 
             
-            <Route exact path="/weather-app/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route>
+            <Route exact path="/weather-app/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route> */}
           
-            <footer className="footer">
+            {/* <footer className="footer">
                 <Link onClick={langEs}> <img className="image" src={Es} alt="" /> </Link>
                 <Link onClick={langEn}> <img className="image" src={En} alt="" /> </Link>
                  

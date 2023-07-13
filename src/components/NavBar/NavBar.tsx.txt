@@ -1,12 +1,23 @@
 import React from "react";
-import Logo from "../img/logo.png";
-import SearchBar from "./SearchBar.jsx";
+import Logo from "../../images/logo.png";
+import SearchBar from "../SearchBar.jsx";
+import { useSelector } from 'react-redux';
 import "./Nav.css";
 
 import { Link } from "react-router-dom";
 
-function Nav({ onSearch, lang }) {
-  if (parseInt(lang) === 1) {
+function Nav(/* { onSearch } */) {
+
+  const darkMode = useSelector( (state: {darkMode:boolean}) => state.darkMode)
+  const english = useSelector((state: {english:boolean}) => state.english)
+  const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
+  const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
+  const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
+  const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
+  const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
+  const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
+
+  if (english) {
     return (
       <nav className="navbar">
         <Link id="background" to="/weather-app">
@@ -27,11 +38,11 @@ function Nav({ onSearch, lang }) {
         <Link className="aboutNav" to="/weather-app/about">
           <span >ACERCA</span>
         </Link>
-        <SearchBar onSearch={onSearch} lang={lang}/>
+        {/* <SearchBar onSearch={onSearch} lang={lang}/> */}
       </nav>
     );
     
-  } else {
+   /* else {
     return (
       <div className="NavbarContainer">
         <nav   className="navbar">
@@ -50,7 +61,7 @@ function Nav({ onSearch, lang }) {
             Weatherify
             </div>
           </Link> 
-          <SearchBar onSearch={onSearch} lang={lang}/>
+          {/* <SearchBar onSearch={onSearch} lang={lang}/> */}
         </nav>        
         <Link className="aboutNav" to="/weather-app/about">
         <span >ABOUT</span>
@@ -58,7 +69,7 @@ function Nav({ onSearch, lang }) {
     </div>
     );
     
-  }
+  } */
   
 }
 

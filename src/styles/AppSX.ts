@@ -1,6 +1,6 @@
 export const background = () => {
   return {
-    background: 'url("./img/bg-image.jpg")',
+    background: 'url("./images/bg-image.jpg")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     display: 'flex',
@@ -21,7 +21,7 @@ export const background = () => {
 }
 
 body {
-  background: url("./img/bg-image.jpg");  
+  background: url("./images/bg-image.jpg");  
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -31,7 +31,7 @@ body {
 
 @media (max-width: 450px) {
   body {
-    background: url("./img/bg-image-rotate.jpg");  
+    background: url("./images/bg-image-rotate.jpg");  
     background-size:180%;
     background-repeat: no-repeat;
     display: flex;
