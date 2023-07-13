@@ -1,3 +1,10 @@
+export function addCity(addCity:any) {
+  return {
+    type: 'ADD_CITY',
+    payload: addCity
+  }
+};
+
 export function languageChanger(languageChanger:boolean) {
   return {
     type: 'LANGUAGE_CHANGER',

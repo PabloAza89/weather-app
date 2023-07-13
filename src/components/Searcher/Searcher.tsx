@@ -1,15 +1,37 @@
 import { useState } from "react";
 import "./Searcher.css";
-import { useSelector } from 'react-redux';
 import { Box, FormControl, Input, Button, TextField } from '@mui/material';
 import * as s from '../../styles/SearcherSX';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  addCity
+} from '../../actions';
 
 export default function SearchBar() {
 
+  const dispatch = useDispatch()
+
   const apiKey = "996c7f0e4e0b0953dddafed0a123ef9c&units=metric";
 
+  //const [cities, setCities] = useState<arrayI[]>([]);
   const [city, setCity] = useState("");
 
+  interface citiesI {
+    id: number,
+    name: string,
+    country: string,
+    min: number,
+    max: number,
+    wind: number,
+    temp: number,
+    weather: string,
+    img: string,
+    clouds: number,
+    latitud: number,
+    longitud: number,
+  }
+
+  const cities = useSelector((state: {cities:citiesI[]}) => state.cities)
   const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
   const english = useSelector((state: {english:boolean}) => state.english)
   const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
@@ -34,14 +56,13 @@ export default function SearchBar() {
     longitud: number,
   }
 
-  const [cities, setCities] = useState<arrayI[]>([]);
 
   function onSearch(ciudad:string) {
     fetch( `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}` )
     .then((r) => r.json())
     .then((res) => {
       if (res.main !== undefined) {
-        const ciudad = {
+        const newCity = {
           id: res.id,
           name: res.name,
           country: res.sys.country,
@@ -55,7 +76,9 @@ export default function SearchBar() {
           latitud: res.coord.lat,
           longitud: res.coord.lon,
         };
-        setCities(() => [...cities, ciudad]);
+        //setCities(() => [...cities, ciudad]);
+        //dispatch(addCity([...cities, ciudad]))
+        dispatch(addCity([...cities, newCity]))
       } else alert("City not found!");
     });
   }

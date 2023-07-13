@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Box } from '@mui/material';
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import Cards from "./components/Cards.jsx";
+import Cards from "./components/Cards/Cards";
 import { Route, Routes, useLocation, Link } from "react-router-dom";
 import About from "./components/About/About";
 import Language from "./components/Language/Language";
@@ -62,7 +62,7 @@ function App() {
           <Language />
         </>}/>
         {/*
-        <Route exact path="/weather-app" render={() => (<Cards cities={cities} onClose={onClose} lang={lang} />)}
+        <Route exact path="/weather-app" render={() => (<Cards cities={cities} onClose={onClose} />)}
         />
         <Route exact path="/weather-app/city/:ciudadId" render={() => (<City onFilter={onFilter} lang={lang} />)}/>
         <Route exact path="/weather-app/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route> */}

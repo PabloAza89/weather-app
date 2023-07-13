@@ -1,4 +1,20 @@
+interface citiesI {
+  id: number,
+  name: string,
+  country: string,
+  min: number,
+  max: number,
+  wind: number,
+  temp: number,
+  weather: string,
+  img: string,
+  clouds: number,
+  latitud: number,
+  longitud: number,
+}
+
 interface initialStateI {
+  cities: citiesI[],
   english: boolean,
   darkMode: boolean,
   width: number,
@@ -18,6 +34,7 @@ interface initialStateI {
 }
 
 const initialState: initialStateI = {
+  cities: [],
   english: localStorage.getItem('langEn') === null ? true : JSON.parse(`${localStorage.getItem('langEn')}`),
   darkMode: localStorage.getItem('night') === null ? false : JSON.parse(`${localStorage.getItem('night')}`),
   width: window.screen.width,
@@ -36,9 +53,13 @@ const initialState: initialStateI = {
   fullScreen: window.screen.width === window.innerWidth && window.screen.height === window.innerHeight ? true : false
 }
 
-
 const reducer = (state = initialState, action: {type: string; payload: any}) => {
   switch (action.type) {
+    case 'ADD_CITY':
+      return {
+        ...state,
+        cities: action.payload
+      };
     case 'LANGUAGE_CHANGER':
       return {
         ...state,
@@ -130,4 +151,3 @@ const reducer = (state = initialState, action: {type: string; payload: any}) => 
 };
 
 export default reducer
-
