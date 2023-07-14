@@ -4,110 +4,62 @@ import { Box, Typography, Button } from '@mui/material';
 import * as s from '../../styles/CardSX';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCity } from '../../actions';
-//import countries from '../../styles/Countries.JSON';
+import countriesJSON from '../../styles/Countries.json';
 
 interface cardI {
   min: number,
   max: number,
   name: string,
   img: string,
-  /* onClose: any, */
   id: number,
   country: string,
 }
 
-const Card = ({ min, max, name, img, /* onClose, */ id, country }: cardI) => {
+const Card = ({ min, max, name, img, id, country }: cardI) => {
 
-  const dispatch = useDispatch()
-
-  interface citiesI {
-    id: number,
-    name: string,
-    country: string,
-    min: number,
-    max: number,
-    wind: number,
-    temp: number,
-    weather: string,
-    img: string,
-    clouds: number,
-    latitud: number,
-    longitud: number,
+  interface EnEsI {
+    en: string,
+    es: string
   }
 
-  const cities = useSelector((state: {cities:citiesI[]}) => state.cities)
+  interface countriesCodeI {
+    [key: string]: EnEsI
+  }
 
-  //console.log("A VER", countries.AF.toString())
+  const countryCode = countriesJSON as countriesCodeI
+  const english = useSelector((state: {english:boolean}) => state.english)
+  const dispatch = useDispatch()
 
-  // interface enEsI {
-  //   en: string,
-  //   es: string,
-  // }
+  function cityDeleter(id:number) {
+    dispatch(deleteCity(id))
+  }
 
-  // interface countryCodeI {
-  //   [key: string]: enEsI
-  // }
-
-    // function onClose(id:any) {
-    //     setCities((oldCities:any) => oldCities.filter((c:any) => c.id !== id));
-    // }
-
-    //arr.map(e => e.id).indexOf(13)
-
-    function cityDeleter(id:number) {
-      /* setCities((oldCities:any) => oldCities.filter((c:any) => c.id !== id)); */
-      //cities.length
-      //cities.map(e => e.id).indexOf(id)
-      dispatch(deleteCity(id))
-
-    }
-
-
-    
+  console.log("country", country)
 
   return (
     <Box sx={s.background}>
-      {/* <Button sx={s.button} onClick={onClose(id)} >X</Button> */}
-      {/* <Button sx={s.button} onClick={() => console.log(id)} >X</Button> */}
-      <Button sx={s.button} onClick={() => cityDeleter(id)} >X</Button>
-      <div className="card-body">
-          <Link to={`/weather-app/city/${id}`}>
-              <h3 className="card-title">{name}</h3>
-          </Link>
-          <p className="card-country">{country}</p>
-          <div className="row">
-              <div
-                  id="minAlign"
-                  className="col-sm-4 col-md-4 col-lg-4"
-              >
-                  <h5>Min</h5>
-                  <h5>{Math.round(min * 10) / 10} °C</h5>
-              </div>
-              <div
-                  id="minAlign"
-                  className="col-sm-4 col-md-4 col-lg-4"
-              >
-                  <h5>Max</h5>
-                  <h5>{Math.round(max * 10) / 10} °C</h5>
-              </div>
-              <div id="iconAlign" className="col-sm-4 col-md-4 col-lg-4">
-                  <img
-                      className="iconoClima"
-                      src={
-                          "https://openweathermap.org/img/wn/" +
-                          img +
-                          "@2x.png"
-                      }
-                      width="80"
-                      height="80"
-                      alt=""
-                  />
-              </div>
-          </div>
-      </div>
+      <Button sx={s.button} onClick={() => cityDeleter(id)}>X</Button>
+      <Link to={`/cityDetail/${id}`}>
+        <Typography>{name}</Typography>
+      </Link>
+      <Typography>{ english ? countryCode[country].en : countryCode[country].es }</Typography>
+      <Box>
+        <Typography>
+          Min
+          { english ? `${Math.round((min * (9 / 5) + 32) * 10) / 10} °F` : `${Math.round(min * 10) / 10} °C` }
+        </Typography>
+        <Typography>
+          Max
+          { english ? `${Math.round((max * (9 / 5) + 32) * 10) / 10} °F` : `${Math.round(max * 10) / 10} °C` }
+        </Typography>
+        <Box
+          component="img"
+          src={`https://openweathermap.org/img/wn/${img}@2x.png`}
+        />
+      </Box>
+      
     </Box>
   );
-    
 }
 
 export default Card

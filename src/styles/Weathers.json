@@ -1,0 +1,7 @@
+{
+  "Clouds": { "en": "Clouds", "es": "Nublado" },
+  "Clear": { "en": "Clear", "es": "Despejado" },
+  "Rain": { "en": "Rain", "es": "Lluvioso" },
+  "Mist": { "en": "Mist", "es": "Neblina" },
+  "Fog": { "en": "Fog", "es": "Niebla" }
+}

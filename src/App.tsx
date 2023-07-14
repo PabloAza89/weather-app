@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { Box } from '@mui/material';
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import Cards from "./components/Cards/Cards";
+import CardsMapper from "./components/CardsMapper/CardsMapper";
 import { Route, Routes, useLocation, Link } from "react-router-dom";
 import About from "./components/About/About";
 import Language from "./components/Language/Language";
-import City from "./components/City.jsx";
+import CityDetail from "./components/CityDetail/CityDetail";
 import Map from "./components/Map.jsx"
 import * as s from './styles/AppSX';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,7 +19,6 @@ import {
 function App() {
 
   const dispatch = useDispatch()
-  const location = useLocation()
 
   useEffect(() => {
     function handleResize() {
@@ -39,22 +38,12 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   });
 
-    // function onClose(id:any) {
-    //     setCities((oldCities:any) => oldCities.filter((c:any) => c.id !== id));
-    // }
-
-    // function onFilter(ciudadId:any) {
-    //     let ciudad = cities.filter((c:any) => c.id === parseInt(ciudadId));
-    //     if (ciudad.length > 0) return ciudad[0];
-    //     else return "City not found!";
-    // }
-
   return (
     <Box sx={s.background}>
       <Routes>
         <Route path="/" element={<>
           <NavBar />
-          <Cards />
+          <CardsMapper />
           <Language />
         </>}/>
         <Route path="/about" element={<>
@@ -62,11 +51,15 @@ function App() {
           <About />
           <Language />
         </>}/>
+        <Route path="/cityDetail/:cityId" element={<>
+          <CityDetail />
+          <Language />
+        </>}/>
+
         {/*
-        <Route exact path="/weather-app" render={() => (<Cards cities={cities} onClose={onClose} />)}
-        />
-        <Route exact path="/weather-app/city/:ciudadId" render={() => (<City onFilter={onFilter} lang={lang} />)}/>
-        <Route exact path="/weather-app/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route> */}
+          <Route exact path="/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route>
+        */}
+
       </Routes>
     </Box>
   );

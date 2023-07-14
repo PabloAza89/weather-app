@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css';
+import './CardsMapper.css';
 import { useDispatch, useSelector } from 'react-redux';
 import Card from '../Card/Card';
 import countries from '../../styles/Countries.json';
@@ -12,7 +12,7 @@ interface cardsI {
 
 export default function Cards(/* {cities, onClose}: cardsI */) {
 
-  console.log("A VER", countries)
+  //console.log("A VER", countries)
 
   interface citiesI {
     id: number,
