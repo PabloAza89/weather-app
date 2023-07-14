@@ -25,8 +25,8 @@ export default function Cards(/* {cities, onClose}: cardsI */) {
     weather: string,
     img: string,
     clouds: number,
-    latitud: number,
-    longitud: number,
+    latitude: number,
+    longitude: number,
   }
 
   const cities = useSelector((state: {cities: citiesI[]}) => state.cities)

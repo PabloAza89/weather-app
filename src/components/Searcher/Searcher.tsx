@@ -25,8 +25,8 @@ export default function SearchBar() {
     weather: string,
     img: string,
     clouds: number,
-    latitud: number,
-    longitud: number,
+    latitude: number,
+    longitude: number,
   }
 
   const cities = useSelector((state: {cities:citiesI[]}) => state.cities)
@@ -50,8 +50,8 @@ export default function SearchBar() {
     weather: string,
     img: string,
     clouds: number,
-    latitud: number,
-    longitud: number,
+    latitude: number,
+    longitude: number,
   }
 
 
@@ -71,8 +71,8 @@ export default function SearchBar() {
           weather: res.weather[0].main,
           img: res.weather[0].icon,
           clouds: res.clouds.all,
-          latitud: res.coord.lat,
-          longitud: res.coord.lon,
+          latitude: res.coord.lat,
+          longitude: res.coord.lon,
         };
         if (cities.filter(e => e.id === newCity.id).length === 0) dispatch(addCity([...cities, newCity]))
         else alert("City already exists!");
@@ -80,7 +80,7 @@ export default function SearchBar() {
     });
   }
 
-  console.log(cities)
+  //console.log(cities)
 
   return (
     <Box

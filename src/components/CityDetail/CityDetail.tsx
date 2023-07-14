@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as s from '../../styles/CityDetailSX';
 import countriesJSON from '../../styles/Countries.json';
 import weathersJSON from '../../styles/Weathers.json';
+import Map from "../Map/Map"
 
 function CityDetail() {
 
@@ -40,8 +41,8 @@ function CityDetail() {
     weather: string,
     img: string,
     clouds: number,
-    latitud: number,
-    longitud: number,
+    latitude: number,
+    longitude: number,
   }
 
   const english = useSelector((state: {english:boolean}) => state.english)
@@ -78,6 +79,8 @@ function CityDetail() {
         `Clouds amount: ${city.clouds} %` :
         `Cantidad de nubes: ${city.clouds} %`
       }</Typography>
+      { Map({latitude: city.latitude, longitude:city.longitude}) }
+      <Box id="map" sx={s.map}></Box>
     </Box>
   )
 }

@@ -16,3 +16,10 @@ export const background = () => {
     alignSelf: 'center',
   }
 }
+
+export const map = () => {
+  return {
+    height: '300px',
+    width: '600px',
+  }
+}

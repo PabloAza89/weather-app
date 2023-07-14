@@ -34,7 +34,7 @@ const Card = ({ min, max, name, img, id, country }: cardI) => {
     dispatch(deleteCity(id))
   }
 
-  console.log("country", country)
+  //console.log("country", country)
 
   return (
     <Box sx={s.background}>
@@ -57,7 +57,6 @@ const Card = ({ min, max, name, img, id, country }: cardI) => {
           src={`https://openweathermap.org/img/wn/${img}@2x.png`}
         />
       </Box>
-      
     </Box>
   );
 }

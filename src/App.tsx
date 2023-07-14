@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Box } from '@mui/material';
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import CardsMapper from "./components/CardsMapper/CardsMapper";
-import { Route, Routes, useLocation, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import Language from "./components/Language/Language";
 import CityDetail from "./components/CityDetail/CityDetail";
-import Map from "./components/Map.jsx"
 import * as s from './styles/AppSX';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {
   setCurrentWidth, setHeight, setLarLand,
   setLarPort, setMedLand, setMedPort, setMinLand,
@@ -52,14 +51,10 @@ function App() {
           <Language />
         </>}/>
         <Route path="/cityDetail/:cityId" element={<>
+          <NavBar />
           <CityDetail />
           <Language />
         </>}/>
-
-        {/*
-          <Route exact path="/city/:ciudadId"> <Map className="mapAlign" onFilter={onFilter} /> </Route>
-        */}
-
       </Routes>
     </Box>
   );

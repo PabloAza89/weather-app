@@ -9,8 +9,8 @@ interface citiesI {
   weather: string,
   img: string,
   clouds: number,
-  latitud: number,
-  longitud: number,
+  latitude: number,
+  longitude: number,
 }
 
 interface initialStateI {
