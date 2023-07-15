@@ -3,7 +3,7 @@ import { Box, Typography, Button } from '@mui/material';
 import * as s from '../../styles/CardSX';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCity } from '../../actions';
-import countriesJSON from '../../styles/Countries.json';
+import countriesJSON from '../../json/Countries.json';
 
 interface cardI {
   min: number,

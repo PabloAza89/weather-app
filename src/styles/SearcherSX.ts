@@ -1,6 +1,24 @@
 // width 160 + 160 = 320
 // height 30
 
+export const background = () => {
+  return {
+    ':hover': {
+      background: 'yellow',
+    }
+  }
+}
+
+export const tooltip = () => {
+  return {
+    //backgroundColor: 'yellow',
+    //background: 'yellow',
+    background: '#f5f5f9',
+    //color: 'rgba(0, 0, 0, 0.87)',
+    color: 'red',
+  }
+}
+
 export const input = () => {
   return {
     background: '#F0F0F0',

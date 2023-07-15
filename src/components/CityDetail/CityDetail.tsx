@@ -2,8 +2,8 @@ import { Box, Typography } from '@mui/material';
 import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import * as s from '../../styles/CityDetailSX';
-import countriesJSON from '../../styles/Countries.json';
-import weathersJSON from '../../styles/Weathers.json';
+import countriesJSON from '../../json/Countries.json';
+import weathersJSON from '../../json/Weathers.json';
 import Map from "../Map/Map"
 
 function CityDetail() {
@@ -59,23 +59,23 @@ function CityDetail() {
     </Box>)
   else return (
     <Box sx={s.background}>
-      <Typography>{city.name}</Typography>
-      <Typography>{ english ?
+      <Typography sx={s.cityName}>{city.name}</Typography>
+      <Typography sx={s.countryName}>{ english ?
         countryCode[city.country].en : countryCode[city.country].es
       }</Typography>
-      <Typography>{ english ?
+      <Typography sx={s.tempWeatherWindClouds}>{ english ?
         `Temperature: ${Math.round(((city.temp * (9/5)) + 32) * 10) / 10} ºF` :
         `Temperatura: ${Math.round(city.temp * 10) / 10} ºF`
       }</Typography>
-      <Typography>{ english ?
+      <Typography sx={s.tempWeatherWindClouds}>{ english ?
         `Weather: ${weathers[city.weather].en}` :
         `Clima: ${weathers[city.weather].es}`
       }</Typography>
-      <Typography>{ english ?
+      <Typography sx={s.tempWeatherWindClouds}>{ english ?
         `Wind: ${Math.round((city.wind * 0.621371) * 10) / 10} MPH` :
         `Viento: ${Math.round(city.wind * 10) / 10} MPH`
       }</Typography>
-      <Typography>{ english ?
+      <Typography sx={s.tempWeatherWindClouds}>{ english ?
         `Clouds amount: ${city.clouds} %` :
         `Cantidad de nubes: ${city.clouds} %`
       }</Typography>

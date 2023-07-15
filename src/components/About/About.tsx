@@ -1,13 +1,8 @@
-import { Box, Dialog, Typography } from '@mui/material';
-import "../../styles/AboutSX";
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from "react-router-dom";
+import { Box, Typography } from '@mui/material';
+import * as s from '../../styles/AboutSX';
+import { useSelector } from 'react-redux';
 
-interface langI {
-  lang: string,
-}
-
-function About(/* {lang}:langI */) {
+function About() {
 
   const english = useSelector((state: {english:boolean}) => state.english)
   const height = useSelector((state: {height:number}) => state.height)
@@ -20,21 +15,19 @@ function About(/* {lang}:langI */) {
   const percentageResizedHeight = useSelector((state: {percentageResizedHeight:number}) => state.percentageResizedHeight)
 
   return (
-    <Box className="about">
-      <Typography> { english ?
+    <Box sx={s.background}>
+      <Typography sx={s.description}> { english ?
         `Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry!!` :
         `Hi i'm Pablo ! And this is my weather app created during my Bootcamp at Henry!`
-      }&#x1F680;
-        </Typography>
-            <a
-              href={"https://www.linkedin.com/in/juan-pablo-azambuyo"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >&#10145; { english ? `MY LINKEDIN PROFILE` : `MI PERFIL DE LINKEDIN`} &#11013;</a>
-        
+      }&#x1F680;</Typography>
+      <a
+        style={s.link()}
+        href={`https://www.linkedin.com/in/juan-pablo-azambuyo`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >&#10145; { english ? `MY LINKEDIN PROFILE` : `MI PERFIL DE LINKEDIN`} &#11013;</a>
     </Box>
   )
-  
 }
 
 export default About

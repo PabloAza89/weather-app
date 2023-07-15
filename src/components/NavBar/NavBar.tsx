@@ -18,16 +18,18 @@ const NavBar = () => {
 
   return (
     <Box sx={s.background}>
-      <Link style={s.linkLogo()} to="/">
-        <Box
-          component="img"
-          src={Logo}
-          sx={s.logo}
-        />
-        <Typography sx={s.logoTypo}>
-          Weatherify
-        </Typography>
-      </Link>
+      <Box sx={s.linkLogoContainer}>
+        <Link style={s.linkLogo()} to="/">
+          <Box
+            component="img"
+            src={Logo}
+            sx={s.logo}
+          />
+          <Typography sx={s.logoTypo}>
+            Weatherify
+          </Typography>
+        </Link>
+      </Box>
       <Link
         to="/about"
         style={s.linkAbout()}

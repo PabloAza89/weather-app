@@ -15,11 +15,27 @@ export const background = () => {
   }
 }
 
+
+// width 160 + 160 = 320 // same as searcher
+// height 30
+
+export const linkLogoContainer = () => {
+  return {
+    ...noDeco, ...noSelect,
+    display: 'flex',
+    width: '320px',
+    background: 'darkred',
+    alignItems: 'center',
+    fontSize: 'x-large',
+  }
+}
+
 export const linkLogo = () => {
   return {
     ...noDeco, ...noSelect,
     display: 'flex',
-    //background: 'darkred',
+    //width: '320px',
+    background: 'yellow',
     alignItems: 'center',
     fontSize: 'x-large',
   }

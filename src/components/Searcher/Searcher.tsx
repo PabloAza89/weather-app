@@ -1,14 +1,19 @@
-import { useState } from "react";
-import { Box, Button, TextField } from '@mui/material';
+import { useEffect, useState } from "react";
+import { Box, Button, TextField/* , Tooltip */ } from '@mui/material';
 import * as s from '../../styles/SearcherSX';
 import { useDispatch, useSelector } from 'react-redux';
+//import { makeStyles } from '@material-ui/styles';
+//import { makeStyles } from '@mui/material/styles';
+//import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
+import Tooltip from '@mui/joy/Tooltip';
 import { addCity } from '../../actions';
 
 export default function SearchBar() {
 
   const dispatch = useDispatch()
 
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState<string>("");
+  const [disabled, setDisabled] = useState<boolean>(false); // 3 to test..
 
   interface citiesI {
     id: number,
@@ -60,21 +65,78 @@ export default function SearchBar() {
     });
   }
 
+  useEffect(() => {
+    if (cities.length >= 3) setDisabled(true)
+    else setDisabled(false)
+  },[cities])
+
+  console.log("ABC", cities.length)
+
   return (
     <Box
       component="form"
       onSubmit={(e: any) => { e.preventDefault(); onSearch(city) }}
+      sx={s.background}
     >
-      <TextField
-        type="text"
-        placeholder={ english ? `Search city...` : `Buscar ciudad...`}
-        onFocus={() => setCity("")}
-        value={city}
-        sx={s.input}
-        InputProps={{ style: s.inputStyleProps() }}
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <Button 
+      <Tooltip
+        
+        disableHoverListener={false}
+        disableFocusListener={false}
+
+       /*  title={
+          <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            backgroundColor: 'red',
+            maxWidth: 320,
+            justifyContent: 'center',
+            p: 1,
+          }}
+        >123123123</Box>
+        } */
+
+        /* title={"123123123"} */
+        //placement="top-end"
+        //variant="outlined"
+        //arrow
+
+        /*  title={
+          <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            maxWidth: 320,
+            background: 'red',
+            justifyContent: 'center',
+            p: 1,
+            gap: 1,
+          }}
+        >123123123</Box>
+        } */
+        //component="div"
+        title="ASDASD123123"
+        /* sx={{ background: 'yellow', backgroundColor: 'red' }} */
+        sx={{ background: 'yellow' }}
+        
+
+        /* sx={{ backgroundColor: 'yellow' }} */
+
+      >
+        <TextField
+          disabled={disabled}
+          type="text"
+          autoComplete='off'
+          placeholder={ english ? `Search city...` : `Buscar ciudad...`}
+          onFocus={() => setCity("")}
+          value={city}
+          sx={s.input}
+          InputProps={{ style: s.inputStyleProps() }}
+          onChange={(e) => setCity(e.target.value)}
+        />
+      </Tooltip>
+      <Button
+        disabled={disabled}
         sx={s.button}
         type="submit"
       >{ english ? `ADD CITY!` : `AGREGAR CIUDAD!` }</Button>
