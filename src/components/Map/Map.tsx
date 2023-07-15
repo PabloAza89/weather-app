@@ -26,7 +26,7 @@ function Map({ latitude, longitude }: mapI) {
       id: "mapbox/streets-v11",
       tileSize: 512,
       zoomOffset: -1,
-      accessToken: process.env.REACT_APP_KEY,
+      accessToken: process.env.REACT_APP_MAP,
     }).addTo(map);
 
     L.marker([latitude, longitude]).addTo(map);

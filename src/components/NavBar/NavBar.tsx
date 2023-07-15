@@ -3,11 +3,7 @@ import { Box, Typography } from '@mui/material';
 import Searcher from "../Searcher/Searcher";
 import { useSelector } from 'react-redux';
 import * as s from '../../styles/NavBarSX';
-import "./Nav.css";
 import { Link } from "react-router-dom";
-//import countries from '../../styles/Countries.json';
-//console.log("A VER", countries)
-
 
 const NavBar = () => {
 
@@ -40,7 +36,7 @@ const NavBar = () => {
         style={s.linkAbout()}
       >
         <Typography sx={s.typoAbout()}>
-          { english ? `ABOUT` : `ACERCA`}
+          { english ? `ABOUT` : `ACERCA` }
         </Typography>
       </Link>
       <Searcher />
