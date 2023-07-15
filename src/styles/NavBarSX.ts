@@ -17,7 +17,7 @@ export const background = () => {
 
 export const linkLogo = () => {
   return {
-    ...noDeco,
+    ...noDeco, ...noSelect,
     display: 'flex',
     //background: 'darkred',
     alignItems: 'center',
@@ -50,7 +50,7 @@ export const logoTypo = () => {
 
 export const linkAbout = () => {
   return {
-    ...noDeco,
+    ...noDeco, ...noSelect,
   }
 }
 

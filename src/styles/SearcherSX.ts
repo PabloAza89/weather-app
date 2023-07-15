@@ -5,7 +5,7 @@ export const input = () => {
   return {
     background: '#F0F0F0',
     borderRadius: '0px',
-    width: '130px',
+    width: '160px',
     height: '30px',
     ':hover': {
       background: '#F0F0F0',
@@ -15,7 +15,7 @@ export const input = () => {
 
 export const inputStyleProps = () => {
   return {
-    width: '130px',
+    width: '160px',
     height: '30px',
     borderRadius: '0px',
   }
@@ -28,7 +28,7 @@ export const button = () => {
     color: 'rgb(0, 0, 0)',
     fontWeight: 400,
     fontSize: '16px',
-    width: '130px',
+    width: '160px',
     letterSpacing: 'normal',
     lineHeight: '24px',
     height: '30px',

@@ -7,12 +7,13 @@ export const background = () => {
   return {
     display: 'flex',
     flexDirection: 'column',
-    fontSize: 'x-large',
-    marginTop: '50px',
-    justifyItems: 'center',
-    paddingRight: '8rem',
+    //fontSize: 'x-large',
+    //marginTop: '50px',
+    //justifyItems: 'center',
+    //paddingRight: '8rem',
     background: 'red',
-    width: '300px',
+    width: '700px',
+    height: '600px',
     alignSelf: 'center',
   }
 }

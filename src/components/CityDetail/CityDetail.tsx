@@ -1,6 +1,6 @@
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import * as s from '../../styles/CityDetailSX';
 import countriesJSON from '../../styles/Countries.json';
 import weathersJSON from '../../styles/Weathers.json';

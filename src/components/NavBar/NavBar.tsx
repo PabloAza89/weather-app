@@ -16,9 +16,6 @@ const NavBar = () => {
   const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
   const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
-  
-  //console.log("A VER", countries)
-
   return (
     <Box sx={s.background}>
       <Link style={s.linkLogo()} to="/">

@@ -1,4 +1,3 @@
-import "./Card.css";
 import { Link } from "react-router-dom";
 import { Box, Typography, Button } from '@mui/material';
 import * as s from '../../styles/CardSX';
@@ -39,20 +38,21 @@ const Card = ({ min, max, name, img, id, country }: cardI) => {
   return (
     <Box sx={s.background}>
       <Button sx={s.button} onClick={() => cityDeleter(id)}>X</Button>
-      <Link to={`/cityDetail/${id}`}>
-        <Typography>{name}</Typography>
+      <Link style={s.cityNameLink()} to={`/cityDetail/${id}`}>
+        <Typography sx={s.cityName}>{name}</Typography>
       </Link>
-      <Typography>{ english ? countryCode[country].en : countryCode[country].es }</Typography>
-      <Box>
-        <Typography>
-          Min
+      <Typography sx={s.countryName}>{ english ? countryCode[country].en : countryCode[country].es }</Typography>
+      <Box sx={s.minMaxIcon}>
+        <Typography sx={s.minMax}>
+          <Box>Min</Box>
           { english ? `${Math.round((min * (9 / 5) + 32) * 10) / 10} °F` : `${Math.round(min * 10) / 10} °C` }
         </Typography>
-        <Typography>
-          Max
+        <Typography sx={s.minMax}>
+          <Box>Max</Box>
           { english ? `${Math.round((max * (9 / 5) + 32) * 10) / 10} °F` : `${Math.round(max * 10) / 10} °C` }
         </Typography>
         <Box
+          sx={s.minMax}
           component="img"
           src={`https://openweathermap.org/img/wn/${img}@2x.png`}
         />
