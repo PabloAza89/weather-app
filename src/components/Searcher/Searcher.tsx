@@ -65,7 +65,7 @@ export default function SearchBar() {
     });
   }
 
-  useEffect(() => {
+  useEffect(() => { // available slots checker
     if (cities.length >= 3) setDisabled(true)
     else setDisabled(false)
   },[cities])
@@ -73,56 +73,35 @@ export default function SearchBar() {
   console.log("ABC", cities.length)
 
   return (
+    <Tooltip
+
+        disableHoverListener={!disabled}
+        disableFocusListener={!disabled}
+        // disableHoverListener={true}
+        // disableFocusListener={true}
+
+        enterDelay={500}
+        leaveDelay={200}
+        placement="bottom-end"
+        sx={s.tooltip({ larPort, larLand })}
+        title={ english ?
+          <Box sx={s.innerTooltip}>
+            <Box sx={s.innerTooltipOne}>You're able to make <em>3 searchs</em> at the same time..</Box>
+            <Box sx={s.innerTooltipTwo}>Please delete some search, then you will have some available slots.</Box>
+          </Box> :
+          <Box sx={s.innerTooltip}>
+            <Box sx={s.innerTooltipOne}>Estás habilitado a realizar <em>3 búsquedas</em> al mismo tiempo..</Box>
+            <Box sx={s.innerTooltipTwo}>Por favor eliminá algunas búsquedas, así tenés espacios disponibles.</Box>
+          </Box>
+        }
+        
+      >
     <Box
       component="form"
       onSubmit={(e: any) => { e.preventDefault(); onSearch(city) }}
-      sx={s.background}
+      sx={s.background({ larPort, larLand })}
     >
-      <Tooltip
-        
-        disableHoverListener={false}
-        disableFocusListener={false}
 
-       /*  title={
-          <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            backgroundColor: 'red',
-            maxWidth: 320,
-            justifyContent: 'center',
-            p: 1,
-          }}
-        >123123123</Box>
-        } */
-
-        /* title={"123123123"} */
-        //placement="top-end"
-        //variant="outlined"
-        //arrow
-
-        /*  title={
-          <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            maxWidth: 320,
-            background: 'red',
-            justifyContent: 'center',
-            p: 1,
-            gap: 1,
-          }}
-        >123123123</Box>
-        } */
-        //component="div"
-        title="ASDASD123123"
-        /* sx={{ background: 'yellow', backgroundColor: 'red' }} */
-        sx={{ background: 'yellow' }}
-        
-
-        /* sx={{ backgroundColor: 'yellow' }} */
-
-      >
         <TextField
           disabled={disabled}
           type="text"
@@ -130,16 +109,17 @@ export default function SearchBar() {
           placeholder={ english ? `Search city...` : `Buscar ciudad...`}
           onFocus={() => setCity("")}
           value={city}
-          sx={s.input}
-          InputProps={{ style: s.inputStyleProps() }}
+          sx={s.input({ larPort, larLand })}
+          InputProps={{ style: s.inputStyleProps({ larPort, larLand }) }}
           onChange={(e) => setCity(e.target.value)}
         />
-      </Tooltip>
+
       <Button
         disabled={disabled}
-        sx={s.button}
+        sx={s.button({ larPort, larLand })}
         type="submit"
       >{ english ? `ADD CITY!` : `AGREGAR CIUDAD!` }</Button>
     </Box>
+    </Tooltip>
   );
 }

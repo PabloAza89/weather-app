@@ -4,26 +4,43 @@ import {
   jcsb, jcse, jsc, jic, noDeco, mix, noSelect
 } from './CommonsSX';
 
-export const background = () => {
+interface backgroundI {
+  larPort: boolean,
+  larLand: boolean,
+}
+
+export const background = ({ larPort, larLand }: backgroundI) => {
   return {
     ...flex, ...row, ...jcsb,
-    padding: '0px 30px',
+    position: 'fixed',
+    width: '100%',
+    //padding: larPort ? '0px 8px' : '0px 30px',
+    //padding: larPort ? '0px 8px' : '0px px',
+    //paddingLeft: '80px',
+    //marginRight: '50px',
+    //padding: larPort ? '0px 8px' : '0px max(8px, 2vw)',
     height: '86px',
     alignItems: 'center',
-    //background: 'gray',
-    background: 'rgba(144,238,144,.33)',
+    zIndex: 2000,
+    //background: 'lightblue',
+    background: 'rgba(144, 238, 144, .33)',
   }
 }
 
+interface linkLogoContainerI {
+  larPort: boolean,
+  larLand: boolean,
+}
 
 // width 160 + 160 = 320 // same as searcher
 // height 30
 
-export const linkLogoContainer = () => {
+export const linkLogoContainer = ({ larPort, larLand }: linkLogoContainerI) => {
   return {
     ...noDeco, ...noSelect,
     display: 'flex',
-    width: '320px',
+    width: larPort ? '182px' : '320px',
+    marginLeft: '16px',
     background: 'darkred',
     alignItems: 'center',
     fontSize: 'x-large',

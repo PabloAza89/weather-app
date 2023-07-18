@@ -1,94 +1,41 @@
+import backgroundImage from '../images/bgImage.webp';
+
 export const background = () => {
   return {
-    background: 'url("./images/bg-image.jpg")',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
     display: 'flex',
-    flexDirection: 'column',
+    position: 'absolute',
+    width: '100%',
+    //position: 'fixed',
+    //background: 'red',
+    //backgroundImage: `url(${backgroundImage})`,
+    //backgroundSize: 'cover',
+    //height: '100%',
+    //width: '520px', // width
+    //height: '520px', // height
+    //width: '100vw', // width
+    //height: '100vh', // height
+    //width: '1920px', // width
+    //height: '900px', // height
   }
 }
 
-/* .App {
-  text-align: center;
-  
-  
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  
-}
-
-body {
-  background: url("./images/bg-image.jpg");  
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-    
-}
-
-@media (max-width: 450px) {
-  body {
-    background: url("./images/bg-image-rotate.jpg");  
-    background-size:180%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    
+export const background2 = () => {
+  return {
+    display: 'flex',
+    position: 'fixed',
+    width: '100%',
+    height: '100vh',
+    //position: 'fixed',
+    zIndex: 0,
+    background: 'lightgray',
+    backgroundImage: `url(${backgroundImage})`,
+    //backgroundSize: 'cover',
+    //height: '100%',
+    //width: '520px', // width
+    //height: '520px', // height
+    //width: '100vw', // width
+    //height: '100vh', // height
+    //width: '1920px', // width
+    //height: '900px', // height
   }
-    
-
 }
-
-.footer {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  bottom: 5px;
-  margin-left: 45%;
-  width: 30px;
-  max-width: 30px;
-}
-
-@media (max-width: 450px) {
-  .footer {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    bottom: 5px;
-    margin-left: 38%;
-    width: 30px;
-    max-width: 30px;
-  }
-    
-
-}
-
-
-.image {
-  margin: 1px;
-  width: 33px;
-}
-
-@media (max-width: 450px) {
-  .image {
-    margin: 1px;
-    width: 33px;
-  }
-    
-
-}
-
-.mapAlign{
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-  margin-right: 6%;
-  margin-top: 1.5%;
-
-  
-}  */

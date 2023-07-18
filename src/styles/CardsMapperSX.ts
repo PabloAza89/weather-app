@@ -7,7 +7,12 @@ export const background = () => {
   return {
     display: 'flex',
     flexWrap: 'wrap',
+    marginTop: '86px',
     justifyContent: 'center',
-    background: 'gray',
+    //background: 'gray',
+    zIndex: 1999,
+    width: '100%',
+    //'overflow-x': 'hidden',
+    //height: '55vh',
   }
 }

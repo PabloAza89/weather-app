@@ -19,6 +19,7 @@ export const background = () => {
     width: '0px',
     height: '120px',
     top: '100px',
+    zIndex: 3000,
     
     
     'active': {

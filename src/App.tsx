@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Box } from '@mui/material';
-import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import CardsMapper from "./components/CardsMapper/CardsMapper";
 import { Route, Routes } from "react-router-dom";
@@ -9,6 +8,7 @@ import Language from "./components/Language/Language";
 import CityDetail from "./components/CityDetail/CityDetail";
 import * as s from './styles/AppSX';
 import { useDispatch } from 'react-redux';
+import backgroundImage from './images/bg-image.jpg';
 import {
   setCurrentWidth, setHeight, setLarLand,
   setLarPort, setMedLand, setMedPort, setMinLand,
@@ -38,7 +38,16 @@ function App() {
   });
 
   return (
-    <Box sx={s.background}>
+    <Box 
+      sx={s.background}
+      //component="img"
+      //src={backgroundImage}
+    >
+      <Box
+        sx={s.background2}
+        //component="img"
+        //src={backgroundImage}
+      />
       <Routes>
         <Route path="/" element={<>
           <NavBar />

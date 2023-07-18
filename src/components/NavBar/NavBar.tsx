@@ -17,8 +17,8 @@ const NavBar = () => {
   const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
   return (
-    <Box sx={s.background}>
-      <Box sx={s.linkLogoContainer}>
+    <Box sx={s.background({ larPort, larLand })}>
+      <Box sx={s.linkLogoContainer({ larPort, larLand })}>
         <Link style={s.linkLogo()} to="/">
           <Box
             component="img"
