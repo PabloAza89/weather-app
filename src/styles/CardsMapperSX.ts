@@ -8,6 +8,7 @@ export const background = () => {
     display: 'flex',
     flexWrap: 'wrap',
     marginTop: '86px',
+    marginBottom: '20px',
     justifyContent: 'center',
     //background: 'gray',
     zIndex: 1999,

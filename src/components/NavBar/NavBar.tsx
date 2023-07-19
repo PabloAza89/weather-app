@@ -4,6 +4,7 @@ import Searcher from "../Searcher/Searcher";
 import { useSelector } from 'react-redux';
 import * as s from '../../styles/NavBarSX';
 import { Link } from "react-router-dom";
+import $ from 'jquery';
 
 const NavBar = () => {
 
@@ -38,7 +39,12 @@ const NavBar = () => {
           { english ? `ABOUT` : `ACERCA` }
         </Typography>
       </Link>
-      <Searcher />
+      <Box
+        sx={s.searcherContainer}
+        className={`reference`}
+      >
+        <Searcher />
+      </Box>
     </Box>
   );
 }

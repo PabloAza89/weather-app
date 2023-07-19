@@ -11,7 +11,9 @@ export const background = () => {
   return {
     display: 'flex',
     flexDirection: 'column',
-    margin: '20px',
+    //margin: '20px',
+    //margin: '20px 0px 0px 20px',
+    margin: '20px 10px 0px 10px',
     width: '290px',
     height: '210px',
     borderRadius: '4px',

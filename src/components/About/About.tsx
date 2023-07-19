@@ -17,8 +17,8 @@ function About() {
   return (
     <Box sx={s.background}>
       <Typography sx={s.description}> { english ?
-        `Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry!!` :
-        `Hi i'm Pablo ! And this is my weather app created during my Bootcamp at Henry!`
+        `Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry !! ` :
+        `Hi i'm Pablo ! And this is my weather app created during my Bootcamp at Henry !! `
       }&#x1F680;</Typography>
       <a
         style={s.link()}

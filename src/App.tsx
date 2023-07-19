@@ -48,6 +48,11 @@ function App() {
         //component="img"
         //src={backgroundImage}
       />
+      <Box
+        sx={s.background3}
+        //component="img"
+        //src={backgroundImage}
+      />
       <Routes>
         <Route path="/" element={<>
           <NavBar />

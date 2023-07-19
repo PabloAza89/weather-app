@@ -7,10 +7,13 @@ export const background = () => {
   return {
     display: 'flex',
     flexDirection: 'column',
+    marginTop: '86px',
     paddingTop: '40px',
-    paddingBottom: '40px',
+    //paddingBottom: '40px',
     background: 'gray',
-    width: '700px',
+    zIndex: 1999,
+    //width: '700px',
+    width: '100%',
     height: '600px',
     alignSelf: 'center',
     alignItems: 'center',
@@ -51,9 +54,15 @@ export const tempWeatherWindClouds = () => {
   }
 }
 
-export const map = () => {
+interface mapI {
+  scrollWidth: number
+}
+
+export const map = ({ scrollWidth }: mapI) => {
   return {
+    //display: 'block',
     height: '300px',
-    width: '600px',
+    //width: '600px',
+    width: `max(35vw, ${500 - scrollWidth}px)`, // 500 - scrollWidth (17 approx.) === 483px
   }
 }

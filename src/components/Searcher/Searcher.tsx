@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import { Box, Button, TextField/* , Tooltip */ } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import * as s from '../../styles/SearcherSX';
+import '../../styles/SearcherSX.css';
 import { useDispatch, useSelector } from 'react-redux';
-//import { makeStyles } from '@material-ui/styles';
-//import { makeStyles } from '@mui/material/styles';
-//import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import Tooltip from '@mui/joy/Tooltip';
+import Swal from 'sweetalert2';
 import { addCity } from '../../actions';
+import $ from 'jquery';
 
 export default function SearchBar() {
-
+  
   const dispatch = useDispatch()
 
+  const currentWidth = useSelector((state: {currentWidth: number}) => state.currentWidth)
+  
   const [city, setCity] = useState<string>("");
   const [disabled, setDisabled] = useState<boolean>(false); // 3 to test..
 
@@ -40,6 +42,26 @@ export default function SearchBar() {
   const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
   const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
+  const cityExists = () => {
+    Swal.fire({
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      icon: 'info',
+      title: english ? 'City already exists !' : 'La ciudad ya existe !',
+    })
+  }
+
+  const cityNotFound = () => {
+    Swal.fire({
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      icon: 'info',
+      title: english ? 'City not found !' : 'Ciudad no encontrada !',
+    })
+  }
+
   function onSearch(city:string) {
     fetch( `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_WEATHER}` )
     .then((r) => r.json())
@@ -60,8 +82,8 @@ export default function SearchBar() {
           longitude: res.coord.lon,
         };
         if (cities.filter(e => e.id === newCity.id).length === 0) dispatch(addCity([...cities, newCity]))
-        else alert("City already exists!");
-      } else alert("City not found!");
+        else cityExists();
+      } else cityNotFound();
     });
   }
 
@@ -70,56 +92,51 @@ export default function SearchBar() {
     else setDisabled(false)
   },[cities])
 
-  console.log("ABC", cities.length)
-
   return (
     <Tooltip
-
-        disableHoverListener={!disabled}
-        disableFocusListener={!disabled}
-        // disableHoverListener={true}
-        // disableFocusListener={true}
-
-        enterDelay={500}
-        leaveDelay={200}
-        placement="bottom-end"
-        sx={s.tooltip({ larPort, larLand })}
-        title={ english ?
-          <Box sx={s.innerTooltip}>
-            <Box sx={s.innerTooltipOne}>You're able to make <em>3 searchs</em> at the same time..</Box>
-            <Box sx={s.innerTooltipTwo}>Please delete some search, then you will have some available slots.</Box>
-          </Box> :
-          <Box sx={s.innerTooltip}>
-            <Box sx={s.innerTooltipOne}>Estás habilitado a realizar <em>3 búsquedas</em> al mismo tiempo..</Box>
-            <Box sx={s.innerTooltipTwo}>Por favor eliminá algunas búsquedas, así tenés espacios disponibles.</Box>
-          </Box>
-        }
-        
-      >
-    <Box
-      component="form"
-      onSubmit={(e: any) => { e.preventDefault(); onSearch(city) }}
-      sx={s.background({ larPort, larLand })}
+      disableHoverListener={!disabled}
+      disableFocusListener={!disabled}
+      enterDelay={500}
+      leaveDelay={200}
+      placement="bottom-end"
+      sx={s.tooltip({ larPort, larLand })}
+      title={ english ?
+        <Box sx={s.innerTooltip}>
+          <Box sx={s.innerTooltipOne}>You're able to make <em>3 searchs</em> at the same time..</Box>
+          <Box sx={s.innerTooltipTwo}>Please delete some search, then you will have some available slots.</Box>
+        </Box> :
+        <Box sx={s.innerTooltip}>
+          <Box sx={s.innerTooltipOne}>Estás habilitado a realizar <em>3 búsquedas</em> al mismo tiempo..</Box>
+          <Box sx={s.innerTooltipTwo}>Por favor eliminá algunas búsquedas, así tenés espacio disponible.</Box>
+        </Box>
+      }
     >
-
+      <Box
+        component="form"
+        onSubmit={(e: any) => { e.preventDefault(); onSearch(city) }}
+        sx={s.background({ currentWidth, larPort, larLand })}
+      >
         <TextField
+          className={`inputPos`}
           disabled={disabled}
           type="text"
           autoComplete='off'
           placeholder={ english ? `Search city...` : `Buscar ciudad...`}
           onFocus={() => setCity("")}
           value={city}
-          sx={s.input({ larPort, larLand })}
+          InputLabelProps={{ style: s.labelStyle() }}
           InputProps={{ style: s.inputStyleProps({ larPort, larLand }) }}
+          sx={s.input({ larPort, larLand })}
           onChange={(e) => setCity(e.target.value)}
         />
-
-      <Button
-        disabled={disabled}
-        sx={s.button({ larPort, larLand })}
-        type="submit"
-      >{ english ? `ADD CITY!` : `AGREGAR CIUDAD!` }</Button>
-    </Box>
+        <Button
+          className={`buttonPos`}
+          disabled={disabled}
+          sx={s.button({ larPort, larLand })}
+          type="submit"
+        >{ english ? `ADD CITY!` : `AGREGAR CIUDAD!` }
+        </Button>
+      </Box>
     </Tooltip>
   );
 }

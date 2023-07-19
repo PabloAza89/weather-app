@@ -33,7 +33,7 @@ function Map({ latitude, longitude }: mapI) {
 
   });
 
-  return ( <Box/> )
+  return ( <Box /> )
 }
 
 export default Map;
