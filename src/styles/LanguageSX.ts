@@ -15,7 +15,7 @@ export const background = () => {
     //position: 'relative',
     position: 'fixed',
     display: 'flex',
-    background: 'yellow',
+    //background: 'yellow', // dev
     width: '0px',
     height: '120px',
     top: '100px',
@@ -34,11 +34,9 @@ export const sliderBox = () => {
   return {
     ...flex, ...relative,
     flexDirection : 'column',
-    background: 'orange',
+    //background: 'orange', // dev
     left: '0px',
     justifyContent: 'center',
-    //width: '500px',
-    //overflowX: 'hidden',
   }
 }
 
@@ -63,7 +61,7 @@ export const buttonTypo = () => {
   return {
       ...flex, ...noSelect,
     fontFamily: 'Roboto',
-    background: 'gray',
+    //background: 'gray', // dev
     //fontSize: minPort || minLand ? '11px' : english && ( larPort || larLand ) ? '14px' : '13px',
     fontSize: '14px',
     fontWeight: '500',

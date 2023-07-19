@@ -36,7 +36,7 @@ export const linkLogoContainer = ({ larPort, larLand }: linkLogoContainerI) => {
     display: 'flex',
     width: '320px',
     marginLeft: '16px',
-    background: 'darkred',
+    //background: 'darkred', // dev
     alignItems: 'center',
     fontSize: 'x-large',
   }
@@ -46,7 +46,7 @@ export const linkLogo = () => {
   return {
     ...noDeco, ...noSelect,
     display: 'flex',
-    background: 'yellow',
+    //background: 'yellow', // dev
     alignItems: 'center',
     fontSize: 'x-large',
   }
@@ -60,7 +60,11 @@ export const logo = () => {
   }
 }
 
-export const logoTypo = () => {
+interface logoTypoI {
+  darkMode: boolean
+}
+
+export const logoTypo = ({ darkMode }: logoTypoI) => {
   return {
     ...noDeco,
     display: 'flex',
@@ -69,7 +73,7 @@ export const logoTypo = () => {
     fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
     fontSize: '24px',
     fontWeight: 400,
-    color: '#007bff',
+    color: darkMode ? '#1259a6' : '#007bff',
   }
 }
 
@@ -101,7 +105,7 @@ export const searcherContainer = () => {
     display: 'flex',
     position: 'relative',
     width: '320px',
-    background: 'yellow',
+    //background: 'yellow', // dev
     marginRight: '16px',
     justifyContent: 'flex-end',
     flexWrap: 'wrap',

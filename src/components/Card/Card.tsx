@@ -27,6 +27,7 @@ const Card = ({ min, max, name, img, id, country }: cardI) => {
 
   const countryCode = countriesJSON as countriesCodeI
   const english = useSelector((state: {english:boolean}) => state.english)
+  const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
   const dispatch = useDispatch()
 
   function cityDeleter(id:number) {
@@ -36,10 +37,10 @@ const Card = ({ min, max, name, img, id, country }: cardI) => {
   //console.log("country", country)
 
   return (
-    <Box sx={s.background}>
+    <Box sx={s.background({ darkMode })}>
       <Button sx={s.button} onClick={() => cityDeleter(id)}>X</Button>
       <Link style={s.cityNameLink()} to={`/cityDetail/${id}`}>
-        <Typography sx={s.cityName}>{name}</Typography>
+        <Typography sx={s.cityName({ darkMode })}>{name}</Typography>
       </Link>
       <Typography sx={s.countryName}>{ english ? countryCode[country].en : countryCode[country].es }</Typography>
       <Box sx={s.minMaxIcon}>

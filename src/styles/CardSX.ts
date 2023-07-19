@@ -7,19 +7,21 @@ import {
 // width 290
 // height 210
 
-export const background = () => {
+interface backgroundI {
+  darkMode: boolean
+}
+
+export const background = ({ darkMode }: backgroundI) => {
   return {
     display: 'flex',
     flexDirection: 'column',
-    //margin: '20px',
-    //margin: '20px 0px 0px 20px',
     margin: '20px 10px 0px 10px',
     width: '290px',
     height: '210px',
     borderRadius: '4px',
     border: '1px solid rgba(0,0,0,.125)',
     //backgroundColor: 'darkred',
-    background: 'rgba(232, 62, 140, .15)',
+    background: darkMode ? 'rgba(232, 62, 140, .22)' : 'rgba(232, 62, 140, .15)',
     padding: '8px',
     justifyContent: 'space-between',
   }
@@ -27,7 +29,6 @@ export const background = () => {
 
 export const button = () => {
   return {
-    //background: 'red',
     minWidth: '26px !important',
     width: '26px !important',
     minHeight: '31px !important',
@@ -35,7 +36,6 @@ export const button = () => {
     background: '#dc3545',
     color: '#fff',
     fontWeight: 400,
-    //padding: '0px !important',
     paddingTop: '7px',
     alignSelf: 'flex-end',
     ':hover': {
@@ -44,26 +44,19 @@ export const button = () => {
   }
 }
 
-export const cityName = () => {
+interface cityNameI {
+  darkMode: boolean
+}
+
+export const cityName = ({ darkMode }: cityNameI) => {
   return {
     ...noDeco,
     display: 'flex',
     position: 'relative',
-    //background: 'red',
-    // minWidth: '26px !important',
-    // width: '26px !important',
-    // minHeight: '31px !important',
-    // height: '31px !important',
-    // background: '#dc3545',
-    color: '#007bff',
+    color: darkMode ? 'white' : '#007bff',
     fontSize: '28px',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     fontWeight: 500,
-    // //padding: '0px !important',
-    // paddingTop: '7px',
-    // ':hover': {
-    //   background: '#c82333',
-    // }
   }
 }
 
@@ -71,24 +64,13 @@ export const cityNameLink = () => {
   return {
     ...noDeco, ...noSelect,
     display: 'flex',
-    //position: 'relative',
-    //background: 'red',
-    // minWidth: '26px !important',
-    // width: '26px !important',
-    // minHeight: '31px !important',
-    // height: '31px !important',
-    background: 'yellow',
+    //background: 'yellow', // dev
     width: 'fit-content',
     color: '#007bff',
     fontSize: '28px',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     fontWeight: 500,
     alignSelf: 'center',
-    // //padding: '0px !important',
-    // paddingTop: '7px',
-    // ':hover': {
-    //   background: '#c82333',
-    // }
   }
 }
 
@@ -109,7 +91,7 @@ export const minMax = () => {
     ...noSelect,
     display: 'flex',
     flexDirection: 'column',
-    background: 'yellow',
+    //background: 'yellow', // dev
     width: '80px',
     height: '80px',
     lineHeight: '24px',
@@ -124,14 +106,9 @@ export const minMax = () => {
 
 export const minMaxIcon = () => {
   return {
-    // lineHeight: '24px',
-    // color: 'rgb(33, 37, 41)',
-    // fontSize: '20px',
-    // fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-    // fontWeight: 500,
     display: 'flex',
     flexDirection: 'row',
-    background: 'darkred',
+    //background: 'darkred', // dev
     justifyContent: 'space-evenly',
     
   }

@@ -26,7 +26,7 @@ const NavBar = () => {
             src={Logo}
             sx={s.logo}
           />
-          <Typography sx={s.logoTypo}>
+          <Typography sx={s.logoTypo({ darkMode })}>
             Weatherify
           </Typography>
         </Link>

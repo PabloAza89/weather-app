@@ -9,10 +9,8 @@ export const background = () => {
     flexDirection: 'column',
     marginTop: '86px',
     paddingTop: '40px',
-    //paddingBottom: '40px',
-    background: 'gray',
+    //background: 'gray', // dev
     zIndex: 1999,
-    //width: '700px',
     width: '100%',
     height: '600px',
     alignSelf: 'center',
