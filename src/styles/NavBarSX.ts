@@ -79,13 +79,17 @@ export const linkAbout = () => {
   }
 }
 
-export const typoAbout = () => {
+interface typoAboutI {
+  darkMode: boolean
+}
+
+export const typoAbout = ({ darkMode }: typoAboutI) => {
   return {
     ...noDeco,
     display: 'flex',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     fontSize: 'large',
-    color: '#007bff',
+    color: darkMode ? 'white' : '#007bff',
     fontWeight: 450,
     letterSpacing: 'normal',
     lineHeight: '1.5',

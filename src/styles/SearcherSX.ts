@@ -14,7 +14,7 @@ export const tooltip = ({ larPort, larLand }: tooltipI) => {
     color: 'rgba(0, 0, 0, 0.87)',
     border: '1px solid #dadde9',
     zIndex: 3000,
-  }  
+  }
 }
 
 interface backgroundI {

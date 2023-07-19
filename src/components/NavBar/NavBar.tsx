@@ -35,7 +35,7 @@ const NavBar = () => {
         to="/about"
         style={s.linkAbout()}
       >
-        <Typography sx={s.typoAbout()}>
+        <Typography sx={s.typoAbout({ darkMode })}>
           { english ? `ABOUT` : `ACERCA` }
         </Typography>
       </Link>

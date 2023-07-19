@@ -2,12 +2,13 @@ import { useEffect } from "react";
 import { Box } from '@mui/material';
 import NavBar from "./components/NavBar/NavBar";
 import CardsMapper from "./components/CardsMapper/CardsMapper";
+import DarkMode from "./components/DarkMode/DarkMode";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import Language from "./components/Language/Language";
 import CityDetail from "./components/CityDetail/CityDetail";
 import * as s from './styles/AppSX';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import backgroundImage from './images/bg-image.jpg';
 import {
   setCurrentWidth, setHeight, setLarLand,
@@ -37,37 +38,30 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   });
 
+  const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
+
   return (
-    <Box 
-      sx={s.background}
-      //component="img"
-      //src={backgroundImage}
-    >
-      <Box
-        sx={s.background2}
-        //component="img"
-        //src={backgroundImage}
-      />
-      <Box
-        sx={s.background3}
-        //component="img"
-        //src={backgroundImage}
-      />
+    <Box sx={s.background} >
+      <Box sx={s.background2({ darkMode })} />
+      <Box sx={s.background3({ darkMode })} />
       <Routes>
         <Route path="/" element={<>
           <NavBar />
           <CardsMapper />
           <Language />
+          <DarkMode />
         </>}/>
         <Route path="/about" element={<>
           <NavBar />
           <About />
           <Language />
+          <DarkMode />
         </>}/>
         <Route path="/cityDetail/:cityId" element={<>
           <NavBar />
           <CityDetail />
           <Language />
+          <DarkMode />
         </>}/>
       </Routes>
     </Box>

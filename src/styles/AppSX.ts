@@ -1,66 +1,38 @@
-import backgroundImage from '../images/bgImage.webp';
+import bgDay from '../images/bgDay.webp';
+import bgNight from '../images/bgNight.webp';
 
 export const background = () => {
   return {
     display: 'flex',
     position: 'absolute',
     width: '100%',
-    //position: 'fixed',
-    //background: 'red',
-    //backgroundImage: `url(${backgroundImage})`,
-    //backgroundSize: 'cover',
-    //height: '100%',
-    //width: '520px', // width
-    //height: '520px', // height
-    //width: '100vw', // width
-    //height: '100vh', // height
-    //width: '1920px', // width
-    //height: '900px', // height
   }
 }
 
-export const background2 = () => {
+interface backgroundI {
+  darkMode: boolean
+}
+
+export const background2 = ({ darkMode }: backgroundI) => {
   return {
     display: 'flex',
     position: 'fixed',
     width: '100%',
     height: '100vh',
-    //position: 'fixed',
-    //overflow: 'hidden',
     zIndex: 0,
     background: 'lightgray',
-    backgroundImage: `url(${backgroundImage})`,
-    //backgroundSize: 'cover',
-    //height: '100%',
-    //width: '520px', // width
-    //height: '520px', // height
-    //width: '100vw', // width
-    //height: '100vh', // height
-    //width: '1920px', // width
-    //height: '900px', // height
+    backgroundImage: darkMode ? `url(${bgNight})` : `url(${bgDay})`,
   }
 }
 
 
-export const background3 = () => {
+export const background3 = ({ darkMode }: backgroundI) => {
   return {
     display: 'flex',
     position: 'fixed',
     width: '100%',
-    //height: '10vh',
     height: '86px',
-    //position: 'fixed',
-    //overflow: 'hidden',
     zIndex: 2000,
-    //background: 'darkred',
-    backgroundImage: `url(${backgroundImage})`,
-    //backgroundSize: 'cover',
-    //height: '100%',
-    //width: '520px', // width
-    //height: '520px', // height
-    //width: '100vw', // width
-    //height: '100vh', // height
-    //width: '1920px', // width
-    //height: '900px', // height
+    backgroundImage: darkMode ? `url(${bgNight})` : `url(${bgDay})`,
   }
 }
