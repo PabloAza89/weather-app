@@ -14,6 +14,7 @@ interface citiesI {
 }
 
 interface initialStateI {
+  wrongPath: boolean,
   cities: citiesI[],
   english: boolean,
   darkMode: boolean,
@@ -34,6 +35,7 @@ interface initialStateI {
 }
 
 const initialState: initialStateI = {
+  wrongPath: false,
   cities: [],
   english: localStorage.getItem('langEn') === null ? true : JSON.parse(`${localStorage.getItem('langEn')}`),
   darkMode: localStorage.getItem('night') === null ? false : JSON.parse(`${localStorage.getItem('night')}`),
@@ -55,6 +57,11 @@ const initialState: initialStateI = {
 
 const reducer = (state = initialState, action: {type: string; payload: any}) => {
   switch (action.type) {
+    case 'WRONG_PATH':
+      return {
+        ...state,
+        wrongPath: action.payload
+      };
     case 'ADD_CITY':
       return {
         ...state,

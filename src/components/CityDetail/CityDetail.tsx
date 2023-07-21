@@ -7,6 +7,7 @@ import countriesJSON from '../../json/Countries.json';
 import weathersJSON from '../../json/Weathers.json';
 import Map from "../Map/Map"
 import $ from 'jquery';
+import CityNotFound from "../CityNotFound/CityNotFound"
 
 function CityDetail() {
 
@@ -69,16 +70,24 @@ function CityDetail() {
 
   },[])
 
+  // useEffect(() => {
+          
+  // })
+
+/*   function AVS () {
+    useEffect(() => {
+      console.log("MOUNTED")
+            return () => {
+              console.log("UNMOUNTED")
+            }
+    })
+  }
+ */
   //console.log("A VER ESTE", scrollWidth)
   console.log("localStorage", localStorage)
 
   if (!city) return (
-    <Box>
-      { english ?
-        `Sorry, this city does not exist ! Or maybe you have reloading the page.. Anyway, please, go back and find your city in the search box !` :
-        `Lo siento, esta ciudad no existe ! O quizás recargaste la página.. De todas maneras, por favor, ve atras y buscá tu ciudad en el cuadro de busqueda !`
-      }
-    </Box>)
+    <CityNotFound />)
   else return (
     <Box sx={s.background}>
       <Typography sx={s.cityName({ darkMode })}>{city.name}</Typography>

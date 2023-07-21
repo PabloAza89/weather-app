@@ -1,3 +1,10 @@
+export function wrongPath(wrongPath:any) {
+  return {
+    type: 'WRONG_PATH',
+    payload: wrongPath
+  }
+};
+
 export function addCity(addCity:any) {
   return {
     type: 'ADD_CITY',

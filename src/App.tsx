@@ -10,7 +10,6 @@ import Error from "./components/Error/Error";
 import CityDetail from "./components/CityDetail/CityDetail";
 import * as s from './styles/AppSX';
 import { useDispatch, useSelector } from 'react-redux';
-import backgroundImage from './images/bg-image.jpg';
 import {
   setCurrentWidth, setHeight, setLarLand,
   setLarPort, setMedLand, setMedPort, setMinLand,
@@ -65,8 +64,8 @@ function App() {
           <DarkMode />
         </>}/>
         <Route path="*" element={<>
-            {/* <BackButton /> */}
-            <Error />
+          <NavBar />
+          <Error />
         </>}/>
       </Routes>
     </Box>

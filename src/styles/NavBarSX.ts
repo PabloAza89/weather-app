@@ -11,18 +11,24 @@ interface backgroundI {
 
 export const background = ({ larPort, larLand }: backgroundI) => {
   return {
-    ...flex, ...row, ...jcsb,
+    ...flex,
+    //display: 'none',
+    ...row, ...jcsb,
     position: 'fixed',
     width: '100%',
     height: '86px',
     alignItems: 'center',
-    zIndex: 2000,
-    //background: 'lightblue',
+    zIndex: 2003,
+    //background: 'lightblue', // dev
     background: 'rgba(144, 238, 144, .33)',
   }
 }
 
 interface linkLogoContainerI {
+  minPort: boolean,
+  minLand: boolean,
+  medPort: boolean,
+  medLand: boolean,
   larPort: boolean,
   larLand: boolean,
 }
@@ -30,13 +36,14 @@ interface linkLogoContainerI {
 // width 160 + 160 = 320 // same as searcher
 // height 30
 
-export const linkLogoContainer = ({ larPort, larLand }: linkLogoContainerI) => {
+export const linkLogoContainer = ({ minPort, minLand, medPort, medLand, larPort, larLand }: linkLogoContainerI) => {
   return {
     ...noDeco, ...noSelect,
     display: 'flex',
     width: '320px',
-    marginLeft: '16px',
-    //background: 'darkred', // dev
+    marginLeft: minPort || minLand ? '2px' : '16px',
+    //marginLeft: '16px',
+    background: 'darkred', // dev
     alignItems: 'center',
     fontSize: 'x-large',
   }
@@ -48,26 +55,42 @@ export const linkLogo = () => {
     display: 'flex',
     //background: 'yellow', // dev
     alignItems: 'center',
-    fontSize: 'x-large',
+    //fontSize: 'x-large',
   }
 }
 
-export const logo = () => {
+interface logoI {
+  minPort: boolean,
+  minLand: boolean,
+  medPort: boolean,
+  medLand: boolean,
+  larPort: boolean,
+  larLand: boolean,
+}
+
+export const logo = ({ minPort, minLand, medPort, medLand, larPort, larLand }: logoI) => {
   return {
-    width: '60px',
-    height: '60px'
+    width: minPort || minLand ? '60px' : '60px',
+    height: minPort || minLand ? '60px' : '60px',
   
   }
 }
 
 interface logoTypoI {
+  minPort: boolean,
+  minLand: boolean,
+  medPort: boolean,
+  medLand: boolean,
+  larPort: boolean,
+  larLand: boolean,
   darkMode: boolean
 }
 
-export const logoTypo = ({ darkMode }: logoTypoI) => {
+export const logoTypo = ({ minPort, minLand, medPort, medLand, larPort, larLand, darkMode }: logoTypoI) => {
   return {
     ...noDeco,
-    display: 'flex',
+    //display: 'flex',
+    display: minPort || minLand ? 'none' : 'flex',
     flexDirection: 'row',
     marginLeft: '5px',
     fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
@@ -77,9 +100,16 @@ export const logoTypo = ({ darkMode }: logoTypoI) => {
   }
 }
 
-export const linkAbout = () => {
+interface linkAboutI {
+  wrongPath: boolean,
+}
+
+export const linkAbout = ({ wrongPath }: linkAboutI) => {
   return {
     ...noDeco, ...noSelect,
+    //display: 'none', // edit
+    //display: 'flex', // edit
+    display: wrongPath ? 'none' : 'flex', // edit
   }
 }
 
@@ -100,13 +130,26 @@ export const typoAbout = ({ darkMode }: typoAboutI) => {
   }
 }
 
-export const searcherContainer = () => {
+interface searcherContainerI {
+  wrongPath: boolean,
+  minPort: boolean,
+  minLand: boolean,
+  medPort: boolean,
+  medLand: boolean,
+  larPort: boolean,
+  larLand: boolean,
+}
+
+export const searcherContainer = ({ wrongPath, minPort, minLand, medPort, medLand, larPort, larLand }: searcherContainerI) => {
   return {
-    display: 'flex',
+    //display: 'flex',
+    //display: 'none', // edit
+    display: wrongPath ? 'none' : 'flex', // edit
     position: 'relative',
     width: '320px',
     //background: 'yellow', // dev
-    marginRight: '16px',
+    //marginRight: '16px',
+    marginRight: minPort || minLand ? '2px' : '16px',
     justifyContent: 'flex-end',
     flexWrap: 'wrap',
   }

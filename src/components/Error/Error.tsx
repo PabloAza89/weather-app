@@ -1,11 +1,14 @@
+import { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import cloudDontAgree from '../../images/cloudDontAgree.gif';
 import * as s from '../../styles/ErrorSX';
 import loadingImage from '../../images/loadingImage.png';
+import { wrongPath } from '../../actions';
 
 function Error() {
+
+  const dispatch = useDispatch()
 
   const english = useSelector((state: {english:boolean}) => state.english)
   const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
@@ -15,6 +18,14 @@ function Error() {
   const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
 
   const [loaded, setLoaded] = useState<boolean>(false)
+
+  useEffect(() => {
+    //console.log("MOUNTED")
+    dispatch(wrongPath(true))
+          return () => {
+            dispatch(wrongPath(false))
+          }
+  },[dispatch])
 
   return (
     <Box sx={s.background({ minPort, minLand })}>
