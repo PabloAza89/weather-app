@@ -6,12 +6,9 @@ import * as s from '../../styles/CityDetailSX';
 import countriesJSON from '../../json/Countries.json';
 import weathersJSON from '../../json/Weathers.json';
 import Map from "../Map/Map"
-import $ from 'jquery';
 import CityNotFound from "../CityNotFound/CityNotFound"
 
 function CityDetail() {
-
-  const [ scrollWidth, setScrollWidth ] = useState<number>(0)
 
   interface EnEsI {
     en: string,
@@ -63,22 +60,6 @@ function CityDetail() {
   const params = useParams()
   const city = cities.filter((c) => c.id === parseInt(`${params.cityId}`))[0]
 
-  useEffect(() => {
-    $(function() {
-      var scrollDiv = document.createElement("div"); // Creates the div
-      scrollDiv.className = "scrollbar-measure";
-      document.body.appendChild(scrollDiv);
-      $(`.scrollbar-measure`)
-        .css("overflowY", "scroll") // Creates a ScrollBar
-        .css("width", "fit-content") // Set width to auto considering the ScrollBar width
-      typeof scrollDiv.offsetWidth === 'number' ? setScrollWidth(scrollDiv.offsetWidth) : setScrollWidth(0)
-      document.body.removeChild(scrollDiv); // Delete the div
-    })
-
-  },[])
-
-  console.log("localStorage", localStorage)
-
   if (!city) return (
     <CityNotFound />)
   else return (
@@ -103,12 +84,7 @@ function CityDetail() {
         `Clouds amount: ${city.clouds} %` :
         `Cantidad de nubes: ${city.clouds} %`
       }</Typography>
-      <Map />
-      {/* <Box id="map" sx={s.map({ scrollWidth, width, minPort, minLand, medPort, medLand, larPort, larLand })}>
-      </Box> */}
-      {/* { Map({latitude: city.latitude, longitude:city.longitude}) } */}
-      {/* <Map latitude={city.latitude} longitude={city.longitude} /> */}
-      
+      <Map latitude={city.latitude} longitude={city.longitude}/>
     </Box>
   )
 }

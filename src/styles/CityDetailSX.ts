@@ -55,24 +55,3 @@ export const tempWeatherWindClouds = () => {
     fontWeight: 400,
   }
 }
-
-interface mapI {
-  scrollWidth: number
-  width: number,
-  minPort: boolean,
-  minLand: boolean,
-  medPort: boolean,
-  medLand: boolean,
-  larPort: boolean,
-  larLand: boolean,
-}
-
-export const map = ({ scrollWidth, width, minPort, minLand, medPort, medLand, larPort, larLand }: mapI) => {
-  return {
-    //display: 'block',
-    height: '300px',
-    //width: '600px',
-    width: minPort ? `${width}px` : minLand ? `200px` : `max(35vw, ${500 - scrollWidth}px)`, // 500 - scrollWidth (17 approx.) === 483px
-    //width: `414px`, // 500 - scrollWidth (17 approx.) === 483px
-  }
-}
