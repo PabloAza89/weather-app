@@ -19,11 +19,15 @@ export const background = () => {
   }
 }
 
-export const cityName = () => {
+interface cityNameI {
+  darkMode: boolean,
+}
+
+export const cityName = ({ darkMode }: cityNameI) => {
   return {
     ...noSelect,
     lineHeight: '38.4px',
-    color: 'rgb(33, 37, 41)',
+    color: darkMode ? 'white' : 'rgb(33, 37, 41)',
     fontSize: '32px',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     fontWeight: 500,

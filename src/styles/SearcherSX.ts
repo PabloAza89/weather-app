@@ -1,3 +1,9 @@
+import {
+  flex, relative, absolute, fixed, column, pointer,
+  row, aic, aifs, asc, jcc, jcfe, jcfs, jcsa,
+  jcsb, jcse, jsc, jic, noDeco, mix, noSelect
+} from './CommonsSX';
+
 // width 182 // larPort
 // height 60 // larPort
 // width 160 + 160 = 320 // larLand
@@ -54,6 +60,7 @@ export const innerTooltipTwo = () => {
 
 export const labelStyle = () => {
   return {
+    //...noSelect,
     width: '160px',
     height: '30px',
   }
@@ -107,6 +114,7 @@ interface inputStylePropsI {
 
 export const inputStyleProps = ({ larPort, larLand }: inputStylePropsI) => {
   return {
+    ...noSelect,
     display: 'flex',
     width: '160px',
     height: '30px',

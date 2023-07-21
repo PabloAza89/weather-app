@@ -10,9 +10,15 @@ interface backgroundI {
 
 export const background = ({ minPort, minLand }: backgroundI) => {
   return {
-    ...flex, ...jcsb,
+    ...flex,
+    //position: 'absolute',
+    position: 'fixed',
+    ...jcsb,
     //background: 'darkorange',
-    height: 'calc(100vh - 12px)',
+    zIndex: 2002,
+    width: '100vw',
+    //height: 'calc(100vh - 12px)',
+    height: '100vh',
     minHeight: minPort || minLand ? 'none' : '530px',
   }
 }
@@ -88,16 +94,18 @@ export const placeholderAnimation = ({ loaded, minPort, minLand, medPort, medLan
 }
 
 interface messageI {
+  darkMode: boolean,
   minPort: boolean,
   minLand: boolean,
   medPort: boolean,
   medLand: boolean,
 }
 
-export const message = ({ minPort, minLand, medPort, medLand }: messageI) => {
+export const message = ({ darkMode, minPort, minLand, medPort, medLand }: messageI) => {
   return {
     ...flex, ...relative, ...noSelect, ...mix,
-    color: 'white',
+    //color: 'white',
+    color: darkMode ? 'white' : '#154f8f',
     fontSize: minPort ? '7vw' : minLand ? '5.5vh' : medPort || medLand ? '31px' : '35px',
   }
 }

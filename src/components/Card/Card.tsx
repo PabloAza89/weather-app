@@ -44,14 +44,14 @@ const Card = ({ min, max, name, img, id, country }: cardI) => {
       </Link>
       <Typography sx={s.countryName}>{ english ? countryCode[country].en : countryCode[country].es }</Typography>
       <Box sx={s.minMaxIcon}>
-        <Typography sx={s.minMax}>
+        <Box sx={s.minMax}>
           <Box>Min</Box>
           { english ? `${Math.round((min * (9 / 5) + 32) * 10) / 10} °F` : `${Math.round(min * 10) / 10} °C` }
-        </Typography>
-        <Typography sx={s.minMax}>
+        </Box>
+        <Box sx={s.minMax}>
           <Box>Max</Box>
           { english ? `${Math.round((max * (9 / 5) + 32) * 10) / 10} °F` : `${Math.round(max * 10) / 10} °C` }
-        </Typography>
+        </Box>
         <Box
           sx={s.minMax}
           component="img"

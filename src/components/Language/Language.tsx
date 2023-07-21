@@ -28,29 +28,6 @@ function Language() {
   const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
   const percentageResizedHeight = useSelector((state: {percentageResizedHeight:number}) => state.percentageResizedHeight)
 
-  // useEffect(() => {
-  //   let langEn: string | null = localStorage.getItem('langEn');
-  //   if (langEn === ( null || 'true' )) dispatch(languageChanger(true))
-  //   if (langEn === 'false') dispatch(languageChanger(false))
-  // })
-
-/*   return (
-    <Box sx={s.background({ height, minLand, larPort, larLand, location:location.pathname, percentageResizedHeight })}>
-      <Box
-        component="img"
-        src={lanEn}
-        onClick={() => { localStorage.setItem('langEn', (!english).toString()); dispatch(languageChanger(true)) }}
-        sx={s.lanEnFlag({ english, minPort, minLand, medPort, medLand, larPort })}
-      />
-      <Box
-        component="img"
-        src={lanEs}
-        onClick={() => { localStorage.setItem('langEn', (!english).toString()); dispatch(languageChanger(false)) }}
-        sx={s.lanEsFlag({ english, minPort, minLand, medPort, medLand, larPort })}
-      />
-    </Box>
-  ) */
-
   useEffect(() => {
     $(function() {
       if (show) { // show -> hidden
@@ -59,13 +36,6 @@ function Language() {
           .css("left", "0px")
         $(`.flags`)
           .css("left", "-60px")
-        // if (!animRunning) {
-        //   $(`.buttonShow`)
-        //     .css(`animationName`,`shake`)
-        //     .css(`animationDuration`,`6s`)
-        //     .css(`animationDelay`,`3s`)
-        //     .css(`animationIterationCount`,`infinite`)
-        // }
         $(`#buttonShow`).on("click", function() {
           $(`#buttonShow`)
             .stop()
@@ -75,10 +45,7 @@ function Language() {
             .css(`animationIterationCount`,`none`)
           $(`.flags`)
             .stop()
-            .animate( { left: minPort || minLand ? -20 : -60 }, { queue: false, easing: 'easeOutCubic', duration: 800, complete: function() {
-              // isRunning.current = false;
-              // if (!isRunning.current) setAnimRunning(false)
-            }})
+            .animate( { left: minPort || minLand ? -20 : -60 }, { queue: false, easing: 'easeOutCubic', duration: 800 })
         })
       } 
       
@@ -88,13 +55,6 @@ function Language() {
           .css("left", "0px")
         $(`.flags`)
           .css("left", "-60px")
-        // if (!animRunning) {
-        //   $(`.buttonShow`)
-        //     .css(`animationName`,`shake`)
-        //     .css(`animationDuration`,`6s`)
-        //     .css(`animationDelay`,`3s`)
-        //     .css(`animationIterationCount`,`infinite`)
-        // }
         $(`#buttonShow`).on("click", function() {
           $(`#buttonShow`)
             .stop()
@@ -104,14 +64,17 @@ function Language() {
             .css(`animationIterationCount`,`none`)
           $(`.flags`)
             .stop()
-            .animate( { left: minPort || minLand ? -20 : 30 }, { queue: false, easing: 'easeOutCubic', duration: 800, complete: function() {
-              // isRunning.current = false;
-              // if (!isRunning.current) setAnimRunning(false)
-            }})
+            .animate( { left: minPort || minLand ? -20 : 30 }, { queue: false, easing: 'easeOutCubic', duration: 800 })
         })
       }
     })
   },[show, minLand, minPort])
+
+  // useEffect(() => {
+  //   let langEn: string | null = localStorage.getItem('langEn');
+  //   if (langEn === ( null || 'true' )) dispatch(languageChanger(true))
+  //   if (langEn === 'false') dispatch(languageChanger(false))
+  // },[])
 
   return (
     <Box sx={s.background}>

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import error from '../../images/error.gif';
+import cloudDontAgree from '../../images/cloudDontAgree.gif';
 import * as s from '../../styles/ErrorSX';
 import loadingImage from '../../images/loadingImage.png';
 
@@ -12,6 +12,7 @@ function Error() {
   const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
   const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
   const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
+  const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
 
   const [loaded, setLoaded] = useState<boolean>(false)
 
@@ -22,7 +23,7 @@ function Error() {
         <Box>
           <Box
             component="img"
-            src={error}
+            src={cloudDontAgree}
             onLoad={() => setLoaded(true)}
             sx={s.errorGif({ loaded, minPort, minLand, medPort, medLand })}
           />
@@ -32,7 +33,7 @@ function Error() {
             sx={s.placeholderAnimation({ loaded, minPort, minLand, medPort, medLand })}
           />
         </Box>
-        <Typography sx={s.message({ minPort, minLand, medPort, medLand })}>
+        <Typography sx={s.message({ darkMode, minPort, minLand, medPort, medLand })}>
           { english ? `This page does not exist.` : `Esta página no existe.` }
         </Typography>
       </Box>

@@ -6,6 +6,7 @@ import DarkMode from "./components/DarkMode/DarkMode";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import Language from "./components/Language/Language";
+import Error from "./components/Error/Error";
 import CityDetail from "./components/CityDetail/CityDetail";
 import * as s from './styles/AppSX';
 import { useDispatch, useSelector } from 'react-redux';
@@ -62,6 +63,10 @@ function App() {
           <CityDetail />
           <Language />
           <DarkMode />
+        </>}/>
+        <Route path="*" element={<>
+            {/* <BackButton /> */}
+            <Error />
         </>}/>
       </Routes>
     </Box>

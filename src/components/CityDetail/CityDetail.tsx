@@ -50,6 +50,7 @@ function CityDetail() {
   }
 
   const english = useSelector((state: {english:boolean}) => state.english)
+  const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
   const cities = useSelector((state: {cities:citiesI[]}) => state.cities)
   const params = useParams()
   const city = cities.filter((c) => c.id === parseInt(`${params.cityId}`))[0]
@@ -68,7 +69,8 @@ function CityDetail() {
 
   },[])
 
-  console.log("A VER ESTE", scrollWidth)
+  //console.log("A VER ESTE", scrollWidth)
+  console.log("localStorage", localStorage)
 
   if (!city) return (
     <Box>
@@ -79,7 +81,7 @@ function CityDetail() {
     </Box>)
   else return (
     <Box sx={s.background}>
-      <Typography sx={s.cityName}>{city.name}</Typography>
+      <Typography sx={s.cityName({ darkMode })}>{city.name}</Typography>
       <Typography sx={s.countryName}>{ english ?
         countryCode[city.country].en : countryCode[city.country].es
       }</Typography>

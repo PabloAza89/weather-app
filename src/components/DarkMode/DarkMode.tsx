@@ -22,15 +22,15 @@ function DarkMode() {
   const percentageResizedHeight = useSelector((state: {percentageResizedHeight:number}) => state.percentageResizedHeight)
   const darkMode = useSelector( (state: {darkMode:boolean}) => state.darkMode)
 
-  // useEffect(() => {
-  //   let night: string | null = localStorage.getItem('night');
-  //   if (night === ( null || 'false' )) dispatch(setDarkMode(false))
-  //   if (night === 'true') dispatch(setDarkMode(true))
-  // })
+  useEffect(() => {
+    let night: string | null = localStorage.getItem('night');
+    if (night === ( null || 'false' )) dispatch(setDarkMode(false))
+    if (night === 'true') dispatch(setDarkMode(true))
+  })
 
   return (
     <Button
-      onClick={() => { /* localStorage.setItem('night', (!darkMode).toString()); */ dispatch(setDarkMode(!darkMode)) }}
+      onClick={() => { localStorage.setItem('night', (!darkMode).toString()); dispatch(setDarkMode(!darkMode)) }}
       variant="contained"
       sx={s.background}
     >
