@@ -11,6 +11,7 @@ const NavBar = () => {
 
   const location = useLocation()
 
+  const width = useSelector((state: {width:number}) => state.width)
   const wrongPath = useSelector((state: {wrongPath:boolean}) => state.wrongPath)
   const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
   const english = useSelector((state: {english:boolean}) => state.english)
@@ -39,7 +40,7 @@ const NavBar = () => {
       </Box>
       <Link
         to="/about"
-        style={s.linkAbout({ wrongPath })}
+        style={s.linkAbout({ width, minPort, minLand, medPort, medLand, larPort, larLand, wrongPath })}
       >
         <Typography sx={s.typoAbout({ darkMode })}>
           { english ? `ABOUT` : `ACERCA` }

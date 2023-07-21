@@ -20,13 +20,10 @@ export const background = () => {
     height: '120px',
     top: '100px',
     zIndex: 3000,
-    
-    
-    'active': {
-      'opacity': '0',
-      'display': 'flex'
-      },
-    
+    active: {
+      opacity: '0',
+      display: 'flex'
+    },
   }
 }
 
@@ -88,8 +85,10 @@ export const lanEnFlag = ({ english, minPort, minLand, medPort, medLand, larPort
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     border: english ? `solid ${cyan[400]} 2px` : `solid transparent 2px`,
-    height: minPort ? '25px' : minLand ? '25px' : medPort ? '36px' : medLand ? '36px' : larPort ? '42px' : '42px',
-    width: minPort ? '37px' : minLand ? '37px' : medPort ? '50px' : medLand ? '50px' : larPort ? '60px' : '60px',
+    //height: minPort ? '25px' : minLand ? '25px' : medPort ? '36px' : medLand ? '36px' : larPort ? '42px' : '42px',
+    //width: minPort ? '37px' : minLand ? '37px' : medPort ? '50px' : medLand ? '50px' : larPort ? '60px' : '60px',
+    height: '42px',
+    width: '60px',
     ':hover': {
       webkitFilter: 'brightness(.9)',
       'filter': 'brightness(.9)',
@@ -105,8 +104,10 @@ export const lanEsFlag = ({ english, minPort, minLand, medPort, medLand, larPort
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     border: english ? `solid transparent 2px` : `solid ${cyan[400]} 2px`,
-    height: minPort ? '25px' : minLand ? '25px' : medPort ? '36px' : medLand ? '36px' : larPort ? '42px' : '42px',
-    width: minPort ? '37px' : minLand ? '37px' : medPort ? '50px' : medLand ? '50px' : larPort ? '60px' : '60px',
+    //height: minPort ? '25px' : minLand ? '25px' : medPort ? '36px' : medLand ? '36px' : larPort ? '42px' : '42px',
+    //width: minPort ? '37px' : minLand ? '37px' : medPort ? '50px' : medLand ? '50px' : larPort ? '60px' : '60px',
+    height: '42px',
+    width: '60px',
     ':hover': {
       webkitFilter: 'brightness(.9)',
       'filter': 'brightness(.9)',

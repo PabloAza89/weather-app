@@ -45,7 +45,7 @@ function Language() {
             .css(`animationIterationCount`,`none`)
           $(`.flags`)
             .stop()
-            .animate( { left: minPort || minLand ? -20 : -60 }, { queue: false, easing: 'easeOutCubic', duration: 800 })
+            .animate( { left: minPort || minLand ? -60 : -60 }, { queue: false, easing: 'easeOutCubic', duration: 800 })
         })
       } 
       
@@ -64,7 +64,7 @@ function Language() {
             .css(`animationIterationCount`,`none`)
           $(`.flags`)
             .stop()
-            .animate( { left: minPort || minLand ? -20 : 30 }, { queue: false, easing: 'easeOutCubic', duration: 800 })
+            .animate( { left: minPort || minLand ? 30 : 30 }, { queue: false, easing: 'easeOutCubic', duration: 800 })
         })
       }
     })

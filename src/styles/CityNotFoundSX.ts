@@ -14,7 +14,7 @@ export const background = ({ darkMode }: backgroundI) => {
     //color: 'red',
     //color: 'white',
     color: darkMode ? 'white' : '#154f8f',
-    //background: 'gray',
+    //background: 'gray', // dev
     marginTop: '86px',
     //height: '86px',
     //padding: '0px 35px',
@@ -23,6 +23,7 @@ export const background = ({ darkMode }: backgroundI) => {
     minHeight: '154px',
     height: 'calc(100vh - 86px)',
     width: '100vw',
+    //width: '80vw',
     zIndex: 2000,
     justifyContent: 'center',
     alignItems: 'center',

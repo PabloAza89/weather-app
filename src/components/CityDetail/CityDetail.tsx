@@ -50,6 +50,13 @@ function CityDetail() {
     longitude: number,
   }
 
+  const width = useSelector((state: {width:number}) => state.width)
+  const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
+  const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
+  const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
+  const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
+  const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
+  const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
   const english = useSelector((state: {english:boolean}) => state.english)
   const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
   const cities = useSelector((state: {cities:citiesI[]}) => state.cities)
@@ -70,20 +77,6 @@ function CityDetail() {
 
   },[])
 
-  // useEffect(() => {
-          
-  // })
-
-/*   function AVS () {
-    useEffect(() => {
-      console.log("MOUNTED")
-            return () => {
-              console.log("UNMOUNTED")
-            }
-    })
-  }
- */
-  //console.log("A VER ESTE", scrollWidth)
   console.log("localStorage", localStorage)
 
   if (!city) return (
@@ -110,8 +103,12 @@ function CityDetail() {
         `Clouds amount: ${city.clouds} %` :
         `Cantidad de nubes: ${city.clouds} %`
       }</Typography>
-      { Map({latitude: city.latitude, longitude:city.longitude}) }
-      <Box id="map" sx={s.map({ scrollWidth })}></Box>
+      <Map />
+      {/* <Box id="map" sx={s.map({ scrollWidth, width, minPort, minLand, medPort, medLand, larPort, larLand })}>
+      </Box> */}
+      {/* { Map({latitude: city.latitude, longitude:city.longitude}) } */}
+      {/* <Map latitude={city.latitude} longitude={city.longitude} /> */}
+      
     </Box>
   )
 }

@@ -16,7 +16,7 @@ function About() {
   const percentageResizedHeight = useSelector((state: {percentageResizedHeight:number}) => state.percentageResizedHeight)
 
   return (
-    <Box sx={s.background}>
+    <Box sx={s.background({ english, minPort, minLand, medPort, medLand, larPort })}>
       <Typography sx={s.description({ darkMode })}> { english ?
         `Hola soy Pablo ! Y está es mi aplicacion del clima creada durante el Bootcamp de Henry !! ` :
         `Hi i'm Pablo ! And this is my weather app created during my Bootcamp at Henry !! `

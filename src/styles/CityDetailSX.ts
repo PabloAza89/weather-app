@@ -3,32 +3,6 @@ import {
   aic, noSelect, relative
 } from '../styles/CommonsSX';
 
-interface cityNotFoundI {
-  darkMode: boolean
-}
-
-export const cityNotFound = ({ darkMode }: cityNotFoundI) => {
-  return {
-    display: 'flex',
-    //color: 'red',
-    //color: 'white',
-    color: darkMode ? 'white' : '#154f8f',
-    //background: 'gray',
-    marginTop: '86px',
-    //height: '86px',
-    //padding: '0px 35px',
-    padding: '0px 40px',
-    //height: '100vh',
-    minHeight: '154px',
-    height: 'calc(100vh - 86px)',
-    width: '100vw',
-    zIndex: 2000,
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-  }
-}
-
 export const background = () => {
   return {
     display: 'flex',
@@ -84,13 +58,21 @@ export const tempWeatherWindClouds = () => {
 
 interface mapI {
   scrollWidth: number
+  width: number,
+  minPort: boolean,
+  minLand: boolean,
+  medPort: boolean,
+  medLand: boolean,
+  larPort: boolean,
+  larLand: boolean,
 }
 
-export const map = ({ scrollWidth }: mapI) => {
+export const map = ({ scrollWidth, width, minPort, minLand, medPort, medLand, larPort, larLand }: mapI) => {
   return {
     //display: 'block',
     height: '300px',
     //width: '600px',
-    width: `max(35vw, ${500 - scrollWidth}px)`, // 500 - scrollWidth (17 approx.) === 483px
+    width: minPort ? `${width}px` : minLand ? `200px` : `max(35vw, ${500 - scrollWidth}px)`, // 500 - scrollWidth (17 approx.) === 483px
+    //width: `414px`, // 500 - scrollWidth (17 approx.) === 483px
   }
 }

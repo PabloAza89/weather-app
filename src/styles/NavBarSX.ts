@@ -16,6 +16,7 @@ export const background = ({ larPort, larLand }: backgroundI) => {
     ...row, ...jcsb,
     position: 'fixed',
     width: '100%',
+    //width: '100%',
     height: '86px',
     alignItems: 'center',
     zIndex: 2003,
@@ -40,8 +41,9 @@ export const linkLogoContainer = ({ minPort, minLand, medPort, medLand, larPort,
   return {
     ...noDeco, ...noSelect,
     display: 'flex',
-    width: '320px',
-    marginLeft: minPort || minLand ? '2px' : '16px',
+    //width: '320px',
+    width: minPort ? 'unset' : '320px',
+    marginLeft: minPort || minLand ? '10px' : '16px',
     //marginLeft: '16px',
     background: 'darkred', // dev
     alignItems: 'center',
@@ -90,7 +92,7 @@ export const logoTypo = ({ minPort, minLand, medPort, medLand, larPort, larLand,
   return {
     ...noDeco,
     //display: 'flex',
-    display: minPort || minLand ? 'none' : 'flex',
+    display: minPort ? 'none' : 'flex',
     flexDirection: 'row',
     marginLeft: '5px',
     fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
@@ -101,15 +103,22 @@ export const logoTypo = ({ minPort, minLand, medPort, medLand, larPort, larLand,
 }
 
 interface linkAboutI {
+  width: number,
+  minPort: boolean,
+  minLand: boolean,
+  medPort: boolean,
+  medLand: boolean,
+  larPort: boolean,
+  larLand: boolean,
   wrongPath: boolean,
 }
 
-export const linkAbout = ({ wrongPath }: linkAboutI) => {
+export const linkAbout = ({ width, minPort, minLand, medPort, medLand, larPort, larLand, wrongPath }: linkAboutI) => {
   return {
     ...noDeco, ...noSelect,
     //display: 'none', // edit
     //display: 'flex', // edit
-    display: wrongPath ? 'none' : 'flex', // edit
+    display: ( width < 310 && minPort ) || wrongPath ? 'none' : 'flex', // edit
   }
 }
 
@@ -146,10 +155,11 @@ export const searcherContainer = ({ wrongPath, minPort, minLand, medPort, medLan
     //display: 'none', // edit
     display: wrongPath ? 'none' : 'flex', // edit
     position: 'relative',
-    width: '320px',
+    //width: '320px',
+    width: minPort ? 'unset' : '320px',
     //background: 'yellow', // dev
     //marginRight: '16px',
-    marginRight: minPort || minLand ? '2px' : '16px',
+    marginRight: minPort || minLand ? '10px' : '16px',
     justifyContent: 'flex-end',
     flexWrap: 'wrap',
   }
