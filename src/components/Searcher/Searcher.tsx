@@ -15,7 +15,7 @@ export default function SearchBar() {
   const currentWidth = useSelector((state: {currentWidth: number}) => state.currentWidth)
 
   const [city, setCity] = useState<string>("");
-  const [disabled, setDisabled] = useState<boolean>(false); // 3 to test..
+  const [disabled, setDisabled] = useState<boolean>(false); // enables search box
 
   interface citiesI {
     id: number,
@@ -97,7 +97,7 @@ export default function SearchBar() {
   }
 
   useEffect(() => { // available slots checker
-    if (cities.length >= 15) setDisabled(true)
+    if (cities.length >= 15) setDisabled(true) // number of searches
     else setDisabled(false)
   },[cities])
 
@@ -113,11 +113,11 @@ export default function SearchBar() {
       sx={s.tooltip}
       title={ english ?
         <Box>
-          <Box sx={s.innerTooltipOne}>You're able to make <em>3 searchs</em> at the same time..</Box>
+          <Box sx={s.innerTooltipOne}>You're able to make <em>15 searches</em> at the same time..</Box>
           <Box sx={s.innerTooltipTwo}>Please delete some search, then you will have some available slots.</Box>
         </Box> :
         <Box>
-          <Box sx={s.innerTooltipOne}>Estás habilitado a realizar <em>3 búsquedas</em> al mismo tiempo..</Box>
+          <Box sx={s.innerTooltipOne}>Estás habilitado a realizar <em>15 búsquedas</em> al mismo tiempo..</Box>
           <Box sx={s.innerTooltipTwo}>Por favor eliminá algunas búsquedas, así tenés espacio disponible.</Box>
         </Box>
       }

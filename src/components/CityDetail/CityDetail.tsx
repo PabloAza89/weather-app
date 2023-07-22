@@ -62,7 +62,7 @@ function CityDetail() {
       }</Typography>
       <Typography sx={s.tempWeatherWindClouds}>{ english ?
         `Temperature: ${Math.round(((city.temp * (9/5)) + 32) * 10) / 10} ºF` :
-        `Temperatura: ${Math.round(city.temp * 10) / 10} ºF`
+        `Temperatura: ${Math.round(city.temp * 10) / 10} °C`
       }</Typography>
       <Typography sx={s.tempWeatherWindClouds}>{ english ?
         `Weather: ${weathers[city.weather].en}` :
