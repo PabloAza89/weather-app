@@ -1,7 +1,9 @@
+import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { useSelector } from 'react-redux';
 import { Box, Typography } from '@mui/material';
 import * as s from '../../styles/MapSX';
+import $ from 'jquery';
 
 interface mapI {
   latitude: number,
@@ -9,6 +11,8 @@ interface mapI {
 }
 
 const Map = ({ latitude, longitude }: mapI)  => {
+
+  const [ scrollWidth, setScrollWidth ] = useState<number>(0)
 
   const width = useSelector((state: {width:number}) => state.width)
   const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
@@ -18,14 +22,28 @@ const Map = ({ latitude, longitude }: mapI)  => {
   const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
   const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
+  useEffect(() => {
+    $(function() {
+      var scrollDiv = document.createElement("div"); // Creates the div
+      scrollDiv.className = "scrollbar-measure";
+      document.body.appendChild(scrollDiv);
+      $(`.scrollbar-measure`)
+        .css("overflowY", "scroll") // Creates a ScrollBar
+        .css("width", "fit-content") // Set width to auto considering the ScrollBar width
+      typeof scrollDiv.offsetWidth === 'number' ? setScrollWidth(scrollDiv.offsetWidth) : setScrollWidth(0)
+      document.body.removeChild(scrollDiv); // Delete the div
+    })
+
+  },[])
 
   return (
-    <Box style={s.test({ width, minPort, minLand, medPort, medLand, larPort, larLand })}>
+    <Box style={s.background({ scrollWidth, width, minPort, minLand, medPort, medLand, larPort, larLand })}>
       <MapContainer
-        style={s.background({ width, minPort, minLand, medPort, medLand, larPort, larLand })}
+        style={s.mapContainer({ width, minPort, minLand, medPort, medLand, larPort, larLand })}
         center={[latitude, longitude]}
         zoom={5}
         scrollWheelZoom={true}
+        minZoom={1}
       >
         <TileLayer
           //attribution='"© <a href=""https://osm.org/copyright"">OpenStreetMap</a> contributors"'

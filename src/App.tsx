@@ -39,11 +39,17 @@ function App() {
   });
 
   const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
+  const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
+  const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
+  const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
+  const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
+  const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
+  const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
   return (
     <Box sx={s.background} >
-      <Box sx={s.background2({ darkMode })} />
-      <Box sx={s.background3({ darkMode })} />
+      <Box sx={s.wallpaperNavBar({ darkMode, minPort, minLand, medPort, medLand, larPort, larLand })} />
+      <Box sx={s.wallpaperBody({ darkMode, minPort, minLand, medPort, medLand, larPort, larLand })} />
       <Routes>
         <Route path="/" element={<>
           <NavBar />

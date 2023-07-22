@@ -20,15 +20,14 @@ function Error() {
   const [loaded, setLoaded] = useState<boolean>(false)
 
   useEffect(() => {
-    //console.log("MOUNTED")
     dispatch(wrongPath(true))
-          return () => {
-            dispatch(wrongPath(false))
-          }
+      return () => {
+        dispatch(wrongPath(false))
+      }
   },[dispatch])
 
   return (
-    <Box sx={s.background({ minPort, minLand })}>
+    <Box sx={s.background({ minPort, minLand, medPort, medLand })}>
       <Box sx={s.leftRightHelper({ minPort, minLand })} />
       <Box sx={s.mainContainer({ minPort, minLand, medPort, medLand })}>
         <Box>

@@ -11,9 +11,10 @@ export const background = ({ darkMode }: backgroundI) => {
   return {
     ...noSelect,
     display: 'flex',
+    // '#1259a6' : '#007bff'
     //color: 'red',
     //color: 'white',
-    color: darkMode ? 'white' : '#154f8f',
+    color: darkMode ? 'white' : '#0e3a6b',
     //background: 'gray', // dev
     marginTop: '86px',
     //height: '86px',

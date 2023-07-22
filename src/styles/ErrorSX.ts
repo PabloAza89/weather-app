@@ -6,20 +6,28 @@ import {
 interface backgroundI {
   minPort: boolean,
   minLand: boolean,
+  medPort: boolean,
+  medLand: boolean,
 }
 
-export const background = ({ minPort, minLand }: backgroundI) => {
+export const background = ({ minPort, minLand, medPort, medLand }: backgroundI) => {
   return {
     ...flex,
     //position: 'absolute',
-    position: 'fixed',
+    //position: 'fixed',
+    marginTop: '86px',
+    position: 'relative',
+    //flexDirection: 'column',
     ...jcsb,
-    //background: 'darkorange',
+    background: 'darkorange', // dev
     zIndex: 2002,
     width: '100vw',
     //height: 'calc(100vh - 12px)',
-    height: '100vh',
-    minHeight: minPort || minLand ? 'none' : '530px',
+    //height: '100vh',
+    height: 'calc(100vh - 86px)', // 86px
+    //height: '100vh', // 86px
+    minHeight: minPort || minLand || medPort || medLand ? 'none' : '530px',
+    //bottom: '0px',
   }
 }
 

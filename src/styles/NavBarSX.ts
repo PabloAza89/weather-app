@@ -99,6 +99,8 @@ export const logoTypo = ({ minPort, minLand, medPort, medLand, larPort, larLand,
     fontSize: '24px',
     fontWeight: 400,
     color: darkMode ? '#1259a6' : '#007bff',
+
+   
   }
 }
 
@@ -136,6 +138,8 @@ export const typoAbout = ({ darkMode }: typoAboutI) => {
     fontWeight: 450,
     letterSpacing: 'normal',
     lineHeight: '1.5',
+
+     // '#1259a6' : '#007bff' // '#0e3a6b',
   }
 }
 
