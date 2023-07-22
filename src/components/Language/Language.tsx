@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from "react-router-dom";
 import { languageChanger } from '../../actions';
 import * as s from '../../styles/LanguageSX';
 import lanEn from '../../images/lanEn.png';
@@ -14,22 +13,16 @@ function Language() {
   easings() // Jquery easings..
 
   const dispatch = useDispatch()
-  const location = useLocation()
 
   const [ show, setShow ] = useState<boolean>(false)
 
   const english = useSelector((state: {english:boolean}) => state.english)
-  const height = useSelector((state: {height:number}) => state.height)
   const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
   const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
-  const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
-  const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
-  const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
-  const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
-  const percentageResizedHeight = useSelector((state: {percentageResizedHeight:number}) => state.percentageResizedHeight)
 
   useEffect(() => {
     $(function() {
+      
       if (show) { // show -> hidden
         $(`.buttonShow`)
           .stop()
@@ -47,8 +40,8 @@ function Language() {
             .stop()
             .animate( { left: minPort || minLand ? -60 : -60 }, { queue: false, easing: 'easeOutCubic', duration: 800 })
         })
-      } 
-      
+      }
+
       else if (!show) { // hidden -> show
         $(`.buttonShow`)
           .stop()
@@ -87,13 +80,13 @@ function Language() {
           component="img"
           src={lanEn}
           onClick={() => { localStorage.setItem('langEn', (!english).toString()); dispatch(languageChanger(true)) }}
-          sx={s.lanEnFlag({ english, minPort, minLand, medPort, medLand, larPort })}
+          sx={s.lanEnFlag({ english })}
         />
         <Box
           component="img"
           src={lanEs}
           onClick={() => { localStorage.setItem('langEn', (!english).toString()); dispatch(languageChanger(false)) }}
-          sx={s.lanEsFlag({ english, minPort, minLand, medPort, medLand, larPort })}
+          sx={s.lanEsFlag({ english })}
         />
       </Box>
       <Button

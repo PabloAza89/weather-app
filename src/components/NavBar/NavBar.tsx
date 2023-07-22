@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
 import Logo from "../../images/logo.png";
 import { Box, Typography } from '@mui/material';
 import Searcher from "../Searcher/Searcher";
 import { useSelector } from 'react-redux';
 import * as s from '../../styles/NavBarSX';
 import { Link, useLocation } from "react-router-dom";
-import $ from 'jquery';
 
 const NavBar = () => {
 
@@ -17,37 +15,31 @@ const NavBar = () => {
   const english = useSelector((state: {english:boolean}) => state.english)
   const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
   const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
-  const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
-  const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
-  const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
-  const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
-
-  console.log("LOCATION", location.pathname)
-
+  
   return (
-    <Box sx={s.background({ larPort, larLand })}>
-      <Box sx={s.linkLogoContainer({ minPort, minLand, medPort, medLand, larPort, larLand })}>
+    <Box sx={s.background}>
+      <Box sx={s.linkLogoContainer({ minPort, minLand })}>
         <Link style={s.linkLogo()} to="/">
           <Box
             component="img"
             src={Logo}
-            sx={s.logo({ minPort, minLand, medPort, medLand, larPort, larLand })}
+            sx={s.logo({ minPort, minLand })}
           />
-          <Typography sx={s.logoTypo({ minPort, minLand, medPort, medLand, larPort, larLand, darkMode })}>
+          <Typography sx={s.logoTypo({ minPort, darkMode })}>
             Weatherify
           </Typography>
         </Link>
       </Box>
       <Link
         to="/about"
-        style={s.linkAbout({ width, minPort, minLand, medPort, medLand, larPort, larLand, wrongPath })}
+        style={s.linkAbout({ width, minPort, wrongPath, location:location.pathname })}
       >
         <Typography sx={s.typoAbout({ darkMode })}>
           { english ? `ABOUT` : `ACERCA` }
         </Typography>
       </Link>
       <Box
-        sx={s.searcherContainer({ wrongPath, minPort, minLand, medPort, medLand, larPort, larLand })}
+        sx={s.searcherContainer({ wrongPath, minPort, minLand })}
         className={`reference`}
       >
         <Searcher />

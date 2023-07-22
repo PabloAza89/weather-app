@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import { useSelector } from 'react-redux';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import * as s from '../../styles/MapSX';
 import $ from 'jquery';
 
@@ -37,9 +37,9 @@ const Map = ({ latitude, longitude }: mapI)  => {
   },[])
 
   return (
-    <Box style={s.background({ scrollWidth, width, minPort, minLand, medPort, medLand, larPort, larLand })}>
+    <Box style={s.background({ scrollWidth, width, minPort, minLand })}>
       <MapContainer
-        style={s.mapContainer({ width, minPort, minLand, medPort, medLand, larPort, larLand })}
+        style={s.mapContainer()}
         center={[latitude, longitude]}
         zoom={5}
         scrollWheelZoom={true}

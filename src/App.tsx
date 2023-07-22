@@ -47,8 +47,8 @@ function App() {
 
   return (
     <Box sx={s.background} >
-      <Box sx={s.wallpaperNavBar({ darkMode, minPort, minLand, medPort, medLand, larPort, larLand })} />
-      <Box sx={s.wallpaperBody({ darkMode, minPort, minLand, medPort, medLand, larPort, larLand })} />
+      <Box sx={s.wallpaperNavBar({ darkMode, medPort, larPort })} />
+      <Box sx={s.wallpaperBody({ darkMode, medPort, larPort })} />
       <Routes>
         <Route path="/" element={<>
           <NavBar />

@@ -1,7 +1,7 @@
 import {
-  flex, relative, absolute, fixed, column, pointer,
-  row, aic, aifs, asc, jcc, jcfe, jcfs, jcsa,
-  jcsb, jcse, jsc, jic, noDeco, mix, noSelect
+  flex, relative, column,
+  row, aic, asc,
+  jcsb, jcse, noDeco, noSelect
 } from './CommonsSX'; // ALL VARS
 
 // width 290

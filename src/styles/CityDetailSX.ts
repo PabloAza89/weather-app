@@ -1,21 +1,18 @@
 import {
-  column, flex, mix, jcsb, jcc,
-  aic, noSelect, relative
-} from '../styles/CommonsSX';
+  flex, column, 
+  aic, asc, 
+  jcse, noSelect
+} from './CommonsSX';
 
 export const background = () => {
   return {
-    display: 'flex',
-    flexDirection: 'column',
+    ...flex, ...column, ...asc, ...aic, ...jcse,
     marginTop: '86px',
     paddingTop: '40px',
     //background: 'gray', // dev
     zIndex: 1999,
     width: '100%',
     height: '600px',
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
   }
 }
 

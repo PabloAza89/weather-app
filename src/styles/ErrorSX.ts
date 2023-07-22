@@ -1,7 +1,8 @@
 import {
-  column, flex, mix, jcsb, jcc,
-  aic, noSelect, relative
-} from '../styles/CommonsSX';
+  flex, relative, column, 
+  aic, jcc, 
+  jcsb, mix, noSelect
+} from './CommonsSX';
 
 interface backgroundI {
   minPort: boolean,
@@ -12,22 +13,13 @@ interface backgroundI {
 
 export const background = ({ minPort, minLand, medPort, medLand }: backgroundI) => {
   return {
-    ...flex,
-    //position: 'absolute',
-    //position: 'fixed',
+    ...flex, ...relative, ...jcsb,
     marginTop: '86px',
-    position: 'relative',
-    //flexDirection: 'column',
-    ...jcsb,
-    background: 'darkorange', // dev
+    //background: 'darkorange', // dev
     zIndex: 2002,
     width: '100vw',
-    //height: 'calc(100vh - 12px)',
-    //height: '100vh',
-    height: 'calc(100vh - 86px)', // 86px
-    //height: '100vh', // 86px
+    height: 'calc(100vh - 86px)',
     minHeight: minPort || minLand || medPort || medLand ? 'none' : '530px',
-    //bottom: '0px',
   }
 }
 

@@ -38,8 +38,6 @@ export default function SearchBar() {
   const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
   const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
   const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
-  const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
-  const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
 
   const cityExists = () => {
     Swal.fire({
@@ -99,7 +97,7 @@ export default function SearchBar() {
   }
 
   useEffect(() => { // available slots checker
-    if (cities.length >= 3) setDisabled(true)
+    if (cities.length >= 15) setDisabled(true)
     else setDisabled(false)
   },[cities])
 
@@ -112,13 +110,13 @@ export default function SearchBar() {
       leaveDelay={200}
       enterTouchDelay={0}
       placement="bottom-end"
-      sx={s.tooltip({ larPort, larLand })}
+      sx={s.tooltip}
       title={ english ?
-        <Box sx={s.innerTooltip}>
+        <Box>
           <Box sx={s.innerTooltipOne}>You're able to make <em>3 searchs</em> at the same time..</Box>
           <Box sx={s.innerTooltipTwo}>Please delete some search, then you will have some available slots.</Box>
         </Box> :
-        <Box sx={s.innerTooltip}>
+        <Box>
           <Box sx={s.innerTooltipOne}>Estás habilitado a realizar <em>3 búsquedas</em> al mismo tiempo..</Box>
           <Box sx={s.innerTooltipTwo}>Por favor eliminá algunas búsquedas, así tenés espacio disponible.</Box>
         </Box>
@@ -127,7 +125,7 @@ export default function SearchBar() {
       <Box
         component="form"
         onSubmit={(e: any) => { e.preventDefault(); onSearch(city) }}
-        sx={s.background({ currentWidth, larPort, larLand })}
+        sx={s.background({ currentWidth })}
       >
         <TextField
           className={`inputPos`}
@@ -138,14 +136,14 @@ export default function SearchBar() {
           onFocus={() => setCity("")}
           value={city}
           InputLabelProps={{ style: s.labelStyle() }}
-          InputProps={{ style: s.inputStyleProps({ larPort, larLand }) }}
-          sx={s.input({ larPort, larLand })}
+          InputProps={{ style: s.inputStyleProps() }}
+          sx={s.input()}
           onChange={(e) => setCity(e.target.value)}
         />
         <Button
           className={`buttonPos`}
           disabled={disabled}
-          sx={s.button({ larPort, larLand })}
+          sx={s.button()}
           type="submit"
         >{ english ? `ADD CITY!` : `AGREGAR CIUDAD!` }
         </Button>

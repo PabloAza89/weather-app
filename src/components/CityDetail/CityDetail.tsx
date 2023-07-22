@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -47,13 +46,6 @@ function CityDetail() {
     longitude: number,
   }
 
-  const width = useSelector((state: {width:number}) => state.width)
-  const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
-  const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
-  const medPort = useSelector((state: {medPort:boolean}) => state.medPort)
-  const medLand = useSelector((state: {medLand:boolean}) => state.medLand)
-  const larPort = useSelector((state: {larPort:boolean}) => state.larPort)
-  const larLand = useSelector((state: {larLand:boolean}) => state.larLand)
   const english = useSelector((state: {english:boolean}) => state.english)
   const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
   const cities = useSelector((state: {cities:citiesI[]}) => state.cities)

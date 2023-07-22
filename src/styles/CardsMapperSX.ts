@@ -1,7 +1,4 @@
-import {
-  column, flex, mix, jcsb, jcc,
-  aic, noSelect, relative
-} from '../styles/CommonsSX';
+import { flex, jcc } from '../styles/CommonsSX';
 
 export const background = () => {
   return {

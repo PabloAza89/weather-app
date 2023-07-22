@@ -1,20 +1,11 @@
-import {
-  flex, relative, absolute, fixed, column, pointer,
-  row, aic, aifs, asc, jcc, jcfe, jcfs, jcsa,
-  jcsb, jcse, jsc, jic, noDeco, mix, noSelect
-} from './CommonsSX';
+import { flex, noSelect } from './CommonsSX';
 
 // width 182 // larPort
 // height 60 // larPort
 // width 160 + 160 = 320 // larLand
 // height 30 // larLand
 
-interface tooltipI {
-  larPort: boolean,
-  larLand: boolean,
-}
-
-export const tooltip = ({ larPort, larLand }: tooltipI) => {
+export const tooltip = () => {
   return {
     background: '#f5f5f9',
     color: 'rgba(0, 0, 0, 0.87)',
@@ -25,19 +16,12 @@ export const tooltip = ({ larPort, larLand }: tooltipI) => {
 
 interface backgroundI {
   currentWidth: number,
-  larPort: boolean,
-  larLand: boolean,
 }
 
-export const background = ({ currentWidth, larPort, larLand }: backgroundI) => {
+export const background = ({ currentWidth }: backgroundI) => {
   return {
     width: currentWidth < 737 ? '160px' : '320px',
-    background: 'orange',
-  }
-}
-
-export const innerTooltip = () => {
-  return {
+    //background: 'orange',
   }
 }
 
@@ -54,7 +38,6 @@ export const innerTooltipTwo = () => {
     fontWeight: 'normal',
     fontFamily: 'Roboto',
     fontSize: '12px',
-
   }
 }
 
@@ -66,12 +49,7 @@ export const labelStyle = () => {
   }
 }
 
-interface inputI {
-  larPort: boolean,
-  larLand: boolean,
-}
-
-export const input = ({ larPort, larLand }: inputI) => {
+export const input = () => {
   return {
     background: '#F0F0F0',
     borderRadius: '0px',
@@ -83,12 +61,7 @@ export const input = ({ larPort, larLand }: inputI) => {
   }
 }
 
-interface buttonI {
-  larPort: boolean,
-  larLand: boolean,
-}
-
-export const button = ({ larPort, larLand }: buttonI) => {
+export const button = () => {
   return {
     background: '#F0F0F0',
     borderRadius: '0px',
@@ -107,15 +80,9 @@ export const button = ({ larPort, larLand }: buttonI) => {
   }
 }
 
-interface inputStylePropsI {
-  larPort: boolean,
-  larLand: boolean,
-}
-
-export const inputStyleProps = ({ larPort, larLand }: inputStylePropsI) => {
+export const inputStyleProps = () => {
   return {
-    ...noSelect,
-    display: 'flex',
+    ...noSelect, ...flex,
     width: '160px',
     height: '30px',
     borderRadius: '0px',
