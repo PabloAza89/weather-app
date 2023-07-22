@@ -34,8 +34,6 @@ const Card = ({ min, max, name, img, id, country }: cardI) => {
     dispatch(deleteCity(id))
   }
 
-  //console.log("country", country)
-
   return (
     <Box sx={s.background({ darkMode })}>
       <Button sx={s.button} onClick={() => cityDeleter(id)}>X</Button>

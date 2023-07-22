@@ -45,7 +45,7 @@ export const linkLogoContainer = ({ minPort, minLand, medPort, medLand, larPort,
     width: minPort ? 'unset' : '320px',
     marginLeft: minPort || minLand ? '10px' : '16px',
     //marginLeft: '16px',
-    background: 'darkred', // dev
+    //background: 'darkred', // dev
     alignItems: 'center',
     fontSize: 'x-large',
   }

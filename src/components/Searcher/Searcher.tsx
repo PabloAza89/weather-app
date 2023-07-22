@@ -6,14 +6,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import Tooltip from '@mui/joy/Tooltip';
 import Swal from 'sweetalert2';
 import { addCity } from '../../actions';
-import $ from 'jquery';
+import '../../styles/SearcherSX.css';
 
 export default function SearchBar() {
-  
+
   const dispatch = useDispatch()
 
   const currentWidth = useSelector((state: {currentWidth: number}) => state.currentWidth)
-  
+
   const [city, setCity] = useState<string>("");
   const [disabled, setDisabled] = useState<boolean>(false); // 3 to test..
 
@@ -33,7 +33,6 @@ export default function SearchBar() {
   }
 
   const cities = useSelector((state: {cities:citiesI[]}) => state.cities)
-  const darkMode = useSelector((state: {darkMode:boolean}) => state.darkMode)
   const english = useSelector((state: {english:boolean}) => state.english)
   const minPort = useSelector((state: {minPort:boolean}) => state.minPort)
   const minLand = useSelector((state: {minLand:boolean}) => state.minLand)
@@ -49,6 +48,12 @@ export default function SearchBar() {
       timerProgressBar: true,
       icon: 'info',
       title: english ? 'City already exists !' : 'La ciudad ya existe !',
+      customClass: {
+        popup:
+          minPort || minLand ? 'minPort-minLand' :
+          medPort || medLand ? 'medPort-medLand' :
+          'larPort-larLand',
+      }
     })
   }
 
@@ -59,6 +64,12 @@ export default function SearchBar() {
       timerProgressBar: true,
       icon: 'info',
       title: english ? 'City not found !' : 'Ciudad no encontrada !',
+      customClass: {
+        popup:
+          minPort || minLand ? 'minPort-minLand' :
+          medPort || medLand ? 'medPort-medLand' :
+          'larPort-larLand',
+      }
     })
   }
 
@@ -96,8 +107,10 @@ export default function SearchBar() {
     <Tooltip
       disableHoverListener={!disabled}
       disableFocusListener={!disabled}
+      disableTouchListener={!disabled}
       enterDelay={500}
       leaveDelay={200}
+      enterTouchDelay={0}
       placement="bottom-end"
       sx={s.tooltip({ larPort, larLand })}
       title={ english ?

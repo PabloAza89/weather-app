@@ -5,15 +5,12 @@ import {
 
 export const background = () => {
   return {
-    display: 'flex',
+    ...flex, ...jcc,
     flexWrap: 'wrap',
     marginTop: '86px',
     marginBottom: '20px',
-    justifyContent: 'center',
-    //background: 'gray',
+    //background: 'gray', // dev
     zIndex: 1999,
     width: '100%',
-    //'overflow-x': 'hidden',
-    //height: '55vh',
   }
 }

@@ -1,3 +1,18 @@
 .swal2-container {
   z-index: 3100 !important;
 }
+
+.minPort-minLand {
+  width: 225px !important;
+  font-size: 9px !important;
+}
+
+.medPort-medLand {
+  width: 320px !important;
+  font-size: 12px !important;
+}
+
+.larPort-larLand {
+  width: 420px !important;
+  font-size: 16px !important;
+}

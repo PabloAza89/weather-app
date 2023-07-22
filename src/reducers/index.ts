@@ -28,10 +28,6 @@ interface initialStateI {
   larLand: boolean,
   currentWidth: number,
   percentageResizedHeight: number,
-  timer: number,
-  numberTimer: number | undefined,
-  timerEnabled: boolean,
-  fullScreen: boolean,
 }
 
 const initialState: initialStateI = {
@@ -49,10 +45,6 @@ const initialState: initialStateI = {
   larLand: window.screen.height > 825 && !window.matchMedia("(orientation: portrait)").matches ? true : false,
   currentWidth: window.innerWidth,
   percentageResizedHeight: window.innerHeight / window.screen.height,
-  timer: 60,
-  numberTimer: undefined,
-  timerEnabled: false,
-  fullScreen: window.screen.width === window.innerWidth && window.screen.height === window.innerHeight ? true : false
 }
 
 const reducer = (state = initialState, action: {type: string; payload: any}) => {
@@ -134,31 +126,6 @@ const reducer = (state = initialState, action: {type: string; payload: any}) => 
       return {
         ...state,
         percentageResizedHeight: action.payload
-      };
-    case 'SET_TIMER':
-      return {
-        ...state,
-        timer: state.timer -= action.payload
-      };
-    case 'STOP_TIMER':
-      return {
-        ...state,
-        timer: action.payload
-      };
-    case 'SET_NUMBER_TIMER':
-      return {
-        ...state,
-        numberTimer: action.payload
-      };
-    case 'SET_TIMER_ENABLED':
-      return {
-        ...state,
-        timerEnabled: action.payload
-      };
-    case 'SET_FULL_SCREEN':
-      return {
-        ...state,
-        fullScreen: action.payload
       };
     default:
       return state

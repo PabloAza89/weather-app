@@ -13,8 +13,7 @@ interface backgroundI {
 
 export const background = ({ darkMode }: backgroundI) => {
   return {
-    display: 'flex',
-    flexDirection: 'column',
+    ...flex, ...column, ...jcsb,
     margin: '20px 10px 0px 10px',
     width: '290px',
     height: '210px',
@@ -23,7 +22,6 @@ export const background = ({ darkMode }: backgroundI) => {
     //backgroundColor: 'darkred',
     background: darkMode ? 'rgba(232, 62, 140, .22)' : 'rgba(232, 62, 140, .15)',
     padding: '8px',
-    justifyContent: 'space-between',
   }
 }
 
@@ -50,9 +48,7 @@ interface cityNameI {
 
 export const cityName = ({ darkMode }: cityNameI) => {
   return {
-    ...noDeco,
-    display: 'flex',
-    position: 'relative',
+    ...noDeco, ...flex, ...relative,
     color: darkMode ? 'white' : '#154f8f',
     fontSize: '28px',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
@@ -62,35 +58,30 @@ export const cityName = ({ darkMode }: cityNameI) => {
 
 export const cityNameLink = () => {
   return {
-    ...noDeco, ...noSelect,
-    display: 'flex',
+    ...noDeco, ...noSelect, ...flex, ...asc,
     //background: 'yellow', // dev
     width: 'fit-content',
     color: '#007bff',
     fontSize: '28px',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     fontWeight: 500,
-    alignSelf: 'center',
   }
 }
 
 export const countryName = () => {
   return {
-    ...noSelect,
+    ...noSelect, ...asc,
     lineHeight: '18.4px',
     color: 'rgb(33, 37, 41)',
     fontSize: '13px',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     fontWeight: 500,
-    alignSelf: 'center',
   }
 }
 
 export const minMax = () => {
   return {
-    ...noSelect,
-    display: 'flex',
-    flexDirection: 'column',
+    ...noSelect, ...flex, ...column, ...jcse, ...aic,
     //background: 'yellow', // dev
     width: '80px',
     height: '80px',
@@ -99,17 +90,12 @@ export const minMax = () => {
     fontSize: '20px',
     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     fontWeight: 500,
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
   }
 }
 
 export const minMaxIcon = () => {
   return {
-    display: 'flex',
-    flexDirection: 'row',
+    ...flex, ...row, ...jcse,
     //background: 'darkred', // dev
-    justifyContent: 'space-evenly',
-    
   }
 }

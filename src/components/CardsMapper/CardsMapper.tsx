@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import * as s from '../../styles/CardsMapperSX';
-import { Box, Typography, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import Card from '../Card/Card';
 
 export default function Cards() {
@@ -24,7 +24,7 @@ export default function Cards() {
 
   return (
     <Box sx={s.background}>
-      {cities.map((c) => 
+      {cities.map((c) =>
         <Card
           key={c.id}
           id={c.id}

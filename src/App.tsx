@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   setCurrentWidth, setHeight, setLarLand,
   setLarPort, setMedLand, setMedPort, setMinLand,
-  setMinPort, setPercentageResizedHeight, setWidth, setFullScreen
+  setMinPort, setPercentageResizedHeight, setWidth,
 } from './actions';
 
 function App() {
@@ -32,7 +32,6 @@ function App() {
       dispatch(setLarLand(window.screen.height > 825 && !window.matchMedia("(orientation: portrait)").matches ? true : false))
       dispatch(setCurrentWidth(window.innerWidth))
       dispatch(setPercentageResizedHeight(window.innerHeight / window.screen.height))
-      dispatch(setFullScreen(window.screen.width === window.innerWidth && window.screen.height === window.innerHeight ? true : false))
     }
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
