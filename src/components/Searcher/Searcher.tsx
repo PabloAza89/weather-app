@@ -15,7 +15,7 @@ export default function SearchBar() {
   const currentWidth = useSelector((state: {currentWidth: number}) => state.currentWidth)
 
   const [city, setCity] = useState<string>("");
-  const [disabled, setDisabled] = useState<boolean>(false); // enables search box
+  const [disabled, setDisabled] = useState<boolean>(false); // ENABLES SEARCH BOX
 
   interface citiesI {
     id: number,
