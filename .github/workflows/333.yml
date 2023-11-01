@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - name: Build and deploy
+      working-directory: ./weather-app
       run: npm run build
       env:
         REACT_APP_WEATHER: ${{ secrets.REACT_APP_WEATHER }}
@@ -13,6 +14,7 @@ jobs:
          # (needs permission to create a branch, build the app and modify that branch, 
          # push changes to that branch, and deploy to github pages)
     - name: Build and deploy2
+      working-directory: ./weather-app
       run: npm run deploy
       env:
         REACT_APP_WEATHER: ${{ secrets.REACT_APP_WEATHER }}
