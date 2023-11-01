@@ -5,6 +5,7 @@ jobs:
     name: My Job
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Decrypt large secret
         run: |
           echo "${{ secrets.ENV_FILE }}" > .env
