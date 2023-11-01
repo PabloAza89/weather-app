@@ -35,7 +35,7 @@ const NavBar = () => {
         style={s.linkAbout({ width, minPort, wrongPath, location:location.pathname })}
       >
         <Typography sx={s.typoAbout({ darkMode })}>
-          { english ? `ABOUTT` : `ACERCA` }
+          { english ? `ABOUTTT` : `ACERCA` }
         </Typography>
       </Link>
       <Box
