@@ -13,9 +13,11 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        token: ${{ github.token }}
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
+    - name: Deploy
+      with:
+        token: ${{ github.token }}
     - run: npm run deploy --if-present
