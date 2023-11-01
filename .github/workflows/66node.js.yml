@@ -22,9 +22,9 @@ jobs:
 ##        token: ${{ github.token }}
 ##    - run: git config --global credential.https://github.com.username git
 ##    - git config --global credential.https://github.com.password <your-pat>
-    - uses: de-vri-es/setup-git-credentials@v2
-      with:
-        credentials: ${{secrets.GIT_CREDENTIALS}}
+##    - uses: de-vri-es/setup-git-credentials@v2
+##      with:
+##        credentials: ${{secrets.GIT_CREDENTIALS}}
     - run: git config --global user.email "juanpabloazambuyo@gmail.com"
     - run: git config --global user.name "Juan-Pablo-Azambuyo"
     - run: npm run deploy --if-present
