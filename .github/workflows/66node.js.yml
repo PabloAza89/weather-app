@@ -17,7 +17,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - name: Deploy
-      with:
-        token: ${{ github.token }}
+##    - name: Deploy
+##      with:
+##        token: ${{ github.token }}
     - run: npm run deploy --if-present
