@@ -20,4 +20,6 @@ jobs:
 ##    - name: Deploy
 ##      with:
 ##        token: ${{ github.token }}
+    - run: git config --global user.email "juanpabloazambuyo@gmail.com"
+    - run: git config --global user.name "Juan Pablo Azambuyo"
     - run: npm run deploy --if-present
