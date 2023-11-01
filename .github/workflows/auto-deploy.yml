@@ -27,5 +27,6 @@ jobs:
 ##        credentials: ${{secrets.GIT_CREDENTIALS}}
     - run: git config --global user.email "juanpabloazambuyo@gmail.com"
     - run: git config --global user.name "Juan-Pablo-Azambuyo"
-    - run: git remote add origin https://PabloAza89:${{secrets.USER_PASSWORD}}@github.com/PabloAza89/weather-app.git
+##    - run: git remote add origin https://PabloAza89:${{secrets.USER_PASSWORD}}@github.com/PabloAza89/weather-app.git
+    - run: git remote set-url origin https://PabloAza89:${{secrets.USER_PASSWORD}}@github.com/PabloAza89/weather-app.git
     - run: npm run deploy --if-present
