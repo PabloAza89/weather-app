@@ -52,7 +52,7 @@ const Map = ({ latitude, longitude }: mapI)  => {
           url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
           id="mapbox/streets-v11"
           accessToken={`${process.env.REACT_APP_MAP}`}
-          //accessToken={'${{ secrets.SECRET_NAME }}'} //
+          //accessToken={'${{ secrets.SECRET_NAME }}'} ////
         />
         <Marker position={[latitude, longitude]} />
       </MapContainer>
