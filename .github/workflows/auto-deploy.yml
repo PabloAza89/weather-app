@@ -1,8 +1,7 @@
 name: Auto Deploy
 on:
   push:
-    branches:
-      -main
+    branches: [ "main" ]
 env:
   CI: false
   REACT_APP_MAP: ${{ secrets.REACT_APP_MAP }}
