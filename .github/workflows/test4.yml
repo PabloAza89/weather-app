@@ -1,0 +1,10 @@
+name: Workflows 4
+on: push
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decrypt large secret
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
