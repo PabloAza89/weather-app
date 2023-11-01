@@ -17,17 +17,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-##    - name: Deploy
-##      with:
-##        token: ${{ github.token }}
-##    - run: git config --global credential.https://github.com.username git
-##    - git config --global credential.https://github.com.password <your-pat>
-##    - uses: de-vri-es/setup-git-credentials@v2
-##      with:
-##        credentials: ${{secrets.GIT_CREDENTIALS}}
     - run: git config --global user.email "juanpabloazambuyo@gmail.com"
-    - run: git config --global user.name "Juan-Pablo-Azambuyo"
-##    - run: git remote add origin https://PabloAza89:${{secrets.USER_PASSWORD}}@github.com/PabloAza89/weather-app.git
-##    - run: git remote set-url origin https://PabloAza89:${{secrets.USER_PASSWORD}}@github.com/PabloAza89/weather-app.git
+    - run: git config --global user.name "Juan Pablo Azambuyo"
     - run: git remote set-url origin https://${{secrets.USER_GITHUB_TOKEN}}@github.com/PabloAza89/weather-app.git
     - run: npm run deploy --if-present
