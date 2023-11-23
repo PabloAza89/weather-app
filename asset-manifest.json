@@ -1,18 +1,32 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.0e5c172e.css",
-    "main.js": "/weather-app/static/js/main.d0ccf28f.js",
-    "static/media/bgNight.webp": "/weather-app/static/media/bgNight.a05b8e172faa4e7edf03.webp",
-    "static/media/cloudDontAgree.gif": "/weather-app/static/media/cloudDontAgree.591065bbc147e1eb5795.gif",
-    "static/media/bgDay.webp": "/weather-app/static/media/bgDay.76b91587aecf5594e14c.webp",
-    "static/media/logo.png": "/weather-app/static/media/logo.9e4cc1d5f1d3f5ec393f.png",
-    "static/media/loadingImage.png": "/weather-app/static/media/loadingImage.8af190ff0d46a12567d2.png",
-    "index.html": "/weather-app/index.html",
-    "main.0e5c172e.css.map": "/weather-app/static/css/main.0e5c172e.css.map",
-    "main.d0ccf28f.js.map": "/weather-app/static/js/main.d0ccf28f.js.map"
+    "main.css": "/portfolio/static/css/main.df5a2b27.css",
+    "main.js": "/portfolio/static/js/main.abe476b5.js",
+    "static/media/error.gif": "/portfolio/static/media/error.c8a987390be23c2376be.gif",
+    "static/media/food2.png": "/portfolio/static/media/food2.1c86c9e622a912e50bfa.png",
+    "static/media/food3.png": "/portfolio/static/media/food3.199146d2ac748254effc.png",
+    "static/media/food1.png": "/portfolio/static/media/food1.7713b38ed9b736720273.png",
+    "static/media/weatherify2.png": "/portfolio/static/media/weatherify2.59461baba728eb655dc9.png",
+    "static/media/weatherify1.png": "/portfolio/static/media/weatherify1.4eda5ee767d85ad501b3.png",
+    "static/media/profile.png": "/portfolio/static/media/profile.7f49b905ba2a325c4661.png",
+    "static/media/react.png": "/portfolio/static/media/react.2f2532db663fd5ec5f95.png",
+    "static/media/material.png": "/portfolio/static/media/material.5955eca0663eaeb9b8d6.png",
+    "static/media/efSet.png": "/portfolio/static/media/efSet.70a4ba20ab286e8227ff.png",
+    "static/media/henry.png": "/portfolio/static/media/henry.bc6cc8847bd83df6cc48.png",
+    "static/media/fccCertJS.png": "/portfolio/static/media/fccCertJS.2398854b79d8175858c1.png",
+    "static/media/home.svg": "/portfolio/static/media/home.eb8e1991134358223a6ee700ae5e4fc9.svg",
+    "static/media/javascript.png": "/portfolio/static/media/javascript.cf7522f436d6510da302.png",
+    "static/media/redux.png": "/portfolio/static/media/redux.b426d97de12d4dab1c06.png",
+    "static/media/sequelize.png": "/portfolio/static/media/sequelize.844fb9182c0fbf41931d.png",
+    "static/media/loadingImage.png": "/portfolio/static/media/loadingImage.8af190ff0d46a12567d2.png",
+    "static/media/node.png": "/portfolio/static/media/node.07d152a8a036951b8d14.png",
+    "static/media/darth-vader.svg": "/portfolio/static/media/darth-vader.ab4aa42386ccc66a7de06c02e64d572c.svg",
+    "index.html": "/portfolio/index.html",
+    "main.df5a2b27.css.map": "/portfolio/static/css/main.df5a2b27.css.map",
+    "main.abe476b5.js.map": "/portfolio/static/js/main.abe476b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e5c172e.css",
-    "static/js/main.d0ccf28f.js"
+    "static/css/main.df5a2b27.css",
+    "static/js/main.abe476b5.js"
   ]
 }

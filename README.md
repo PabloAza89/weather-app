@@ -1,17 +1,19 @@
 <div id="user-content-toc" align="left">
   <ul>
-    <summary><h2 style="display: inline-block">Welcome to Weatherify ! (Demo APP)</h2></summary>
+    <summary><h2 style="display: inline-block">Welcome to my Personal Portfolio !</h2></summary>
   </ul>
 </div>
 <div id="user-content-toc" align="left">
   <ul>
-    <h3 style="display: inline-block">○ What's Foodify ?</h3>
+    <h3 style="display: inline-block">○ What's in Portfolio ?</h3>
   </ul>
 </div>
 <ul>
   <summary>
-    Foodify is a responsive Web App that displays city weathers from around the world.<br />
-    You can search the city that you want and Foodify will display the weather and a detailed info of de city also.
+    The Portfolio is in itself an entire App. It displays info about my life & projects made by me.
+    <br />This App is a responsive Static Web App, but only connect to server only for email message purposes.
+    <br />Design inspired in Naveen Jujaray & Sergio Pedercini projects.
+    <br />All the code on my projects are entirely written by me, except some certain technicals points that it's code retrieved and adapted from stackoverflow.
   </summary>
 </ul>
 <div id="user-content-toc" align="left">
@@ -19,19 +21,13 @@
     <h3 style="display: inline-block">○ Where can I test the app ?</h3>
   </ul>
 </div>
-<ul><summary>https://pabloaza89.github.io/weather-app</summary></ul>
+<ul><summary>https://pabloaza89.github.io/portfolio</summary></ul>
 <div id="user-content-toc" align="left">
   <ul>
     <h3 style="display: inline-block">○ What functions are implemented on ?</h3>
   </ul>
 </div>
-<ul>
-  <summary>
-    This App do only-read data from 3rd-part server. (https://openweathermap.org) 
-  </summary>
-  <summary>
-    You can search up to 15 cities. (displayed at the same time)
-  </summary>
+<ul> 
   <summary>
     Language changer. (English/Spanish)
   </summary>
@@ -39,26 +35,30 @@
     Day/Night mode.
   </summary>
   <summary>
-    A detailed city info:
-      <ul>
-        <summary>
-          Temperature, weather, wind, clouds amount & location.
-        </summary>
-        <summary>
-          Values converted depending on language selected.
-        </summary>
-      </ul>
+    Button "Changelog" that show my current projects status.
   </summary>
   <summary>
-    Maps by Leaflet open-source JavaScript library.
+    Email send function using Nodemailer & Gmail SMTP. (Simple Mail Transfer Protocol)
   </summary>
+  <summary>
+    Projects section design as rollfilm like.
+  </summary>
+  <summary>
+    Skills section design as a responsive 3D graphic.
+  </summary>  
 </ul>
 <div id="user-content-toc" align="left">
   <ul>
     <h3 style="display: inline-block">○ Where can I see how App was made ?</h3>
   </ul>
 </div>
-<ul><summary>https://github.com/PabloAza89/weather-app</summary></ul>
+<ul><summary>https://github.com/PabloAza89/portfolio</summary></ul>
+<div id="user-content-toc" align="left">
+  <ul>
+    <h3 style="display: inline-block">○ Where can I see the server running ?</h3>
+  </ul>
+</div>
+<ul><summary>https://glitch.com/edit/#!/oval-transparent-ornament?path=server.js</summary></ul>
 <div id="user-content-toc" align="left">
   <ul>
     <h3 style="display: inline-block">○ Connect with me:</h3>
@@ -125,4 +125,4 @@
   </summary>
 </ul>
 
-<b>Last Update: 30 Oct '23</b>
+<b>Last Update: 12 Jul '23</b>
