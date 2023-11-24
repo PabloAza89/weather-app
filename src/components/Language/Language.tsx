@@ -23,7 +23,7 @@ function Language() {
   useEffect(() => {
     $(function() {
       
-      if (show) { /// show -> hidden
+      if (show) { // show -> hidden
         $(`.buttonShow`)
           .stop()
           .css("left", "0px")
