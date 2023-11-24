@@ -6,16 +6,8 @@ env:
   CI: false
   REACT_APP_MAP: ${{ secrets.REACT_APP_MAP }}
   REACT_APP_WEATHER: ${{ secrets.REACT_APP_WEATHER }}
+  ${{ secrets.GITHUB_TOKEN }}
 jobs:
-  triage:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - uses: actions/labeler@v4
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -29,10 +21,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Copy README from origin root to GH-Pages public folder
-      run: cp "./README.md" "./public/README.md"
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - run: cp "./README.md" "./public/README.md"
     - run: npm ci
     - run: npm run build --if-present
     - run: git config --global user.email "juanpabloazambuyo@gmail.com"
     - run: git config --global user.name "Juan Pablo Azambuyo"
-    - run: git remote set-url origin git@github.com:PabloAza89/weather-app.git
+    - run: git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/PabloAza89/weather-app.git
     - run: npm run deploy --if-present
