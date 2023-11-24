@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.df5a2b27.css",
-    "main.js": "/portfolio/static/js/main.abe476b5.js",
+    "main.css": "/portfolio/static/css/main.69db3aa9.css",
+    "main.js": "/portfolio/static/js/main.0adc8cc2.js",
     "static/media/error.gif": "/portfolio/static/media/error.c8a987390be23c2376be.gif",
     "static/media/food2.png": "/portfolio/static/media/food2.1c86c9e622a912e50bfa.png",
     "static/media/food3.png": "/portfolio/static/media/food3.199146d2ac748254effc.png",
@@ -22,11 +22,11 @@
     "static/media/node.png": "/portfolio/static/media/node.07d152a8a036951b8d14.png",
     "static/media/darth-vader.svg": "/portfolio/static/media/darth-vader.ab4aa42386ccc66a7de06c02e64d572c.svg",
     "index.html": "/portfolio/index.html",
-    "main.df5a2b27.css.map": "/portfolio/static/css/main.df5a2b27.css.map",
-    "main.abe476b5.js.map": "/portfolio/static/js/main.abe476b5.js.map"
+    "main.69db3aa9.css.map": "/portfolio/static/css/main.69db3aa9.css.map",
+    "main.0adc8cc2.js.map": "/portfolio/static/js/main.0adc8cc2.js.map"
   },
   "entrypoints": [
-    "static/css/main.df5a2b27.css",
-    "static/js/main.abe476b5.js"
+    "static/css/main.69db3aa9.css",
+    "static/js/main.0adc8cc2.js"
   ]
 }
