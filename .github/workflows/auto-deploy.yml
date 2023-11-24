@@ -19,7 +19,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Copy README from origin root to GH-Pages public folder
     - run: cp "./README.md" "./public/README.md"
     - run: npm ci
