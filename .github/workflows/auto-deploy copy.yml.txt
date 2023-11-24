@@ -19,10 +19,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Copy the Readmes
-      run:
-        cp "./README.md" "./public/README.md"
-        done
     - run: npm ci
     - run: npm run build --if-present
     - run: git config --global user.email "juanpabloazambuyo@gmail.com"
