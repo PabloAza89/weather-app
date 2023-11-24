@@ -5,12 +5,12 @@
 </div>
 <div id="user-content-toc" align="left">
   <ul>
-    <h3 style="display: inline-block">○ What's Foodify ?</h3>
+    <h3 style="display: inline-block">○ What's Weatherify ?</h3>
   </ul>
 </div>
 <ul>
   <summary>
-    Foodify is a responsive Web App that displays city weathers from around the world.<br />
+    Weatherify is a responsive Web App that displays city weathers from around the world.<br />
     You can search the city that you want and Foodify will display the weather and a detailed info of de city also.
   </summary>
 </ul>
