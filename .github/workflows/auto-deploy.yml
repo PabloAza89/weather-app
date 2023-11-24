@@ -6,7 +6,6 @@ env:
   CI: false
   REACT_APP_MAP: ${{ secrets.REACT_APP_MAP }}
   REACT_APP_WEATHER: ${{ secrets.REACT_APP_WEATHER }}
-  ${{ secrets.GITHUB_TOKEN }}
 jobs:
   build:
     runs-on: ubuntu-latest
