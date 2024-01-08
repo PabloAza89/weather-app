@@ -52,6 +52,8 @@ function CityDetail() {
   const params = useParams()
   const city = cities.filter((c) => c.id === parseInt(`${params.cityId}`))[0]
 
+  console.log("city.weather", city.weather)
+
   if (!city) return (
     <CityNotFound />)
   else return (

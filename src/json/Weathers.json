@@ -1,7 +1,17 @@
 {
-  "Clouds": { "en": "Clouds", "es": "Nublado" },
-  "Clear": { "en": "Clear", "es": "Despejado" },
+  "Thunderstorm": { "en": "Thunderstorm", "es": "Tormentas" },
+  "Drizzle": { "en": "Drizzle", "es": "Lloviznas" },
   "Rain": { "en": "Rain", "es": "Lluvioso" },
+  "Snow": { "en": "Snow", "es": "Nevado" },
   "Mist": { "en": "Mist", "es": "Neblina" },
-  "Fog": { "en": "Fog", "es": "Niebla" }
+  "Smoke": { "en": "Smoke", "es": "Humareda" },
+  "Haze": { "en": "Haze", "es": "Brumoso" },
+  "Dust": { "en": "Dust", "es": "Polvoriento" },
+  "Fog": { "en": "Fog", "es": "Niebla" },
+  "Sand": { "en": "Sand", "es": "Arenoso" },
+  "Ash": { "en": "Ash", "es": "Cenizas" },
+  "Squall": { "en": "Squall", "es": "Chubascos" },
+  "Tornado": { "en": "Tornado", "es": "Tornado" },
+  "Clear": { "en": "Clear", "es": "Despejado" },
+  "Clouds": { "en": "Clouds", "es": "Nublado" }
 }
